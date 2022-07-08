@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ua-UA">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Елементи форми HTML</title>
+    </head>
+    <body>
+        <h1>Елементи форми HTML</h1>
+        <p>
+            У цьому розділі описано всі елементи форми HTML.
+        </p>
+        <hr/>
+
+        <h2>Елементи HTML &lt;form&gt;</h2>
+        <p>
+            Елементи HTML &lt;form&gt; може містити один або кілька таких елементів форми:
+        </p>
+        <ul>
+            <li>
+                &lt;input&gt;
+            </li>
+            <li>
+                &lt;label&gt;
+            </li>
+            <li>
+                &lt;select&gt;
+            </li>
+            <li>
+                &lt;textarea&gt;
+            </li>
+            <li>
+                &lt;button&gt;
+            </li>
+            <li>
+                &lt;fieldset&gt;
+            </li>
+            <li>
+                &lt;legend&gt;
+            </li>
+            <li>
+                &lt;datalist&gt;
+            </li>
+            <li>
+                &lt;output&gt;
+            </li>
+            <li>
+                &lt;option&gt;
+            </li>
+            <li>
+                &lt;optgroup&gt;
+            </li>
+        </ul>
+        <hr/>
+
+        <h2>Елемент &lt;input&gt;</h2>
+        <p>
+            Одним з найбільш часто використовуваних елементів форми є &lt;input&gt; елемент. <br/>
+            Елемент &lt;input&gt; можна відобразити кількома способами, залежно від type атрибута. 
+        </p>
+        <code>
+            &lt;form atcion="/action_page.php"&gt; <br/>
+                &lt;label for="fname"&gt;Ім'я:&lt;/label&gt; <br/>
+                &lt;input type="text" id="fname" name="fname"&gt; <br/>
+                &lt;input type="submit" value="Відправити"&gt; <br/>
+            &lt;/form&gt;
+        </code>
+        <p>
+            Відображається так:
+        </p>
+            <form action="/action_page.php"
+                <label for="fname">Ім'я:</label> <br/>
+                <input type="text" id="fname" name="fname"> <br/>
+                <input type="submit" value="Відправити"> <br/>
+            </form>        
+        <p>
+            Усі значення атрибута type розглянуто в наступному розділі.
+        </p>
+        <hr/>
+
+        <h2>Елемент &lt;label&gt;</h2>
+        <p>
+            Елемент &lt;label&gt; визначає мітку для кількох елементів форми. <br/>
+            Елемент &lt;label&gt; корисний для користувачів програми зчитування з екрана,
+            оскільки програма зчитуваня з екрана вголос прочитає мітку, коли користувачів
+            зосередиться на елементі введення. <br/>
+            Елемент &lt;label&gt; також допомагає користувачам, яким важко клацнути на 
+            дуже маленьких ділянках (наприклад перемикачі чи прапорці), оскільки, коли 
+            користувач натискає текст всередині &lt;label&gt; елемента, він перемикає 
+            перемикач/прапорець. <br/>
+            Атрибут for тега має бути рівним id атрибуту input елемента, щоб зв'язати їх разом
+        </p>
+        <hr/>
+
+        <h2>Елемент &lt;select&gt;</h2>
+        <p>
+            Елемент &lt;select&gt; визначає розкривний список:
+        </p>
+        <code>
+            &lt;form action="/action_page.php"&gt; <br/>
+            &lt;label for="cars"&gt;Виберіть мащину&lt;/label&gt; <br/>
+            &lt;select id="cars" name="cars"&gt; <br/>
+                &lt;option value="volvo"&gt;Volvo&lt;/option&gt; <br/>
+                &lt;option value="saab"&gt;Saab&lt;/option&gt; <br/>
+                &lt;option value="fiat"&gt;Fiat&lt;/option&gt; <br/>
+                &lt;option value="audi"&gt;Audi&lt;/option&gt; <br/>
+            &lt;/select&gt; <br/>
+            &lt;input type="submit" value="Надіслати"&gt;
+            &lt;/form&gt;
+        </code>
+        <p>
+            Відображається так:
+        </p>
+        <form action="/action_page.php"></form>
+            <label for="cars">Виберіть мащину</label>
+            <select id="cars" name="cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="fiat">Fiat</option>
+                <option value="audi">Audi</option>
+            </select>
+            <input type="submit" value="Надіслати">
+        </form>
+        <p>
+            Елемент &lt;option&gt; визначає параметр, який можна вибрати. <br/>
+            За замовчуванням вибирається перший пункт у випадаючому списку. <br/>
+            Щоб визначити попередньо вибрану опцію, додайте selected атрибут до параметра:
+        </p>
+        <code>
+            &lt;option value="audi" selected&gt;Audi&lt;/option&gt;
+        </code>
+        <h3>Видимі значення</h3>
+        <p>
+            Використовуйте size атрибут, щоб указати кількість видимих значень:
+        </p>
+        <code>
+            &lt;form action="/action_page.php"&gt; <br/>
+            &lt;label for="cars"&gt;Виберіть мащину&lt;/label&gt; <br/>
+            &lt;select id="cars" name="cars" size="3"&gt; <br/>
+                &lt;option value="volvo"&gt;Volvo&lt;/option&gt; <br/>
+                &lt;option value="saab"&gt;Saab&lt;/option&gt; <br/>
+                &lt;option value="fiat"&gt;Fiat&lt;/option&gt; <br/>
+                &lt;option value="audi"&gt;Audi&lt;/option&gt; <br/>
+            &lt;/select&gt; <br/>
+            &lt;input type="submit" value="Надіслати"&gt;
+            &lt;/form&gt;
+        </code>
+        <p>Відобажається так:</p>
+        <form action="/action_page.php"></form>
+            <label for="cars">Виберіть мащину</label>
+            <select id="cars" name="cars" size="3">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="fiat">Fiat</option>
+                <option value="audi">Audi</option>
+            </select>
+            <input type="submit" value="Надіслати">
+        </form>
+        <h3>Дозволити кілька варіантів:</h3>
+        <p>
+            Використовуйте multiple атрибут, щоб дозволити користувачеві
+            вибрати більше одного значення:
+        </p>
+        
+        <code>
+            &lt;form action="/action_page.php"&gt; <br/>
+            &lt;label for="cars"&gt;Виберіть мащину&lt;/label&gt; <br/>
+            &lt;select id="cars" name="cars" size="4" multiple&gt; <br/>
+                &lt;option value="volvo"&gt;Volvo&lt;/option&gt; <br/>
+                &lt;option value="saab"&gt;Saab&lt;/option&gt; <br/>
+                &lt;option value="fiat"&gt;Fiat&lt;/option&gt; <br/>
+                &lt;option value="audi"&gt;Audi&lt;/option&gt; <br/>
+            &lt;/select&gt; <br/>
+            &lt;input type="submit" value="Надіслати"&gt; <br/>
+            &lt;/form&gt;
+        </code>
+        <p>Відобажається так:</p>
+        <form action="/action_page.php"></form>
+            <label for="cars">Виберіть мащину</label>
+            <select id="cars" name="cars" size="4" multiple>
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="fiat">Fiat</option>
+                <option value="audi">Audi</option>
+            </select>
+            <input type="submit" value="Надіслати">
+        </form>
+        <hr/>
+ 
+        <h2>Елемент &lt;textarea&gt;</h2>
+        <p>
+            Елемент &lt;textarea&gt; визначає багаторядкове поле введення (текстову область):
+        </p>
+        <code>
+            &lt;form action="action_page.php"&gt; <br/>
+                &lt;textarea name="messsage" rows="10" cols="30"&gt;Кіт грався в саду&lt;/textarea&gt; <br/>
+                &lt;input type="submit"&gt; <br/>
+            &lt;/form&gt;
+        </code>
+        <p>
+            Відображається так:
+        </p>
+        <form action="action_page.php">
+            <textarea name="message" rows="10" cols="30">Кіт грався в саду</textarea> <br/> <br/>
+            <input type="submit">
+        </form>
+        <p>
+            Атрибут rows визначає видиму кількість рядків у текстовій області. <br/>
+            Атрибут cols визначає видиму ширину текстової області. <br/>
+            Ви можете визначити розмір текстової області за допомогою CSS: <br/>
+        </p>
+        <code>
+            &lt;textarea name="message" style="width:100%; height:200px;&gt; Кіт грався в саду &lt;/textarea&gt;
+        </code>
+        <p>Відображається так:</p>
+        <textarea name="message" style="width:100%; height:200px;">Кіт грався в саду</textarea>
+        <hr/>
+
+        <h2>Елемент &lt;button&gt;</h2>
+        <p>
+            Елемент &lt;button&gt; визначає кнопку, яку можна натиснути:
+        </p>
+        <code>
+            &lt;button type="button" onclick="alert('Hello World!')&gt; Click me! &lt;/button&gt;
+        </code>
+        <p>
+            Відображається так:
+        </p>
+        <button type="button" onclick="alert('Hello World!')">Click me!</button>
+        <p>
+            <b>Примітка.</b> Завжди вказуйте type атрибут для елемента кнопки. Різні
+            браузери можуть використовувати різні типи за замовчуванням для елемента
+            кнопки.
+        </p>
+        <hr/>
+
+        <h2>Елементи &lt;fieldset&gt; i &lt;legend&gt;</h2>
+        <p>
+            Елемент &lt;filedset&gt; використовується для групування пов'язаних даних у формі. <br/>
+            Елемент &lt;legend&gt; визначає підпис для &lt;fieldset&gt; елемента.
+        </p>
+        <code>
+            &lt;form action="action_page.php"&gt; <br/>
+                &lt;fieldset&gt; <br/>
+                    &lt;legend&gt;Песоналії&lt;/legend&gt; <br/>
+                    &lt;label for="fname"&gt;Ім'я:&lt/label;&gt; &lt;br/&gt;  <br/>
+                    &lt;input type="text" id="fname" name="fname" value="John"&gt; &lt;br/&gt; <br/>
+                    &lt;label for="lname"&gt;Фамілія:&lt;/label&gt; &lt;br/&gt;<br/> 
+                    &lt;input type="text" id="lname" name="lname" value="Doe"&gt; &lt;br/&gt; &lt;br/&gt; <br/>
+                    &lt;input type="submit" value="Submit"&gt; <br/>
+                &lt;/fieldset&gt; <br/>
+            &lt;/form&gt;
+        </code>
+        <p>
+            Відображається так:
+        </p>
+        <form action="action_page.php">
+            <fieldset>
+                <legend>Песоналії</legend>
+                <label for="fname">Ім'я:</label;> <br/>
+                <input type="text" id="fname" name="fname" value="John"> <br/>
+                <label for="lname">Фамілія:</label> <br/>
+                <input type="text" id="lname" name="lname" value="Doe"> <br/><br/>
+                <input type="submit" value="Submit">  <br/>
+            </fieldset>
+        </form>
+        <hr/>
+
+        <h2>Елемент &lt;datalist&gt;</h2>
+        <p>
+            Елемент &lt;datalist&gt; визначає список попередньо визначених параметрів 
+            для &lt;input&gt; елемента. <br/>
+            Під час введення даних користувачі бачитимуть спадний спиок із попередньо
+            визначеними параметрами. <br/>
+            Атрибут list елемента input повинен посилатися на id атрибут datalist елемента.
+        </p>
+        <code>
+            &lt;form action="/action_page.php"&gt; <br/>
+                &lt;input list="browsers"&gt; <br/>
+                &lt;datalist id="browsers"&gt; <br/>
+                    &lt;option value="Internet Explorer"&gt; <br/>
+                    &lt;option value="Firefox"&gt; <br/>
+                    &lt;option value="Chrome"&gt; <br/>
+                    &lt;option value="Opera"&gt; <br/>
+                    &lt;option value="Safari"&gt; <br/>
+                &lt;/datalist&gt; <br/>
+                &lt;input type="submit"&gt; <br/>
+            &lt;/form&gt;
+        </code>
+        <p>
+            Відображається так:
+        </p>
+        <form action="/action_page.php">
+            <input list="browsers">
+            <datalist id="browsers">
+                <option value="Internet Explorer">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+            </datalist>
+            <input type="submit">
+        </form>
+        <hr/>
+
+        <h2>Елемент &lt;output&gt;</h2>
+        <p>
+            Елемент output представляє результат обчислення (як той, що виконується скриптом)
+        </p>
+        <code>
+            &lt;form action="action_page.php" oninput="x.value=parseInt(a.value)+parseInt(b/value)"&gt; <br/>
+            0 <br/>
+            &lt;input type="range" id="a" name="a" value="50"&gt; <br/>
+            100 + <br/>
+            &lt;input type="number" id="b" name="b" value="50"&gt; <br/>
+            = <br/>
+            &lt;output name="x" for="a b"&gt;&lt;/output&gt; <br/>
+            &lt;br/&gt; &lt;br/&gt; <br/>
+            &lt;input type="submit"&gt; <br/>
+            &lt;/form&gt; <br/>
+        </code>
+        <p>
+           Відображається так: 
+        </p>
+        <form action="action_page.php" oninput="x.value=parseInt(a.value)+parseInt(b/value)">
+            0
+            <input type="range" id="a" name="a" value="50">
+            100 +
+            <input type="number" id="b" name="b" value="50">
+            =
+            <output name="x" for="a b"></output>
+            <br/> <br/>
+            <input type="submit">
+        </form>
+    </body>
+</html>

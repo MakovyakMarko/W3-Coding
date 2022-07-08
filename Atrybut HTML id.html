@@ -1,0 +1,104 @@
+<!DOCTYPE html> 
+<html lang="ua-UA">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Atrybut HTML id</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            #myHeader{
+                background-color:lightblue;
+                color:black;
+                padding: 40px;
+                text-align:center;
+            }
+            .city{
+                background-color: tomato;
+                color:white;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Atrybut HTML id</h1>
+        <p>
+            Atrybut HTML <ins>id</ins> vykorystovuetjsja dlja vyznachennja unikaljnogo identyfikatora dlja elementa HTML. <br>
+            U documenti HTML ne moze bytu biljshe odnogo elementa z odnakovym identyfikatorom. <br>
+        </p>
+        <hr>
+        <h2>Vykorystannja atrybuta id</h2>
+        <p>
+            Atrybut <ins>id</ins> vyznachaje ynikaljnyj isentyfikator dlja elementa HTML. Znachennja <ins>id</ins> atrybuta maje buty unikaljnym u HTML-documenti. <br>
+            Atrybut <ins>id</ins> vykorystovuetjsja dlja vkazivky na pevne ogoloshennja stylju v tablyci styliv. Vin takoz vykorustovuetjsja JavaScript dlja dostupu ta keruvannja elementom iz pevnym identyfikatorom. <br>
+            Syntaksys dlja <ins>id</ins> takuj: napyshitj hesh-symvol(#), a potim imja identyfikatora. Potim vyznachte vlastyvosti CSS u figyrnyh duzkah {}. <br>
+            U nastypnomu prykladi mu majemo <ins>h1</ins> element, jakyj vkazuje na imja identyfikatora "myHeader". Cej <ins>h1</ins> element bude oformleno vidpovidno do #myHeader vyznachennja stylju v rozdili head:
+        </p>
+        <h1 id="myHeader">My Header</h1>
+        <p>
+            <b>Prymitka:</b> imja identyfikatora chytlyve do registru! <br>
+            <b>Prymitka:</b> imja identyfikatora maje mistyty prynajmni odyn symvol, ne moze pochynatusja z cyfry ta ne povynno mistyty probiliv(probiliv,tabuljaciji toscho).
+        </p>
+        <hr>
+        <h2>Riznycja miz klasom i identyfikatorom</h2>
+        <p>
+            Imja klasy moze vkazuvatjsja kiljkoma elementamy HTML, todi jak imja identyfikatora maje vykorystovuvatysja lyshe odnym elementom HTML na storinci:
+        </p>
+        <h1 id="myHeader">My Cities</h1>
+        <h2 class="city">London</h2>
+        <p>London is the capital of England.</p>
+        <h2 class="city">Paris</h2>
+        <p>Paris is the capital of France</p>
+        <h2 class="city">Tokyo</h2>
+        <p>Tokyo is the capital of Japan</p>
+        <hr>
+        <h2>HTML-zakladky z identyfikatorom i posylannjamy</h2>
+        <p>
+            Zakladky html vykorystovujutjsja, schob dozvolyty chytacham perehodyty do pevnyh chastyn web-storinky. <br>
+            Zakladky mozutj buty korysnymy, jakscho vasha storinka dyze dovga. <br>
+            Schob vykorystaty zakladku, spochatku jiji potribno stvoryty, a potim dodaty posylannja na neji. <br>
+            Potim, koly bude natysnuto posylannja, storinka byde prokruchuvatysja do miscja z zakladkoju. <br>
+            Pryklad: <br>
+            Spochatku stvoritj zakladku z id atrybutom: <br>
+            h2 id=#C4 Chapter4 <br>
+            Potim dodajte posylannja na zakladku ("Perejty do rozdilu 4") z tijeji z storinky: <br>
+            a href="#C4" jump to chapter4 /a <br>
+            Abo dodajte posylannja na zakladku ("Perejty do rozdily 4") z inshoji storinky:
+            a href="inshastorinka.html#C4" Jump to chapter 4 /a <br>
+        </p>
+        <hr>
+        <h2>Vykorystannja atrybuta id v JavaScript</h2>
+        <p>
+            Atrybut id takoz moze vykorystovuvatysja JavaScript dlja vykonannja dejakyh zavdanj dlja cjogo konkretnogo elementa. <br>
+            JacaScript moze otrymaty dostyp do elementa z pevnym identyfikatorom za dopomogoju <ins>getElementById()</ins> metodu:
+        </p>
+        <h1 id="change">Hello World!</h1>
+        <button onclick="displayResult()">Chenge text</button>
+        <script>
+            function displayResult(){
+                document.getElementById("change").innerHTML = "Have a nice day!";
+            }
+        </script>
+        <hr>
+        <h2>Pidsumok rozdilu</h2>
+        <ul>
+            <li>
+                Atrybut <ins>id</ins> vykorustovuetjsja dlja vyznachennja unikaljnogo identyfikatora dlja elementa HTML
+            </li>
+            <li>
+                Znachennja <ins>id</ins> atrybuta maje buty unikaljnym u HTML-dokumenti
+            </li>
+            <li>
+                Atrybut <ins>id</ins> vykorystovuetjsja CSS i JavaScript dlja stylizaciji/vyboru pevnogo elementa
+            </li>
+            <li>
+                Znachennja <ins>id</ins> atrybuta chutlyve do registru
+            </li>
+            <li>
+                Atrybut <ins>id</ins> takoz vykorystovuetjsja dlja stvorennja zakladok HTML
+            </li>
+            <li>
+                JavaScript moze otrymoaty dostup do elementa z pevnym identyfikatorom za dopomogoju <ins>getElementById()</ins> metodu
+            </li>
+        </ul>
+    </body>
+</html>

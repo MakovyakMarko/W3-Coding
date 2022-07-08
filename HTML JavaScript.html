@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ua-UA">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML JavaScript</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>HTML JavaScript</h1>
+        <p>
+            JavaScript robytj storinky HTML biljsh dynamichnymy ta interaktyvnymy.
+        </p>
+        <button type="button" onclick="document.getElementById('demo1').innerHTML=Date()">Click me to display Date and Tyme.</button>
+        <p id="demo1"></p>
+        <hr>
+        <h2>Teg HTML <ins>script</ins></h2>
+        <p>
+            Teg html <ins>script</ins> vykorystovuetjsja dlja vyznachennja klientsjkogo scenariju (scrypta). <br>
+            Element <ins>script</ins> abo mistytj operatory scenariju, abo vkazyje na zovnishnij fajl scenariju cherez <ins>src</ins> atrybut. <br>
+            Poshyrenym vykorystannjam JavaScript je manipyljuvannja zobrazennjamy, perevirka formy ta dynamichni zminy vmistu. <br>
+            Schob vybraty element HTML, JavaScript najchastishe vykorystovyje <ins>document.getElementById()</ins> metod. <br>
+            Cej pryklad JavaScript pyshe "Pryvit, JavaScript!" v element HTML z id="demo": <br>
+        </p>
+        <p id="demo2"></p>
+        <script>
+            document.getElementById("demo2").innerHTML="HelloJavaScript";
+        </script>
+        <hr>
+        <h2>Smak JavaScript</h2>
+        <p>
+            Osj kiljka prykladiv togo, scho moze JavaScript: <br>
+            JavaScript moze zminjuvaty vmist:
+        </p>
+        <button type="button" onclick="myFunction()">Click Me!</button>
+        <p id="demo3">Ce demonstracija</p>
+        <script>
+            function myFunction() {
+                document.getElementById("demo3").innerHTML="Hello JavaScript!";
+            }
+        </script>
+        <hr>
+        <p>
+            JavaScript moze zminjuvaty styli:
+        </p>
+        <p id="demo4">JavaScript moze zminjuvaty styli HTML elementa</p>
+        <script>
+            function myFunction1() {
+                document.getElementById("demo4").style.fontSize="25px";
+                document.getElementById("demo4").style.color="red";
+                document.getElementById("demo4").style.backgroundColor="white";
+            }
+        </script>
+        <button type=""button onclick="myFunction1()">Click ME!</button>
+        <hr>
+        <p>JavaScript moze zminjuvaty atrybuty:</p>
+        <script>
+            function light(sw){
+                var pic;
+                if (sw==0){
+                    pic="pic_bulboff.gif"
+                } else{
+                    pic="pic_bulbon.gif"
+                }
+                document.getElementById('myImage').src=pic;
+            }
+        </script>
+        <img id="myImage" src="pic_bulboff.gif" width="100" height="180">
+        <p>
+            <button type="button" onclick="light(1)">Light On</button>
+            <button type="button" onclick="light(0)">Light Off</button>
+        </p>
+        <hr>
+        <h2>Teg HTML <ins>noscript</ins></h2>
+        <p>
+            Teg HTML <ins>noscript</ins> vyznachaje aljternatyvnyj vmist, jakyj vidobrazatymetjsja korystuvacham, jaki vymknuly scenariji u svojemu brauzeri abo majutj brauzer, jakuj ne pidtrymuje scenariji: <br>
+        </p>
+        <p id="demo5"></p>
+        <script>
+            document.getElementById("demo5").innerHTML="Hello JavaScript";
+        </script>
+        <noscript>Sorry, your brawser does not support JavaScript</noscript>
+        <p>Bravser bez pidtrymky JavaScript pokaze tekst vseredyni noscript elementa</p>
+    </body>
+</html>

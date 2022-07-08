@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ua-UA">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Marko Makovyak">
+        <meta name="description" content="HTML entities">
+        <meta name="keywords" content="HTML entities">
+        <link rel="stylesheet" href="styles.css">
+        <title>Сутності HTML</title>
+        <style>
+            th,td{
+                border:1px solid blue;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Сутності HTML</h1>
+        <p>
+            Зарезервовані символи в HTML повинні бути замінені символьними сутностями.
+        </p>
+        <hr>
+
+        <h2>Сутності HTML</h2>
+        <p>
+            Деякі символи зарезервовано в HTML. <br>
+            Якщо ви використовуєте в тексті знаки менше або більше, 
+            браузер може змішати їх з тегами. <br>
+            Символьні сутності використовуються для відображення символів в HTML. <br>
+            Суть символу виглядає так: <br>
+            <code>
+                <q>&entity_name</q> <br>
+                Або <br>
+                <q>&#entity_number</q> <br>
+            </code>
+            Щоб відобразити знак менше (&lt;) ми повинні записати <strong>& lt;</strong> або <strong> &# 60; </strong> (без пробілів)
+            <b>Перевага використання назви об'єкта: іи'я</b> об'єкта легко запам'ятати. <br>
+            <b>Недолік використання назви об'єктів:</b> браузери можуть підтримувати не всі назви
+            об'єктів, але підтримка номерів об'єктів є хорошою.
+        </p>
+        <hr>
+
+        <h2>Нерозривний пробіл</h2>
+        <p>
+            Часто використовуваною сутністю в html є нерозривний пробіл: & nbsp; <br>
+            Нерозривний пробіл - це пробіл, який не розривається на новий рядок. <br>
+            Два слов, розділені нерозривним пробілом, злипнуться (не перейдуть на новий рядок).
+            Це зручно, коли порушення слів може зашкодити. <br>
+            Приклади: <br>
+        </p>
+        <ul>
+            <li>
+                10 km/h
+            </li>
+            <li>
+                10 p.m.
+            </li>
+        </ul> 
+        <p>
+             Інишим поширеним використанням нерозривного пробілу є запобігання браузерам обрізати
+             пробіли на сторінках HTML. <br>
+             Якщо ви введете в текст 10 пробілів, браузер видалить 9 з них. Щоб додати справжні 
+             пробліи до тексту, ви можете використовувати & nbsp; характерна сутність.
+        </p>
+        <p>
+            <b>Порада:</b> нерозривнй дефіс(-) використовується для визначення дефісу, який
+        не розривається на новий рядок
+        </p>
+        <table>
+            <tr>
+                <th><b>Result</b></th>
+                <th><b>Description</b></th>
+                <th><b>Entity Name (без пробілів)</b></th>
+                <th><b>Entity Number (без пробілів)</b></th>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>non-breaking space</td>
+                <td>& nbsp;</td>
+                <td>&# 160;</td>
+            </tr>
+            <tr>
+                <td>&lt;</td>
+                <td>less than</td>
+                <td>& lt;</td>
+                <td>&# 60;</td>
+            </tr>
+            <tr>
+                <td>&gt;</td>
+                <td>greater than</td>
+                <td>& gt;</td>
+                <td>&# 62;</td>
+            </tr>
+            <tr>
+                <td>&amp;</td>
+                <td>ampersand</td>
+                <td>& amp;</td>
+                <td>&# 38;</td>
+            </tr>
+            <tr>
+                <td>&quot;</td>
+                <td>double quotetion mark</td>
+                <td>& quot;</td>
+                <td>&# 34;</td>
+            </tr>
+            <tr>
+                <td>&apos;</td>
+                <td>single quotetion mark (apostrophe)</td>
+                <td>& apos;</td>
+                <td>&# 39;</td>
+            </tr>
+            <tr>
+                <td>&cent;</td>
+                <td>cent</td>
+                <td>& cent;</td>
+                <td>&# 162</td>
+            </tr>
+            <tr>
+                <td>&pound;</td>
+                <td>pound</td>
+                <td>& pound;</td>
+                <td>&# 163;</td>
+            </tr>
+            <tr>
+                <td>&yen;</td>
+                <td>yen</td>
+                <td>& yen;</td>
+                <td>&# 165;</td>
+            </tr>
+            <tr>
+                <td>&euro;</td>
+                <td>euro</td>
+                <td>& euro</td>
+                <td>&# 8364</td>
+            </tr>
+            <tr>
+                <td>&copy;</td>
+                <td>copyright</td>
+                <td>& copy;</td>
+                <td>&# 169;</td>
+            </tr>
+            <tr>
+                <td>&reg;</td>
+                <td>register trademark</td>
+                <td>& reg;</td>
+                <td>&# 174;</td>
+            </tr>
+         </table>
+         <p><b>Примітка:</b> назви об'єктів чутливі до регістру.</p>
+    </body>
+</html>

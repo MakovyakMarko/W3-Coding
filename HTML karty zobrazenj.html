@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ua-UA">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML karty zobrazenj</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>HTML karty zobrazenj</h1>
+        <p>
+            Za dopomogoju kart zobrazenj HTML vy mozete stvorjuvaty na zobrazenni oblasti, jaki mozna natuskaty.
+
+        </p>
+        <hr>
+        <h3>Karty zobrazenj</h3>
+        <p>
+            Teg HTML <ins>map</ins> vyznachae kartu zobrazennja. Kaerta zobrazenj- ce zobrazennja z oblastjamy, jaki mozna naetysnuty.
+            Oblasti vyznachajutjsja odnym abo kiljkoma <ins>area</ins> tegamy.<br>
+            Sprobyjte natysnuty na kompjuter, telefon abo chashky kavy na zobrazenni nyzche<br>
+            <br>
+            img src="map.jpg" alt="Workplace" usemap="#workmap"
+            map name="workmap"
+            area shape="rect" coords="34,44,270,350" alt="Computer" href="mappc.html"
+            area shape="rect" coords="290,172,333,250" alt="Phone" href="MapPhone.html"
+            area shape="circle" coords="337,300,44" alt="Coffee" href="MapCoffee.html"
+            /map
+        
+        </p>
+        <img src="map.jpg" alt="Workplace" usemap="#workmap">
+        <map name="workmap">
+            <area shape="rect" coords="34,44,270,350" alt="Computer" href="mappc.html">
+            <area shape="rect" coords="290,172,333,250" alt="Phone" href="MapPhone.html">
+            <area shape="circle" coords="337,300,44" alt="Coffee" href="MapCoffee.html">
+        </map>
+        <hr>
+        <h3>Jak ce pracjuje?</h3>
+        <p>
+            Ideja karty zobrazenj poljagae v tomu, scho vy povynni maty mozlyvistj vykonuvaty
+            rizni diji zalezno vid togo, de na zobrazenni vu klacaete.<br>
+            Schob stvoryty kartu zaobrazennja, vam znadobytjsja zobrazennja ta dejakyj HTML-kod,
+            scho opusyje oblasti, jaki mozna natysnuty. 
+        </p>
+        <hr>
+        <h3>Zobrazennja</h3>
+        <p>
+            Zobrazennja vstavljaetjsja za dopomogoju <ins>img</ins> tegu. Jedyna vidminnistj vid inshyh zobrazenj
+            poljagae v tomu. scho vy povynni dodaty <ins>usemap</ins> atrybut:<br>
+            img src="workplace.jpg" alt="workplace" usemap="#workmap"<br>
+            <br>
+            Znachennja <ins>usemap</ins> pochynaetjsja z hesh-tega #, za jakym slidue nazva zobrazennja,
+            i vykorystovuetjsja dlja stvorennja zvjazku miz zobrazennjam i kartoju zobrazennja.
+            <b>Porada.</b> Vu mozete vykorystovuvaty budj jake zobrazennja jak kartu zaobrazenj!
+        </p>
+        <hr>
+        <h3>Stvoryty kartu zobrazenj</h3>
+        <p>
+            Potim dodajte <ins>map</ins> element. <br>
+            Element <ins>map</ins> vykorystovuetjsja dlja stvorennja karty zobrazennja i povjazuetjsja iz zobrazennjam za dopomogoju neobhidnogo <ins>name</ins> atrybuta:<br>
+            map name="workmap" <br>
+            <br>
+            Atrybut <ins>name</ins> povynen maty te same znachennja scho i atrybut <ins>usemap</ins> v tegy <ins>img</ins><br>
+        </p>
+        <hr>
+        <h3>Oblasti</h3>
+        <p>
+            Potim dodajte oblasti jaki mozna natysnuty. <br>
+            Oblastj, jaku mozna natysnuty vyznachaetjsja za dopomogoju <ins>area</ins> elementa. <br>
+        </p>
+        <h4>Forma</h4>
+        <p>
+            Vy povynni vyznachyty formu klikabeljnoji oblasti, i vy mozete vybraty odne z cyh znachenj:
+        </p>    
+        <ul>
+            <li>
+                <ins>rect</ins> - vyznachaje prjamokutnu oblastj
+            </li>
+            <li>
+                <ins>circle</ins> - vyznachaje krugovu oblastj 
+            </li>
+            <li>
+                <ins>poly</ins> - vyznachaje poligonaljnu oblastj
+            </li>
+            <li>
+                <ins>default</ins> - vyznachaje vesj region
+            </li>
+        </ul>
+        <p>
+            Vy takoz povynni vyznachyty dejaki koordynaty, schob maty mozlyvistj rozmistyty klikabeljnu oblastj na zobrazenni.
+        </p>
+        <h4>Prjamokutna forma</h4>
+        <p>
+            Koordynaty dlja <ins>shape="rect"</ins> podajutjsja paramy, odna dlja osi x, odna dlja osi y. <br>
+            Otze koordunaty 33,44 roztashovani na vidstani 34 pikseliv vid livogo polja ta 44 pikseli vid verhnjogo:<br>
+        </p> 
+        <img src="wpcoord1.jpg" alt="Coord Shape=rect"> <br>
+        <p>
+            Koordynaty 270,350 roztashovani na vidstani 270 pikselivvid livogo polja ta 350 pikseliv vid verhnjogo: <br>
+        </p>
+        <img src="wpcoord2.jpg" alt="Coord Shape=rect"> <br>
+        <p>
+            Teper u nas dostatnjo dannyh, schob stvoryty klikabeljnu prjamokutnu oblastj: <br>
+            area shape="rect" coords="34,44,270,350" href="mappc.html"<br>
+        </p>
+        <img src="wpcoord.jpg" alt="coord">
+        <br>
+        <h4>
+            Forma = kolo
+        </h4>
+        <p>
+            <ins>Shape=circle</ins> schob dodaty oblasti kola, spochatky znajditj koordynaty centry kola: 337,300 <br>
+        </p>
+        <img src="wpcoord3.jpg" alt="CircleCoord">
+        <p>
+            Potim vkazitj radius kola: 44 px
+        </p>
+        <img src="wpcoord4.jpg" alt="CircleRadius">
+        <p>
+            Teper y nas dostatnjo dannyh, schob stvoryty krugovu oblastj, jaku mozna natyskaty: <br>
+            area shape="circle" coords="337,300,44" href="coffee.html" <br>
+            Ce oblastj jaka staje dostupnoju dlja natyskannja i sprjamovuje korystuvacha na storinky "coffee.html"
+        </p>
+        <img src="wpcoord5.jpg" alt="CircleCoord">
+        <br>
+        <h4>Forma poligranna</h4>
+        <p>
+            <ins>Shape="poly"</ins> mistutj kiljlka koordynatnyh tochok, scho stvorjuje formu, utvorenu prjamymy linijamy (bagatokutnyk). <br>
+            Ce mozna vykorystovuvaty dlja stvorennja budj-jakoji formy. <br>
+            Jak mozlyvo u formi kruasana! <br>
+            Jak my mozemo zrobyty kruasan na formi klikabeljnym posylannjam?
+        </p>
+        <img src="k.jpg" alt="Kruasan">
+        <br>
+        <p>
+            My povynni znajty koordynaty x i y dlja vsih krajiv kryasana:
+        </p>
+        <img src="k1.jpg" alt="KruasanCoord">
+        <p>
+            Koordynaty vhodjatj paramy, odna dlja osi x, odna dlja osi y: <br>
+            area shape="poli"
+            coords="140,121,181,116,204,222,191,270,140,329,85, 355,58,352, 37,322,40,259, 103,161,128,147" href="croissant.html" <br>
+            Mozete nazaty na kruasan na zobrazenni nysche:
+        </p>
+        <img src="k.jpg" alt="croissant" usemap="#kmap">
+        <map name="kmap">
+            <area shape="poly"
+            coords="140,121,181,116,204,222,191,270,140, 329,85,355,58,352,37,322,40,259,103, 161,128,147" href="croissant.html">
+        </map>
+        <hr>
+        <h3>Karta zobrazenj i JavaScript</h3>
+        <p>
+            Oblastj, jaky mozna natysnuty takoz moze zapustyty funkciju JavaScript. <br>
+            Dodajte <ins>click</ins> podiju do <ins>area</ins> elementa, schob vykovaty funkciju JavaScript: <br>
+            <br>
+            map name="workmap" <br>
+                    area shape="circle" coords="337,300,44" href="coffee.html" onclick="MyFunction()" <br>
+            map<br>
+            script <br>
+            function mFunction(){ <br>
+                alert ("You clicked the cofy cup!") <br>
+            } <br> 
+            /script <br>
+            <br>
+            Natysnitj na chashci whob zapustyty JavaScript: <br>
+        </p>
+        <img src="map 1.jpg" alt="mapJs" usemap="#Workmap" width="400" height="379">
+        <map name="Workmap">
+        <area shape="circle" coords="337,300,44" hraf="coffee.html" onclick="myFunction()">
+        </map>
+        <script>
+            function myFunction() {
+                alert("You clicked the coffee cup!")
+            }
+        </script>
+        <br>
+        <hr>
+        <h3>Pidsumok rozdilu</h3>
+        <ul>
+            <li>
+                <ins>map</ins> Vykorystovujte element HTML dlja vyznachennja karty zobrazennjja
+            </li>
+            <li>
+                Vykorystovujte <ins>area</ins> element HTML, schob vyznachyty zony, jaki mozna natysnuty na karti zobrazennjja
+            </li>
+            <li>
+                Vykorystovujte <ins>usemap</ins> atrybut HTML <ins>img</ins> elemente, schob vkazaty kartu zobrazennja
+            </li>
+        </ul>
+    </body>
+</html>

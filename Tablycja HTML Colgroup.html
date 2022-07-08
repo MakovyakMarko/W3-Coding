@@ -1,0 +1,308 @@
+<!DOCTYPE html> 
+<html lang="ua-UA">
+    <head>
+        <meta chatset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tablycja HTML Colgroup</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            table,th,td{
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            td:hover,th:hover{
+                background-color:red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Tablycja HTML Colgroup</h1>
+        <p>
+            Element <ins>colgroup</ins> vykorystovyaetjsja dlja stylizaciji okremyh stvpciv tablyci. <br>
+        </p>
+        <h3>Tablycja HTML Colgroup</h3>
+        <p>
+            Jakscho vy hochete stvoryty stylj dlja dvoh pechyh stovpciv tabluci, vykorystovujte elementy <ins>colgroup</ins> i <ins>col</ins> <br>
+            Element <ins>colgroup</ins> slid vykorystovuvaty jak kontejner dlja specyfikaciji stovpciv. <br>
+            Kozna grupa pochynaetjsja symvolom <ins>col</ins> element. <br>
+            Atrybut <ins>span</ins> vyznachae skiljky stovpciv otrymue stylj. <br>
+            Atrybut <ins>style</ins> vyznachae stylj dlja nadannja stvpcjam. <br>
+            <b>Prymitka.</b> Isnyje dyze obmezenyj vybir legaljnyh vlastyvostej CSS dlja colgroups <br>
+        </p>
+        <table style="width:100%">
+            <colgroup>
+            <col span="5" style="background-color: #D6EEEE">
+            </colgroup>
+            <tr>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+                <th>Sun</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+                <td>26</td>
+                <td>27</td>
+                <td>28</td>
+            </tr>
+            <tr>
+                <td>29</td>
+                <td>30</td>
+                <td>31</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </table>
+        <p>
+            <b>Prymitka.</b> teg <ins>colgroup</ins> mae buty dochirnym 
+            <ins>table</ins> elementom i povynen rozmischyvatusja pered 
+            bydj jakym inschym elementom tablyci, napryklad <ins>thead</ins>,
+            <ins>tr</ins>, <ins>td</ins> toscho, ale pislja <ins>caption</ins>
+            elementa, jakscho vin prysutnij.
+        </p>
+        <hr>
+        <h3>Pravovi vlastyvosti CSS</h3>
+        <p>
+            Isnye lyshe dyze obmezenyj vybir vlastyvostej CSS,jaki dozvoleno vykorystovuvaty
+            v kolgrypi: <br>
+            <ins>width</ins> vlastyvistj <br>
+            <ins>visibility</ins> vlastyvosti <br>
+            <ins>background</ins> vlastyvosti <br>
+            <ins>border</ins> vlastyvosti <br>
+            <br>
+            Inshi vlatyvosti CSS ne vplyvatymytj na vashi tablyci.
+        </p>
+        <hr>
+        <h3>Kiljka elementiv Col</h3>
+        <p>
+            Jakscho vy hochete stvoryty biljshe stovpciv u riznyh styljah, 
+            vykorystovujte biljshe <ins>col</ins> elementiv vseredyni <ins>colgroup</ins>:
+        </p>
+        <table style="width:100%">
+            <colgroup>
+            <col span="5" style="background-color: yellow">
+            <col span="2" style="background-color: #0000ff">
+            </colgroup>
+            <tr>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+                <th>Sun</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+                <td>26</td>
+                <td>27</td>
+                <td>28</td>
+            </tr>
+            <tr>
+                <td>29</td>
+                <td>30</td>
+                <td>31</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </table>
+        <hr>
+        <h3>Porozni Colgroups</h3>
+        <p>
+            Jakscho vy hochete stylizuvaty stovpci v seredyni tablyci, vstavte
+            "poroznij" <ins>col</ins> element (bez styliv) dlja stovpciv pered:
+        </p>
+        <table style="width:100%">
+            <colgroup>
+            <col span="5">
+            <col span="2" style="background-color: #0000ff">
+            </colgroup>
+            <tr>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+                <th>Sun</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+                <td>26</td>
+                <td>27</td>
+                <td>28</td>
+            </tr>
+            <tr>
+                <td>29</td>
+                <td>30</td>
+                <td>31</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </table>
+        <hr>
+        <h3>Shovaty stovpci</h3>
+        <p>
+            Vy mozete pryhovaty stovpci z <ins>visibility:collapse</ins> vlastyvistju:
+        </p>
+        <table style="width:100%">
+            <colgroup>
+            <col span="5">
+            <col span="2" style="visibility:collapse;">
+            </colgroup>
+            <tr>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+                <th>Sun</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+                <td>26</td>
+                <td>27</td>
+                <td>28</td>
+            </tr>
+            <tr>
+                <td>29</td>
+                <td>30</td>
+                <td>31</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </table>
+    </body>
+</html>

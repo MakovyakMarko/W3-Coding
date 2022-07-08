@@ -1,0 +1,346 @@
+<!DOCTYPE html> 
+<html lang="ua-UA">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mezi tablyci HTML</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Mezi tablyci html</h1>
+        <p>
+            Tablyci html mozutj maty mezi riznyh styliv i form
+        </p>
+        <hr>
+        <h3>Jak dodaty mezu</h3>
+        <p>
+            Koly vy dodaete kordon do tablyci, vy takoz doaete mezi navkolo koznoki klitynky tablyci:     
+        </p>
+        <table style="border: 2px solid #ff0000; width:33%;">
+            <tr>
+                <th style="border: 2px solid #ff0000;"> A</th>
+                <th style="border: 2px solid #ff0000;"> B</th>
+                <th style="border: 2px solid #ff0000;"> C</th>
+            </tr>
+            <tr>
+                <td style="border: 2px solid #ff0000;"> Aa</td>
+                <td style="border: 2px solid #ff0000;"> Bb</td>
+                <td style="border: 2px solid #ff0000;"> Cc</td>
+            </tr>
+            <tr>
+                <td style="border: 2px solid #ff0000;"> Dd</td>
+                <td style="border: 2px solid #ff0000;"> Ee</td>
+                <td style="border: 2px solid #ff0000;"> Ff</td>
+            </tr>
+        </table>
+        <p>
+            Schob dodaty mezu, vykorystovujte <ins>border</ins>  vlastyvistj CSS dlja elementiv <ins>table,th,td</ins>
+        </p>
+        <hr>
+        <h3>Zgornuti mezi tablyci</h3>
+        <p>
+            Schob unyknuty podvijnyh mez, jak u pryladi vysche, ystanovitj dlja <ins>border-collaps</ins> vlastyvosti CSS znachennja <ins>collapse</ins> <br>
+            Ce pryvede do zgortannja kordoniv d odny mezy
+        </p>
+        <table style="border-collapse:collapse; width:33%;">
+            <tr>
+                <th style="border: 2px solid #ff0000; "> A</th>
+                <th style="border: 2px solid #ff0000; "> B</th>
+                <th style="border: 2px solid #ff0000; "> C</th>
+            </tr>
+            <tr>
+                <td style="border: 2px solid #ff0000; "> Aa</td>
+                <td style="border: 2px solid #ff0000; "> Bb</td>
+                <td style="border: 2px solid #ff0000; "> Cc</td>
+            </tr>
+            <tr>
+                <td style="border: 2px solid #ff0000;"> Dd</td>
+                <td style="border: 2px solid #ff0000;"> Ee</td>
+                <td style="border: 2px solid #ff0000;"> Ff</td>
+            </tr>
+        </table>
+        <hr>
+        <h3>Mezi tablycj styliv</h3>
+        <p>
+            Jakscho vstanovyty kolir fonu dlja koznoji klitynky ta nadaty mezi bilyj kolir (tak samo jak i fon documenta), vy otrymaete vrazennja nevydymoji mezi:
+        </p>
+        <table style="border: 1px;  width:33%;">
+            <tr style="border: 1px;">
+                <th style="border: 1px;background-color:red"> A</th>
+                <th style="border: 1px;background-color:red"> B</th>
+                <th style="border: 1px;background-color:red"> C</th>
+            </tr>
+            <tr  style="border: 1px;">
+                <td style="border: 1px;background-color:red"> Aa</td>
+                <td style="border: 1px;background-color:red"> Bb</td>
+                <td style="border: 1px;background-color:red"> Cc</td>
+            </tr>
+            <tr  style="border: 1px;">
+                <td style="border: 1px;background-color:red"> Dd</td>
+                <td style="border: 1px;background-color:red"> Ee</td>
+                <td style="border: 1px;background-color:red"> Ff</td>
+            </tr>
+        </table>
+        <hr>
+        <h3>Mezi krygloji tablyci</h3>
+        <p>
+            Z <ins>border-radius</ins> vlastyvosti, mezi otrymujutj zakrugleno kuty:
+        </p>
+        <table style="border-radius: 10px;  width:33%;border: 2px solid #ff0000;">
+            <tr style="border-radius: 10px;">
+                <th style="border: 2px solid #ff0000;border-radius: 10px;"> A</th>
+                <th style="border: 2px solid #ff0000;border-radius: 10px;"> B</th>
+                <th style="border: 2px solid #ff0000;border-radius: 10px;"> C</th>
+            </tr>
+            <tr style="border-radius: 10px;">
+                <td style="border: 2px solid #ff0000;border-radius: 10px;"> Aa</td>
+                <td style="border: 2px solid #ff0000;border-radius: 10px;"> Bb</td>
+                <td style="border: 2px solid #ff0000;border-radius: 10px;"> Cc</td>
+            </tr>
+            <tr style="border-radius: 10px;">
+                <td style="border: 2px solid #ff0000;border-radius: 10px;"> Dd</td>
+                <td style="border: 2px solid #ff0000;border-radius: 10px;"> Ee</td>
+                <td style="border: 2px solid #ff0000;border-radius: 10px;"> Ff</td>
+            </tr>
+        </table>
+        <hr>
+        <p>
+            Propystitj mezu navkolo border:
+        </p>
+        <table style="border: 0px; width:33%;">
+            <tr style="border-radius: 10px;">
+                <th style="border-radius: 10px;border: 2px solid #ff0000;"> A</th>
+                <th style="border-radius: 10px;border: 2px solid #ff0000;"> B</th>
+                <th style="border-radius: 10px;border: 2px solid #ff0000;"> C</th>
+            </tr>
+            <tr style="border-radius: 10px;">
+                <td style="border-radius: 10px;border: 2px solid #ff0000;"> Aa</td>
+                <td style="border-radius: 10px;border: 2px solid #ff0000;"> Bb</td>
+                <td style="border-radius: 10px;border: 2px solid #ff0000;"> Cc</td>
+            </tr>
+            <tr style="border-radius: 10px;">
+                <td style="border-radius: 10px;border: 2px solid #ff0000;"> Dd</td>
+                <td style="border-radius: 10px;border: 2px solid #ff0000;"> Ee</td>
+                <td style="border-radius: 10px;border: 2px solid #ff0000;"> Ff</td>
+            </tr>
+        </table>
+        <hr>
+        <h3>Pynktyrni ta inshi mezi tablycj</h3>
+        <p>
+            Za bopomogoju <ins>border-style</ins> vlastyvosti vy mozete vstanovyty vygljad kordony: <br>
+            Dopyskajutjsja taki znachennja: <br>
+            dotted; <br>
+            dashed; <br>
+            solid; <br>
+            double; <br>
+            groove; <br>
+            ridge; <br>
+            inset; <br>
+            outset; <br>
+            none; <br>
+            hiden;
+        </p>
+        <table style="width:33%;">
+            <tr style="border-radius: 10px;">
+                <th style="border-radius: 10px;border: 2px dotted #ff0000;"> A</th>
+                <th style="border-radius: 10px;border: 2px dotted #ff0000;"> B</th>
+                <th style="border-radius: 10px;border: 2px dotted #ff0000;"> C</th>
+            </tr>
+            <tr style="border-radius: 10px;">
+                <td style="border-radius: 10px;border: 2px dotted #ff0000;"> Aa</td>
+                <td style="border-radius: 10px;border: 2px dotted #ff0000;"> Bb</td>
+                <td style="border-radius: 10px;border: 2px dotted #ff0000;"> Cc</td>
+            </tr>
+            <tr style="border-radius: 10px;">
+                <td style="border-radius: 10px;border: 2px dotted #ff0000;"> Dd</td>
+                <td style="border-radius: 10px;border: 2px dotted #ff0000;"> Ee</td>
+                <td style="border-radius: 10px;border: 2px dotted #ff0000;"> Ff</td>
+            </tr>
+        </table>
+        <hr>
+
+        <table style="width:33%;">
+            <tr style="border-radius: 10px;">
+                <th style="border-radius: 10px;border: 2px dashed #ff0000;"> A</th>
+                <th style="border-radius: 10px;border: 2px dashed #ff0000;"> B</th>
+                <th style="border-radius: 10px;border: 2px dashed #ff0000;"> C</th>
+            </tr>
+            <tr style="border-radius: 10px;">
+                <td style="border-radius: 10px;border: 2px dashed #ff0000;"> Aa</td>
+                <td style="border-radius: 10px;border: 2px dashed #ff0000;"> Bb</td>
+                <td style="border-radius: 10px;border: 2px dashed #ff0000;"> Cc</td>
+            </tr>
+            <tr style="border-radius: 10px;">
+                <td style="border-radius: 10px;border: 2px dashed #ff0000;"> Dd</td>
+                <td style="border-radius: 10px;border: 2px dashed #ff0000;"> Ee</td>
+                <td style="border-radius: 10px;border: 2px dashed #ff0000;"> Ff</td>
+            </tr>
+        </table>
+        <hr>
+        <table style="width:33%;">
+            <tr style="border-radius: 10px;">
+                <th style="border-radius: 10px;border: 2px solid #ff0000;"> A</th>
+                <th style="border-radius: 10px;border: 2px solid #ff0000;"> B</th>
+                <th style="border-radius: 10px;border: 2px solid #ff0000;"> C</th>
+            </tr>
+            <tr style="border-radius: 10px;">
+                <td style="border-radius: 10px;border: 2px solid #ff0000;"> Aa</td>
+                <td style="border-radius: 10px;border: 2px solid #ff0000;"> Bb</td>
+                <td style="border-radius: 10px;border: 2px solid #ff0000;"> Cc</td>
+            </tr>
+            <tr style="border-radius: 10px;">
+                <td style="border-radius: 10px;border: 2px solid #ff0000;"> Dd</td>
+                <td style="border-radius: 10px;border: 2px solid #ff0000;"> Ee</td>
+                <td style="border-radius: 10px;border: 2px solid #ff0000;"> Ff</td>
+            </tr>
+        </table>
+        <hr>
+        <table style="width:33%;">
+            <tr style="border-radius: 10px;">
+                <th style="border-radius: 10px;border: 3px double #ff0000;"> A</th>
+                <th style="border-radius: 10px;border: 3px double #ff0000;"> B</th>
+                <th style="border-radius: 10px;border: 3px double #ff0000;"> C</th>
+            </tr>
+            <tr style="border-radius: 10px;">
+                <td style="border-radius: 10px;border: 3px double #ff0000;"> Aa</td>
+                <td style="border-radius: 10px;border: 3px double #ff0000;"> Bb</td>
+                <td style="border-radius: 10px;border: 3px double #ff0000;"> Cc</td>
+            </tr>
+            <tr style="border-radius: 10px;">
+                <td style="border-radius: 10px;border: 3px double #ff0000;"> Dd</td>
+                <td style="border-radius: 10px;border: 3px double #ff0000;"> Ee</td>
+                <td style="border-radius: 10px;border: 3px double #ff0000;"> Ff</td>
+            </tr>
+        </table>
+        <hr>
+        <table style="width:33%;">
+            <tr style="border-radius: 10px;">
+                <th style="border-radius: 10px;border: 3px groove #ff0000;"> A</th>
+                <th style="border-radius: 10px;border: 3px groove #ff0000;"> B</th>
+                <th style="border-radius: 10px;border: 3px groove #ff0000;"> C</th>
+            </tr>
+            <tr style="border-radius: 10px;">
+                <td style="border-radius: 10px;border: 3px groove #ff0000;"> Aa</td>
+                <td style="border-radius: 10px;border: 3px groove #ff0000;"> Bb</td>
+                <td style="border-radius: 10px;border: 3px groove #ff0000;"> Cc</td>
+            </tr>
+            <tr style="border-radius: 10px;">
+                <td style="border-radius: 10px;border: 3px groove #ff0000;"> Dd</td>
+                <td style="border-radius: 10px;border: 3px groove #ff0000;"> Ee</td>
+                <td style="border-radius: 10px;border: 3px groove #ff0000;"> Ff</td>
+            </tr>
+        </table>
+        <hr>
+        <table style="width:33%;">
+            <tr style="border-radius: 10px;">
+                <th style="border-radius: 10px;border: 3px ridge #ff0000;"> A</th>
+                <th style="border-radius: 10px;border: 3px ridge #ff0000;"> B</th>
+                <th style="border-radius: 10px;border: 3px ridge #ff0000;"> C</th>
+            </tr>
+            <tr style="border-radius: 10px;">
+                <td style="border-radius: 10px;border: 3px ridge #ff0000;"> Aa</td>
+                <td style="border-radius: 10px;border: 3px ridge #ff0000;"> Bb</td>
+                <td style="border-radius: 10px;border: 3px ridge #ff0000;"> Cc</td>
+            </tr>
+            <tr style="border-radius: 10px;">
+                <td style="border-radius: 10px;border: 3px ridge #ff0000;"> Dd</td>
+                <td style="border-radius: 10px;border: 3px ridge #ff0000;"> Ee</td>
+                <td style="border-radius: 10px;border: 3px ridge #ff0000;"> Ff</td>
+            </tr>
+        </table>
+        <hr>
+        <table style="width:33%;">
+            <tr style="border-radius: 10px;">
+                <th style="border-radius: 10px;border: 3px inset #ff0000;"> A</th>
+                <th style="border-radius: 10px;border: 3px inset #ff0000;"> B</th>
+                <th style="border-radius: 10px;border: 3px inset #ff0000;"> C</th>
+            </tr>
+            <tr style="border-radius: 10px;">
+                <td style="border-radius: 10px;border: 3px inset #ff0000;"> Aa</td>
+                <td style="border-radius: 10px;border: 3px inset #ff0000;"> Bb</td>
+                <td style="border-radius: 10px;border: 3px inset #ff0000;"> Cc</td>
+            </tr>
+            <tr style="border-radius: 10px;">
+                <td style="border-radius: 10px;border: 3px inset #ff0000;"> Dd</td>
+                <td style="border-radius: 10px;border: 3px inset #ff0000;"> Ee</td>
+                <td style="border-radius: 10px;border: 3px inset #ff0000;"> Ff</td>
+            </tr>
+        </table>
+        <hr>
+        <table style="width:33%;">
+            <tr style="border-radius: 10px;">
+                <th style="border-radius: 10px;border: 3px outset #ff0000;"> A</th>
+                <th style="border-radius: 10px;border: 3px outset #ff0000;"> B</th>
+                <th style="border-radius: 10px;border: 3px outset #ff0000;"> C</th>
+            </tr>
+            <tr style="border-radius: 10px;">
+                <td style="border-radius: 10px;border: 3px outset #ff0000;"> Aa</td>
+                <td style="border-radius: 10px;border: 3px outset #ff0000;"> Bb</td>
+                <td style="border-radius: 10px;border: 3px outset #ff0000;"> Cc</td>
+            </tr>
+            <tr style="border-radius: 10px;">
+                <td style="border-radius: 10px;border: 3px outset #ff0000;"> Dd</td>
+                <td style="border-radius: 10px;border: 3px outset #ff0000;"> Ee</td>
+                <td style="border-radius: 10px;border: 3px outset #ff0000;"> Ff</td>
+            </tr>
+        </table>
+        <hr>
+        <table style="width:33%;">
+            <tr style="border-radius: 10px;">
+                <th style="border-radius: 10px;border: 3px none #ff0000;"> A</th>
+                <th style="border-radius: 10px;border: 3px none #ff0000;"> B</th>
+                <th style="border-radius: 10px;border: 3px none #ff0000;"> C</th>
+            </tr>
+            <tr style="border-radius: 10px;">
+                <td style="border-radius: 10px;border: 3px none #ff0000;"> Aa</td>
+                <td style="border-radius: 10px;border: 3px none #ff0000;"> Bb</td>
+                <td style="border-radius: 10px;border: 3px none #ff0000;"> Cc</td>
+            </tr>
+            <tr style="border-radius: 10px;">
+                <td style="border-radius: 10px;border: 3px none #ff0000;"> Dd</td>
+                <td style="border-radius: 10px;border: 3px none #ff0000;"> Ee</td>
+                <td style="border-radius: 10px;border: 3px none #ff0000;"> Ff</td>
+            </tr>
+        </table>
+        <hr>
+        <table style="width:33%;">
+            <tr style="border-radius: 10px;">
+                <th style="border-radius: 10px;border: 3px hidden #ff0000;"> A</th>
+                <th style="border-radius: 10px;border: 3px hidden #ff0000;"> B</th>
+                <th style="border-radius: 10px;border: 3px hidden #ff0000;"> C</th>
+            </tr>
+            <tr style="border-radius: 10px;">
+                <td style="border-radius: 10px;border: 3px hidden #ff0000;"> Aa</td>
+                <td style="border-radius: 10px;border: 3px hidden #ff0000;"> Bb</td>
+                <td style="border-radius: 10px;border: 3px hidden #ff0000;"> Cc</td>
+            </tr>
+            <tr style="border-radius: 10px;">
+                <td style="border-radius: 10px;border: 3px hidden #ff0000;"> Dd</td>
+                <td style="border-radius: 10px;border: 3px hidden #ff0000;"> Ee</td>
+                <td style="border-radius: 10px;border: 3px hidden #ff0000;"> Ff</td>
+            </tr>
+        </table>
+        <hr>
+        <h3>Kolir kordony</h3>
+        <p>
+            Z <ins>border-color</ins> vlastyvosti, vu mozete vstanovutu kolir mezi:
+        </p>
+        <table style="width:33%; ">
+            <tr>
+                <td style="border:3px solid; border-color:#00ff00;">  Aa</td>
+                <td style="border:3px solid; border-color:#00ff00;">  Bb</td>
+                <td style="border:3px solid; border-color:#00ff00;">  Cc</td>
+            </tr>
+            <tr>
+                <td style="border:3px solid; border-color:#00ff00;">  Dd</td>
+                <td style="border:3px solid; border-color:#00ff00;">  Ee</td>
+                <td style="border:3px solid; border-color:#00ff00;">  Ff</td>
+            </tr>
+            <tr>
+                <td style="border:3px solid; border-color:#00ff00;">  Gg</td>
+                <td style="border:3px solid; border-color:#00ff00;">  Hh</td>
+                <td style="border:3px solid; border-color:#00ff00;">  Ii</td>
+            </tr>
+        </table>
+    </body>
+</html>

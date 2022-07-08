@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ua-UA">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Стилі HTML</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            .code{
+                background-color: white;
+                color:black;
+                border:none;
+                text-align:left;
+            }
+        </style>
+    </head>
+    <body> 
+        <h1>Стилі HTML</h1>
+        <p>
+            Атрибут HTML style використовується для додавання стилів до елемента
+            таких як колір, шрифт, розмір тощо. Приклад
+        </p>
+        <code>
+            &lt;p&gt;Я звичайний&lt;/p&gt; <br/>
+            &lt;p style="color:red;"&gt;Я червоний&lt;/p&gt; <br/>
+            &lt;p style="color:blue;"&gt;Я синій&lt;/p&gt; <br/>
+            &lt;p style="font-size:50px;"&gt;Я ВЕЛИКИЙ&lt;/p&gt; <br/>      
+        </code>
+        <p>
+            Відображатиметься так:
+        </p>
+        <p class="code">Я звичайний</p>
+        <p class="code" style="color:red;">Я червоний</p>
+        <p class="code" style="color:blue;">Я синій</p>
+        <p class="code" style="font-size:50px;">Я ВЕЛИКИЙ</p>
+        <hr>
+        <h3>Атрибут стилів HTML</h3>
+        <p>Атрибут HTML style має такий синтаксис: <br/> 
+            &lt;tagname style="property:value" &gt; <br/>
+            <br/>
+            Властивість є властивістю CSS. Значення - це значення CSS.
+        </p>
+        <code>
+            &lt;h2 style="background-color:powderblue;"&gt;Колір фону&lt;/h2&gt; <br/>
+            &lt;p&gt;CSS background-color властивість, що визначає колір фону для елемента HTML&lt;/p&gt; <br/>
+            &lt;p style="background-color:tomato;"&gt; Якщо добавити в елемент &lt;body&gt; style="background-color: rgb(5, 140, 252);" зробить колір фону голубим&lt;/p&gt;  <br/>
+        </code>
+        <p>Відображатиметься так:</p>
+        <h2 class="code" style="background-color:powderblue;">Колір фону</h2>
+        <p class="code">CSS background-color властивість, що визначає колір фону для елемента HTML</p>
+        <p class="code" style="background-color:tomato;">Якщо добавити в елемент &lt;body&gt; style="background-color: rgb(5, 140, 252);" zrobuv kolir fony golubym </p>
+        <hr>
+
+        <h2>Колір тексту</h2>
+        <p>
+            Властивість CSS color визначає колір тексту для елементу HTML:
+        </p>
+        <code>
+            &lt;h1 style="color:red;"&gt;Це червоний заголовок&lt;/h1&gt; <br/>
+            &lt;p style="color:rgb(238, 196, 27);"&gt; Це золотий параграф&lt;/p&gt;       
+        </code>
+        <p>
+            Відображатиметься так:
+        </p>
+        <h1 class="code" style="color:red;">Це червоний заголовок</h1>
+        <p class="code" style="color:rgb(238, 196, 27);"> Це золотий параграф</p>
+        <hr>
+
+        <h2>Шрифти</h2>
+        <p>
+            Властивість CSS font-family визначає шрифт, який буде використовуватися
+            для елеметна HTML:
+        </p>
+        <code>
+            &lt;h1 style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;"&gt;Це заголовок&lt;/h1&gt; <br/>
+            &lt;p style="font-family:'Arial';"&gt;Це параграф&lt;/p&gt;
+        </code>
+        <p>
+            Відображатиметься так:
+        </p>
+        <h1 class="code" style="font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Це загловок</h1>
+        <p class="code" style="font-family:'Arial';">Це параграф</p>
+        <hr>
+        
+        <h2>Розмір тексту</h2>
+        <p>Властивість font-size визначає розмір тексту для елемента HTML</p>
+        <code>
+            &lt;h1 style="font-size: 300%;"&gt;Це заголовок&lt;/h1&gt;
+            &lt;p style="font-size: 160%;"&gt;Це параграф&lt;/p&gt;
+        </code>
+        <p>
+            Відображатиметься так:
+        </p>
+        <h1 class="code" style="font-size: 300%;">Це заголовок</h1>
+        <p class="code" style="font-size: 160%;">Це параграф</p>
+        <hr>
+
+        <h2>Вирівнювання тексту</h2>
+        <p>
+            Властивість CSS text-align визначає горизонтальне вирівнювання тексту
+            для елемента HTML:
+        </p>
+        <code>
+            &lt;h1 style="text-align: center;"&gt;Це заголовок&lt;/h1&gt;
+            &lt;p style="text-align: right;"&gt;Це параграф&lt;/p&gt;    
+        </code>
+        <p>
+            Відображатиметься так:
+        </p>
+        <h1 class="code" style="text-align: center;">Це заголовок</h1>
+        <p class="code" style="text-align: right;">Це параграф</p>
+        <hr>
+        <ul>
+            <li>
+                Використовуйте style атрибут для стилізації елементів HTML
+            </li>
+            <li>
+                Використовуйте background-color для кольору фону
+            </li>
+            <li>
+                Використовуйте color для кольорів тексту
+            </li>
+            <li>
+                Використовуйте font-family для текстових шрифтів
+            </li>
+            <li>
+                Використовуйте font-size для розмірів тексту
+            </li>
+            <li>
+                Використовуйте text-align для вирівнювання тексту
+            </li>
+        </ul>
+    </body>
+</html>

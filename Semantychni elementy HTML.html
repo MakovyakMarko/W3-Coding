@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ua-UA">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Marko Makovyak">
+        <title>Semantychni elementy HTML</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            .aside{
+                width:25%;
+                padding-left: 15px;
+                margin-left: 15px;
+                float:right;
+                font-style:italic;
+                background-color:#e5e5e5;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Semantychni elementy HTML</h1>
+        <p>
+            Semantychni elementy = ce elemety zi znachennjam
+        </p>
+        <hr>
+        <h2>Scho take semantychni elementy?</h2>
+        <p>
+            Semantychnyj element chitko opysue jogo znachennja jak dlja brauzera, tak i dlja rozrobnyka. <br>
+            Pryklady nesemantychnyh elementiv: <ins>siv</ins>, <ins>span</ins> - nichogo ne rozpovidaje pro jogo zmist. <br>
+            Pryklady semantychnyh elementiv: <ins>form</ins>, <ins>table</ins>, i <ins>article</ins> -chitko vyznachaje jogo zmist. <br>
+        </p>
+        <hr>
+        <h2>Semantychni elementy v HTML</h2>
+        <p>
+            Bagato web-sajtiv mistjatj HTML-kod, napryklad <ins>div id="nav"</ins>, <ins>div class="header"</ins>, <ins>div id="footer"</ins> dlja poznachennja navigaciji, verhnjogo ta nuzhnjogo kolontytuliv. <br>
+            U html je dejaki semantychni elementy, jaki mozna vykorystvuvaty dlja vyznachennja riznyh chastyn web-storinky: <br>
+        </p>
+        <ul>
+            <li>
+                <img src="img_sem_elements.gif" alt="semantyka html" style="float:right">
+            </li>
+            <li>
+                article
+            </li>
+            <li>
+                aside
+            </li>
+            <li>
+                details
+            </li>
+            <li>
+                figcaption
+            </li>
+            <li>
+                figure
+            </li>
+            <li>
+                footer
+            </li>
+            <li>
+                header
+            </li>
+            <li>
+                main
+            </li>
+            <li>
+                mark
+            </li>
+            <li>
+                nav
+            </li>
+            <li>
+                section
+            </li>
+            <li>
+                summary
+            </li>
+            <li>
+                time
+            </li>
+        </ul>
+        <hr>
+        <h2>HTML <ins>section</ins> element</h2>
+        <p>
+            Element <ins>section</ins> vyznachaje rozdil v dokumenti. <br>
+            Vidpovidno do html-dokumentaciji w3c: "Rozdil - ce tematychne grupuvannja vmistu,jak pravylo, iz zagolovkom". <br>
+            Pryklady, de section element mozna vykorystovuvaty:
+        </p>
+        <ul>
+            <li>
+                Rozdily
+            </li>
+            <li>
+                Vstup
+            </li>
+            <li>
+                Novyny
+            </li>
+            <li>
+                Kontaktna informacija
+            </li>
+        </ul>
+        <p>
+            Web-storinku zazvychaj mozna rozdilyty na rozdily dlja vstypy, vmisty ta kontaktnoji informaciji.
+        </p>
+        <section>
+            <h1>WWF</h1>
+            <p>
+                The World Wide Fundation for Nature (WWF) is an international organization working of issues regarding 
+                the conservation, research and restoration of the enviroment, formerly named the World Wildlife Fund. 
+                WWF was founded in 1961.
+            </p>
+        </section>
+        <section>
+            <h1>WWF's Panda Symbol</h1>
+            <p>
+                The Panda has become the symbol of WWF. The well-known panda logo of WWF originated from a panda named
+                Chi Chi that was tranferred from the Beijing Zoo to the London Zoo in the same year of the establishmant of WWF.
+            </p>
+        </section>
+        <hr>
+        <h2>HTML <ins>article</ins> element</h2>
+        <p>
+            Element  <ins>article</ins> vyznachje nezaleznyj, avtonomnyj vmist. <br>
+            Stattja povunna maty sens sama po sobi, i maje buty mozlyvistj poshyrjuvaty jiji nezalezno vid reshty web-sajtu. <br>
+            Pryklady, de element article mozna vykorystovuvaty: 
+        </p>
+        <ul>
+            <li>
+                Povidomlennja na forumi
+            </li>
+            <li>
+                Publikaciji v blozi
+            </li>
+            <li>
+                Komentari korystuvachiv
+            </li>
+            <li>
+                Fartky tovariv
+            </li>
+            <li>
+                Gazetni statti
+            </li>
+        </ul>
+        <article>
+            <h2>Google Chrome</h2>
+            <p>
+                Google Chrome is a web browser developed by Google, released in 2008. Chrome
+                is the world's most popular web browser today!
+            </p>
+        </article>
+        <article>
+            <h2>Mozilla Firefox</h2>
+            <p>
+                Mozilla Firefox is an open-source web browser developed by Mozilla.
+                Firefox has been the second most popular web browser since January, 2018.
+            </p>
+        </article>
+        <article>
+            <h2>Microsoft Edge</h2>
+            <p>
+                Microsoft Edge is a web browser developed by Microsoft, released in 2015.
+                Microsoft Edge replaced Internet Explorer.
+            </p>
+        </article>
+        <hr>
+        <h2>Vkladennja <ins>article</ins> v <ins>section</ins> schy navpaky?</h2>
+        <p>
+            Element <ins>article</ins> vyznachaje avtonomnuj, nezaleznuj vmist. <br>
+            Element <ins>section</ins> vyznachaje rozdil v dokumenti. <br>
+            Chy mozemo my vykorystovuvaty vyznachennja, schob vyrishyty, jak vkladaty ci elementy? Ni, my ne mozemo! <br>
+            Otzhe, vy znajdete storinky html z section elenentamy, scho mistjatj srticle elementy, i navpaky.
+        </p>
+        <hr>
+        <h2>Element HTML <ins>header</ins></h2>
+        <p>
+            Element <ins>header</ins> javljaje soboju kontejner dlja vstupnodo vmistu, abo nabory navigacijnyh posylanj. <br>
+            Zazvychaj header element mistytj:
+        </p>
+        <ul>
+            <li>
+                Odyn abo kiljka elementiv zagolovkka (h1-h6)
+            </li>
+            <li>
+                Logotyp abo znachok
+            </li>
+            <li>
+                Vidomosti pro avtorstvo
+            </li>
+        </ul>
+        <p>
+            <b>Prymitka.</b> V odnomu HTML-elemnti moze buty kiljka <ins>header</ins> elementiv. 
+            Odnak <ins>header</ins> jogo ne mozna pomistyty v <ins>footer</ins>, <ins>adress</ins> abo v inchyj <ins>header</ins> element. <br>
+        </p>
+        <article>
+            <header>
+                <h1>What does WWF do?</h1>
+                <p>WWF's mission:</p>
+            </header>
+            <p>
+                WWF's mission is stop the degradation of our planet's natural enviroment,
+                and build a future in which humans live in harmony with nature.     
+            </p>
+        </article>
+        <hr>
+        <h2>Element html <ins>footer</ins></h2>
+        <p>
+            Element footer vyznachaje nyznij kolontytul dlja dokumenta abo rozdilu. <br>
+            Zazvychaj footer element mistytj:
+        </p>
+        <ul>
+            <li>
+                vidomosti pro avtorstvo
+            </li>
+            <li>
+                informaciju pro avtorsjki prava
+            </li>
+            <li>
+                Kontaktna informacija
+            </li>
+            <li>
+                karta sajtu
+            </li>
+            <li>
+                povernutysja do verhnih posylanja
+            </li>
+            <li>
+                vidpovidni dokumenty
+            </li>
+        </ul>
+        <br>
+        <p>
+            V odnomu dokumenti moze buty kiljka <ins>footer</ins> elementiv
+        </p>
+        <footer>
+            <p>
+                Author: Hage Refsnes
+            </p>
+            <p><a href="mailto:makovyak.marko@gmail.com">send email to Makovyak Marko</a></p>
+        </footer>
+        <hr>
+        <h2>HTML <ins>nav</ins> element</h2>
+        <p>
+            <ins>nav</ins> element vyznachaje nabir posylanj navigaciji. <br>
+            Zvarnitj uvagu, scho NE vsi posylannja documenta povynni buty vseredyni <ins>nav</ins> elementa. <br>
+            Element <ins>nav</ins> pryznachenyj kyshe dlja osnovnyh blokiv navigacijnyh posylanj. <br>
+        </p>
+        <nav>
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+            <a href="#">Link 4</a>
+            <a href="#">Link 5</a>
+        </nav>
+        <hr>
+        <h2>HTML <ins>aside</ins> element</h2>
+        <p>
+            Element <ins>aside</ins> vyznachje dejakyj vmist, krim vmistu, v jakomu vin rozmischenyj (napryklad bichna panelj).
+            Zmist <ins>aside</ins> maje buty oposeredkovano povjazanyj z navkolyshnim smistom.
+        </p>
+        <aside>
+        <p>
+            My family and i visited the ecpot center this summer. The weather was nice, and Epcot was amazing!
+            I had a great summer together with my family!
+        </p>
+        </aside>
+        <aside class="aside">
+            <p>
+                My family and i visited the ecpot center this summer. The weather was nice, and Epcot was amazing!
+                I had a great summer together with my family!
+            </p>
+        </aside>
+        <aside>
+            <p>
+                My family and i visited the ecpot center this summer. The weather was nice, and Epcot was amazing!
+                I had a great summer together with my family!
+            </p>
+        </aside>
+        <hr>
+        <h2>Elementy HTML <ins>figure</ins> i <ins>figcaption</ins></h2>
+        <p>
+            Element <ins>figure</ins> vyznachaje samostijnyj vmist, jak-ot iljustraciji,diagrany,fotografiji, spysky kodiv toscho. <br>
+            Teg <ins>figcaption</ins> vyznachaje zagolovok dlja <ins>figure</ins> elementa. Element
+            <ins>figcaption</ins> moze buty rozmischenyj jak pershyj abo jak ostannij dochirnij <ins>figure</ins>
+            element.
+        </p>
+        <figure>
+            <img src="pic_trulli.jpg" alt="Trulli Italy" style="width:100%">
+            <figcaption>Figure 1. Trulli, Puglia, Italy</figcaption>
+        </figure>
+    </body>
+</html>     

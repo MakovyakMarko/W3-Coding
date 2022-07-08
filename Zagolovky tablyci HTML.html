@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ua_UA">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Zagolovky tablyci HTML</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            table,th,td{
+                border: 1px solid red;
+                border-collapse:collapse;
+            }
+            th{
+                text-align:left;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Zagolovky tablyci HTML</h1>
+        <p>
+            Tablyci HTML mozutj maty zagolovky dlja koznogo stovpcja abo rjadka abo dlja bagatjoh stovpciv/rjadkiv.
+        </p>
+        <h3>Zagolovky tablyci HTML</h3>
+        <p>
+            Zagolovky tablyci vyznachajutjsja <ins>th</ins> elementamy, kozen <ins>th</ins> element javljaje soboju klitynku tablyci.
+        </p>
+        <table style="width:100%">
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+            </tr>
+        </table>
+        <hr>
+        <h3>Zagolovky dlja kiljkoh stovpciv</h3>
+        <p>
+            Vy mozete maty zagolovok, jakyj ohopljue dva abo biljshe stovpciv. <br>
+            Dlja cjogo vykorystovujte <ins>colspan</ins> atrybut na <ins>th</ins> elementi:
+        </p>
+        <table>
+            <tr>
+                <th colspan="2">Name</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>Jall</td>
+                <td>Smith</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+            </tr>
+        </table>
+        <hr>
+        <h3>Zagolovok tablyci</h3>
+        <p>
+            Vy mozete dodaty pidpys, jakyj sluzytj zagolovkom dlja vsieji tablyci. <br>
+            Schob dodaty pidpys do tablyci, skorystajtesj <ins>caption</ins> tegom.
+        </p>
+        <table>
+            <caption>People</caption>
+            <tr>
+                <th colspan="2">Name</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>Jall</td>
+                <td>Smith</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+            </tr>
+        </table> 
+    </body>
+</html>
