@@ -1,0 +1,39 @@
+body {
+    background-color:#ffffff;
+    color:#000000;
+    margin: 50px;
+    font-size: 110%;
+}
+p {
+    text-align: left;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+h1,h2,h3,h4,h5,h6{
+    color:blue;
+    text-align: center;
+}
+li {
+    color:#000000;
+    font-size: 110%;
+}
+caption{
+    color:#818181;   
+}
+a:link {
+    color:blue;
+    text-decoration: none;
+}
+a:visited{
+    color: rgb(6, 6, 177);
+    text-decoration: none;
+}
+a:hover{
+    color:red;
+    text-decoration: underline;
+}
+a:active{
+    color: yellow;
+    text-decoration: underline;
+}
