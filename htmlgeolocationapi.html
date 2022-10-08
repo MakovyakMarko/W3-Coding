@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>HTML API геолокації</title>
+  </head>
+  <body>
+    <h1>HTML API геолокації</h1>
+    <p>
+      HTML Geolocation API використовується для визначення місця розташування
+      користувача.
+    </p>
+    <hr />
+
+    <h2>Знайдіть місце розташування користувача</h2>
+    <p>
+      HTML Geolocation API використовується для отримання географічного
+      положення користувача. <br />
+      Оскільки це може поставити під загрозу конфеденційність, функція
+      недоступна, якщо користувач її не схвалить. <br />
+      <b>Примітка.</b> Геолокоція найточніша для пристроїв з GPS, наприклад
+      смартфонів.
+    </p>
+    <hr />
+
+    <h2>Підтримка браузера</h2>
+    <p>
+      <b>Примітка.</b> Починаючи з Chronme 50, API геолокації працюватиме лише в
+      безпечних контекстах, таких як HTTPS. Якщо ваш сайт розміщено на
+      незахищеному джерелі (наприклад, HTTP), запити на отримання
+      місцезнаходження користувача більше не працюватимуть.
+    </p>
+    <hr />
+
+    <h2>Використання геолокації HTML</h2>
+    <p>
+      Метод getCurrentPosition() використовується для повернення позиції
+      користувача. Приклад нижче повертає щироту та довготу місця розтащування
+      користувача:
+    </p>
+    <code>
+      &lt;button onclick="getLocation()"&gt;Try it!&lt;/button&gt; <br />
+      &lt;p id="demo"&gt;&lt;/p&gt; <br />
+      &lt;script&gt; <br />
+      var x = document.getElementById("demo"); <br />
+      function getLocation(){ <br />
+      if (navigator.geolocation){ <br />
+      navigator.geolocation.getCurrentPosition(showPosition); <br />
+      }; <br />
+      else{ <br />
+      x.innerHTML="Geolocation is not supported by this browser."; <br />
+      } <br />
+      } <br />
+      function showPosition(position){ <br />
+      x.innerHTML = "Latitude: " + position.coords.latitude +
+      "&lt;br&gt;Longitude: " +position.coords.longitude; <br />
+      } <br />
+      &lt;/script&gt;
+    </code>
+    <p>Відображатиметься так:</p>
+    <button onclick="getLocation()">Try it!</button>
+    <p id="demo"></p>
+    <script>
+      var x = document.getElementById("demo");
+
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+          x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+      }
+      function showPosition(position) {
+        x.innerHTML =
+          "Latitude: " +
+          position.coords.latitude +
+          "<br>Longitude: " +
+          position.coords.longitude;
+      }
+    </script>
+  </body>
+</html>

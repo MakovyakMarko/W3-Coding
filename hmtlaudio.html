@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>HTML Аудіо</title>
+  </head>
+  <body>
+    <h1>HTML Аудіо</h1>
+    <p>
+      Елемент HTML audio використовується для відтворення аудіофайлу на
+      веб-сторінці.
+    </p>
+    <hr />
+
+    <h2>Елемент HTML &lt;audio&gt;</h2>
+    <p>Щоб відтворити аудіофайл у HTML, використовуйте audio елемент:</p>
+    <code>
+      &lt;audio controls&gt; <br />
+      &lt;source src="kaluna.mp3" type="audio/mp3"&gt; <br />
+      &lt;/audio&gt;
+    </code>
+    <p>Відображатиметься так:</p>
+    <audio controls>
+      <source src="kaluna.mp3" type="audio/mp3" />
+    </audio>
+    <hr />
+
+    <h2>HTML аудіо - як це працює</h2>
+    <p>
+      Атрибут controls додає елементи керування звуком, як-от відтворення, пауза
+      та гучність. <br />
+      Елемент source дозволяє вказати альтернативні аудіофайли, які браузер може
+      вибрати. Браузер використовуватиме перший розпізнаний формат. <br />
+      Текст між тегами &lt;audio&gt; i &lt;/audio&gt; відображатиметься лише в
+      браузерах, які не підтримують цей &lt;audio&gt; елемент.
+    </p>
+    <hr />
+
+    <h2>HTML &lt;audio&gt; автовідтворення</h2>
+    <p>
+      Щоб автоматично запустити аудіофайл, використовуйте autoplay атрибут.
+      <br />
+      Додайте muted після autoplay, щоб ваш аудіофайл почав відтворюватись
+      автоматично (але без звуку):
+    </p>
+    <code>
+      &lt;audio controls autoplay muted&gt; <br />
+      &lt;source src="kaluna.mp3" type="audio/mp3"&gt; <br />
+      &lt;/audio&gt;
+    </code>
+    <p>Відображатиметься так:</p>
+    <audio controls autoplay muted>
+      <source src="kaluna.mp3" type="audio/mp3" />
+    </audio>
+    <hr />
+
+    <h2>Аудіо HTML- методи, властивості та події</h2>
+    <p>
+      HTML DOM визначає методи, властивості та події для audio елемента. <br />
+      Це дозволяє завантажувати, відтворювати та призупиняти аудіо, а також
+      встановлювати тривалість і гучність. <br />
+      Існують також події DOM, які можуть повідомляти вас, коли аудіо починає
+      відтворюватися, призупиняється тощо. <br />
+    </p>
+  </body>
+</html>

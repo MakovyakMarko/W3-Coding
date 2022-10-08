@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>HTML Відео</title>
+  </head>
+  <body>
+    <h1>Відео HTML</h1>
+    <p>
+      Елемент HTML &lt;video&gt; використовується для показу відео на
+      веб-сторінці.
+    </p>
+    <code>
+      &lt;video width="400" controls&gt; <br />
+      &lt;source src="mov_bbb.mp4" type="video/mp4" /&gt; <br />
+      &lt;/video&gt; <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <video width="400" controls>
+      <source src="mov_bbb.mp4" type="video/mp4" />
+    </video>
+    <hr />
+
+    <h2>Як це працює</h2>
+    <p>
+      Атрибут controls додає елементи керування відео, як-от відтворення, пауза
+      та гучність. <br />
+      Рекомендується завжди включати атрибути width i height. Якщо висоту та
+      ширину не встановлено, сторінка може мерехтіти під час завантаження відео.
+      <br />
+      Елемент &lt;source&gt; дозволяє вказати альтенативні відеофайли, які
+      браузер може вибрати. Браузер використовуватиме перший розпізнаний формат.
+      <br />
+      Текст між тегами &lt;video&gt; і &lt;/video&gt; відображатиметься лише в
+      браузерах, які не підтримують цей video елемент.
+    </p>
+    <hr />
+
+    <h2>Автоматичне відтворення video HTML</h2>
+    <p>Для атоматичного запуску відео використовувайте autoplay атрибут</p>
+    <code>
+      &lt;video width="320" height="240" autoplay&gt;<br />
+      &lt;source src="movie.mp4" type="video/mp4"&gt;<br />
+      Ваш браузер не підтримує &lt;video&gt; tag. &lt;/video&gt;
+    </code>
+    <p>Відображатиметься так:</p>
+    <video width="320" height="240" autoplay muted>
+      <source src="movie.mp4" type="video/mp4" />
+      Ваш браузер не підтримує &lt;video&gt; tag.
+    </video>
+    <p>
+      Додайте muted після autoplay, щоб відео почало відтворюватись автоматично
+      (але без звуку).
+    </p>
+    <code>
+      &lt;video width="320" height="240" autoplay muted&gt;<br />
+      &lt;source src="movie.mp4" type="video/mp4"&gt;<br />
+      Ваш браузер не підтримує &lt;video&gt; tag. &lt;/video&gt;
+    </code>
+    <hr />
+
+    <h2>Відео HTML - методи, властивості і події</h2>
+    <p>
+      HTML DOM визначає методи, властивості та події для video елемента. <br />
+      Це дозволяє завантажувати, відтворювати та призупиняти відео, а також
+      встановлювати тривалість і гучність. <br />
+      Існують також події DOM, які можуть сповіщати вас про початок відтворення
+      відео, його призупинення тощо.
+    </p>
+    <code>
+      &lt;div style="text-align:center"&gt; <br />
+      &lt;button onclick="playPause()"&gt;Play/Pause&lt;/button&gt; <br />
+      &lt;button onclick="makeBig()"&gt;Big&lt;/button&gt; <br />
+      &lt;button onclick="makeSmall()"&gt;Small&lt;/button&gt; <br />
+      &lt;button onclick="makeNormal()"&gt;Normal&lt;/button&gt; <br />
+      <br />
+      &lt;video id="video1" width="420"&gt; <br />
+      &lt;source src="mov_bbb.mp4" type="video/mp4"&gt; <br />
+      &lt;/video&gt; <br />
+      &lt;/div&gt;<br />
+      &lt;script&gt; <br />
+      var myVideo= document.getElementById("video1"); <br />
+      function playPause(){<br />
+      if (myVideo.paused) <br />
+      myVideo.play(); <br />
+      else <br />
+      myVideo.pause(); <br />
+      } <br />
+      function makeBig(){<br />
+      myVideo.width=560; <br />
+      } <br />
+      function makeSmall(){ <br />
+      myVideo.width=320; <br />
+      } <br />
+      function makeNormal(){ <br />
+      myVideo.width=420; <br />
+      } <br />
+      &lt;/script&gt;
+    </code>
+    <p>Відображатиметься так:</p>
+    <div style="text-align: center">
+      <button onclick="playPause()">Play/Pause</button>
+      <button onclick="makeBig()">Big</button>
+      <button onclick="makeSmall()">Small</button>
+      <button onclick="makeNormal()">Normal</button>
+      <br /><br />
+      <video id="video1" width="420">
+        <source src="mov_bbb.mp4" type="video/mp4" />
+        Ваш браузер не підтримує HTML video
+      </video>
+    </div>
+    <script>
+      var myVideo = document.getElementById("video1");
+      function playPause() {
+        if (myVideo.paused) myVideo.play();
+        else myVideo.pause();
+      }
+      function makeBig() {
+        myVideo.width = 560;
+      }
+      function makeSmall() {
+        myVideo.width = 320;
+      }
+      function makeNormal() {
+        myVideo.width = 420;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Графіка HTML SVG</title>
+  </head>
+  <body>
+    <h1>Графіка HTML SVG</h1>
+    <p>SVG визначає векторну графіку у форматі XML.</p>
+    <hr />
+
+    <h2>Що таке SVG</h2>
+    <ul>
+      <li>SVG означає масштабовану векторну графіку</li>
+      <li>SVG використовується для визначення графіки для Інтернету</li>
+      <li>SVG є рекомендацією W3C</li>
+    </ul>
+    <hr />
+
+    <h2>Елемент HTML &lt;svg&gt;</h2>
+    <p>
+      Елемент HTML &lt;svg&gt; є контейнером для графіки SVG. <br />
+      SVG має кілька методів малювання шляхів, прямокутників, кіл, тексту та
+      графічних зображень
+    </p>
+    <hr />
+
+    <h2>Коло SVG</h2>
+    <code>
+      &lt;svg width="100" height="100" &gt; &lt;circle <br />
+      cx="50" <br />
+      cy="50" <br />
+      r="40" <br />
+      stroke="blue" <br />
+      stroke-width="4" <br />
+      fill="yellow" / &gt; <br />
+      &lt;/svg&gt;
+    </code>
+    <p>Відображається так:</p>
+    <svg width="100" height="100">
+      <circle
+        cx="50"
+        cy="50"
+        r="40"
+        stroke="blue"
+        stroke-width="4"
+        fill="yellow"
+      />
+    </svg>
+    <hr />
+
+    <h2>Прямокутник SVG</h2>
+    <code>
+      &lt;svg width="400" height="100"&gt; <br />
+      &lt;rect width="400" height="100" style="fill: rgb(0,0,255);
+      stroke-width=10; stroke: rgb(0,0,0)" / &gt; <br />
+      &lt;/svg&gt;
+    </code>
+    <p>Відображається так:</p>
+    <svg width="400" height="100">
+      <rect
+        width="400"
+        height="100"
+        style="fill: rgb(0, 0, 255); stroke-width: 10; stroke: rgb(0, 0, 0)"
+      />
+    </svg>
+    <hr />
+
+    <p>SVG заокруглений прямокутник</p>
+    <code>
+      &lt;svg width="400" height="180"&gt; <br />
+      &lt;rect <br />
+      x="50" <br />
+      y="20" <br />
+      rx="20" <br />
+      ry=20" <br />
+      width="150" <br />
+      height="150" <br />
+      style="fill: red;stroke: black; stroke-width:5; opacity:0.5" / &gt; <br />
+    </code>
+    <p>Відображається так:</p>
+    <svg width="400" height="180">
+      <rect
+        x="50"
+        y="20"
+        rx="20"
+        ry="20"
+        width="150"
+        height="150"
+        style="fill: red; stroke: black; stroke-width: 5; opacity: 0.5"
+      />
+    </svg>
+    <hr />
+
+    <h2>Зірка SVG</h2>
+    <code>
+      &lt;svg width="300" height="200"&gt; <br />
+      &lt;polygon points="100,10 40,198 190,78 10,78 160,198"
+      style="fill:lime,stroke:black stroke-width:5,fill-rule:evenodd"&gt; <br />
+      &Lt;/svg&gt;
+    </code>
+    <p>Відображається так:</p>
+    <svg width="300" height="200">
+      <polygon
+        points="100,10 40,198 190,78 10,78 160,198"
+        style="fill: lime; stroke: black; stroke-width: 5; fill-rule: evenodd"
+      ></polygon>
+      <br />
+    </svg>
+    <hr />
+
+    <h2>Логотип SVG</h2>
+    <code>
+      &lt;svg height="130" width="500"&gt; <br />
+      &lt;defs&gt; <br />
+      &lt;linearGradient id="grad1" x1="0%" y1="0%" x2="100% y2="0"&gt; <br />
+      &lt;stop offset="0%" style="stop-color:rgb(255,255,0); stop-opacity:1;" /
+      &gt; <br />
+      &lt;stop offset="100%" style="stop-color:rgb(255,0,0); stop-pacity:1" /
+      &gt; <br />
+      &lt;/linearGradient&gt; <br />
+      &lt;/defs&gt; <br />
+      &lt;ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" / &gt;
+      <br />
+      &lt; text fill="#ffffff" font-size="45" font-family="Verdana" x="50"
+      y="86"&gt;SVG&lt;/text&gt;<br />
+      Ваш бравзер не підтримує SVG <br />
+      &lt;/svg&gt;
+    </code>
+    <p>Відображається так:</p>
+    <svg height="130" width="500">
+      <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop
+            offset="0%"
+            style="stop-color: rgb(255, 255, 0); stop-opacity: 1"
+          />
+          <stop
+            offset="100%"
+            style="stop-color: rgb(255, 0, 0); stop-opacity: 1"
+          />
+        </linearGradient>
+      </defs>
+      <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)"></ellipse>
+      <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">
+        SVG
+      </text>
+      Ваш браузер не підтримує SVG
+    </svg>
+    <hr />
+
+    <h2>Відмінності між SVG і Canvas</h2>
+    <p>
+      SVG - це мова для опису 2d-графіки в XML. <br />
+      Canvas малює 2D-графіку на льоту (за допомогою JavaScript). <br />
+      SVG базується на XML, що означає, що кожен елемент доступний у SVG DOM. Ви
+      можете приєднати обробники подій JavaScript до елемента. <br />
+      У SVG кожна намальована фігура запам'ятовується як об'єкт. Якщо атрибути
+      об'єкта SVG змінено, бравзер може атоматично потвторно відобразити форму.
+      <br />
+      Полотно відтворюється піксель за пікселем. У Canvas, як тільки графіка
+      намальована, вона забувається бравзером. Якщо його положення потрібно
+      змінити, необхідно перемалювати всю сцену, включаючи будь-які об'єкти, які
+      могли бути покриті графікою.
+    </p>
+  </body>
+</html>
