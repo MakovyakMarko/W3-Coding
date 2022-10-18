@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>HTML Web Workers API</title>
+  </head>
+  <body>
+    <h1>HTML Web Workers API</h1>
+    <p>
+      Веб-воркер - це JavaScript, що працює у фоновому режимі, не впливаючи на
+      продуктивність сторінки.
+    </p>
+    <hr />
+
+    <h2>Що таке Веб-воркер?</h2>
+    <p>
+      Під час виконання сценаріїв на сторінці HTML сторінка перестає
+      відповідати, доки сценарії не буде завершено. <br />
+      Веб-воркер - це JavaScript, який працює у фоновому режимі незалежно від
+      інших сценаріїв, не впливаючи на продуктивність сторінки. Ви можете
+      продовжувати робити все, що завгодно: клацати, вибирати речі тощо, поки
+      веб-воркер працює у фоновому режимі.
+    </p>
+    <hr />
+
+    <h2>Приклад HTML Web Workers</h2>
+    <p>
+      У прикладі нижче створюється простий веб-воркер, який відраховує числа у
+      фоновому режимі:
+    </p>
+    <code>
+      &lt;p&gt;Count numbers: &lt;output
+      id="result"&gt;&lt;/output&gt;&lt;/p&gt; <br />
+      &lt;button onclick="startWorker()"&gt;Start Worker&lt;/button&gt; <br />
+      &lt;button onclick="stopWorker()"&gt;Stop Worker&lt;/button&gt; <br />
+      &lt;script&gt; <br />
+      var w; <br />
+      function startWorker(){ <br />
+      if(typeof(Worker) !== "undefined"){ <br />
+      if(typeof(w) == "undefined"){ <br />
+      w = new Worker("demo_workers.js"); <br />
+      } <br />
+      w.onmessage = function(event){ <br />
+      document.getElementById("result").innerHTML = event.data; <br />
+      } ;<br />
+      } else { <br />
+      document.getElementById("result").innerHTML = "Sorry, your browser does
+      not support Web Workers..."; <br />
+      } <br />
+      } <br />
+      function stopWorker(){ <br />
+      w.terminate(); <br />
+      w = undefined; <br />
+      } <br />
+      &lt;script&gt;
+    </code>
+    <p>Відображається так:</p>
+    <p>Count numbers: <output id="result"></output></p>
+    <br />
+    <button onclick="startWorker()">Start Worker</button>
+    <button onclick="stopWorker()">Stop Worker</button> <br />
+    <script>
+      var w;
+      function startWorker() {
+        if (typeof Worker !== "undefined") {
+          if (typeof w == "undefined") {
+            w = new Worker("demo_workers.js");
+          }
+          w.onmessage = function (event) {
+            document.getElementById("result").innerHTML = event.data;
+          };
+        } else {
+          document.getElementById("result").innerHTML =
+            "Sorry, your browser does not support Web Workers...";
+        }
+      }
+      function stopWorker() {
+        w.terminate();
+        w = undefined;
+      }
+    </script>
+    <hr />
+
+    <h2>Перевірте службу підтримки Web Worker</h2>
+    <p>
+      Перед створенням веб-воркера перевірте, чи підтримує його браузер
+      користувача:
+    </p>
+    <code>
+      if(typeof(Worker) !=="undefined") { <br />
+      Yes! Web Worker support! <br />
+      Some code... <br />
+      } else {<br />
+      Sorry! No web worker support... <br />
+      } <br />
+    </code>
+    <hr />
+
+    <h2>Створіть файл Web Worker</h2>
+    <p>
+      Тепер давайте створимо наш веб-воркер у зовнішньому JavaScript. <br />
+      Тут ми створюємо сценарій, який має значення. Сценарій зберігається у
+      файлі "demo_workers.js":
+    </p>
+    <code>
+      var i=0; <br />
+      function timedCount(){ <br />
+      i = i + 1; <br />
+      postMessage(i); <br />
+      setTimeOut("timedCount()",500); <br />
+      } <br />
+      timedCount(); <br />
+    </code>
+    <p>
+      Важливою частиною коду вище є postMessage() метод, який використовується
+      для відправки повідомлення назад на сторінку HTML. <br />
+      <strong>Примітка.</strong> Зазвичай веб-воркери використовуються не для
+      таких простих сценаріїв, а для більш інтенсивних завдань ЦП.
+    </p>
+    <hr />
+
+    <h2>Створіть об'єкт Web Worker</h2>
+    <p>
+      Тепер, коли у нас є файл web-worker, нам потрібно виклакати його зі
+      сторінки HTML. <br />
+      У наступних рядках перевіряється, чи робочий файл уже існує, якщо ні-
+      створюється новий об'єкт веб-воркера та виконується код у
+      "demo_workers.js":
+    </p>
+    <code>
+      if (typeof(w) == "undefined"){ <br />
+      w = new Worker("demo_workers.js"); <br />
+      }
+    </code>
+    <p>
+      Тоді ми можемо надсилати й отримувати повідомлення від веб-воркера. <br />
+      Додайте слухач подій "onmessage" до веб-воркера.
+    </p>
+    <code>
+      w.onmessage = function(event){ <br />
+      document.getElementById("result").innerHTML = event.data; <br />
+      } <br />
+    </code>
+    <p>
+      Коли веб-воркер публікує повідомлення, виконується код у обробнику подій.
+      Дані веб-воркера зберігаються в event.data.
+    </p>
+    <hr />
+
+    <h2>Припинити роботу Web Worker</h2>
+    <p>
+      Коли об'єкт веб-воркера створюється, він продовжуватиме прослуховувати
+      повідомлення (навіть після завершення зовнішнього сценарію), доки його не
+      буде припинено. <br />
+      Щоб припинити роботу веб-воркера та звільнити ресурси браузера/комп'ютера,
+      скористайтесь такм terminate() методом:
+    </p>
+    <code> w.terminate(); </code>
+    <hr />
+
+    <h2>Повторне використання Web Worker</h2>
+    <p>
+      Якщо ви встановите робочу зміння як undefined, після її завершення ви
+      зможете повторно використати код:
+    </p>
+    <code> w = undefined; </code>
+    <hr />
+
+    <h2>Web Workers i DOM</h2>
+    <p>
+      Оскільки веб-працівник знаходиться у зовнішніх файлах, вони не мають
+      доступу до таких об'єктів JavaScript:
+    </p>
+    <ul>
+      <li>Об'єкт вікна</li>
+      <li>Об'єкт документа</li>
+      <li>Батьківський об'єкт</li>
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>HTML веб-сховища API</title>
+    <script>
+      function clickCounter() {
+        if (typeof Storage !== "undefined") {
+          if (localStorage.clickcount) {
+            localStorage.clickcount = Number(localStorage.clickcount) + 1;
+          } else {
+            localStorage.clickcount = 1;
+          }
+          document.getElementById("result1").innerHTML =
+            "You have clicked the button " +
+            localStorage.clickcount +
+            " time(s).";
+        } else {
+          document.getElementById("result1").iinerHTML =
+            "Sorry, your browser does not support web storage...";
+        }
+      }
+      function SessionclickCounter() {
+        if (typeof Storage !== "undefined") {
+          if (sessionStorage.clickcount) {
+            sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1;
+          } else {
+            sessionStorage.clickcount = 1;
+          }
+          document.getElementById("result2").innerHTML =
+            "You have clicked the button " +
+            sessionStorage.clickcount +
+            " time(s).";
+        } else {
+          document.getElementById("result2").iinerHTML =
+            "Sorry, your browser does not support web storage...";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1>HTML веб-сховища API</h1>
+    <hr />
+
+    <h2>Що таке веб-сховище HTML?</h2>
+    <p>
+      За допомогою веб-сховища веб-програми можуть зберігати дані локально в
+      браузері користувача. <br />
+      До HTML5 дані програми повинні були зберігатися в файлах cookie, які
+      додавалися в кожному запиті на сервер. Веб-сховище безпечніше, і велиуі
+      обсяги даних можна зберігати локально, не впливаючи на продуктивність
+      веб-сайту. <br />
+      На відміну від файлів cookie, ліміт пам'яті набагато більший (принаймні 5
+      Мб), і інформація ніколи не передається на сервер. <br />
+      Веб-сховище залежить від джерела (домену та протоколу). Усі сторінки з
+      одного джерела модуть зберігати та отримувати одні й ті самі дані.
+    </p>
+    <hr />
+
+    <h2>Об'єкти веб-сховища HTML</h2>
+    <p>Веб-сховище HTML надає два об'єкти для зберігання даних на клієнті:</p>
+    <ul>
+      <li>window.localStorage - зберігає дані без терміну дії</li>
+      <li>
+        windoe.sessionStorage - зберігає дані за один сеанс (дані втрачаються
+        при закритті браузера)
+      </li>
+    </ul>
+    <p>
+      Перш ніж використовувати веб-сховище, перевірте підтримку браузером
+      localStorage i sessionStorage:
+    </p>
+    <code>
+      if (typeof(Storage) !== "undefined"){ <br />
+      //Code for localStorage/sessionStorage. <br />
+      } else{ <br />
+      // Sorry! No Web Storage support... <br />
+      } <br />
+    </code>
+    <hr />
+
+    <h2>Об'єкт localStorage</h2>
+    <p>
+      Об'єкт localStorage зберігає дані без терміну дії. Дані не будуть
+      видалені, коли браузер закрито, і будуть доступні наступного дня, тижня
+      або року.
+    </p>
+    <code>
+      &lt;div id="result"&gt;&lt;/div&gt; <br />
+      &lt;script&gt; <br />
+      //Check browser support <br />
+      if (typeof(Storage) !== "undefined"){<br />
+      //Store <br />
+      localStorage.setItem("lastname", "Smith");<br />
+      //Retrieve <br />
+      document.getElementById("result").innerHTML =
+      localStorage.getItem("lastname"); <br />
+      } else { <br />
+      document.getElementById("result").innerHTML = "Sorry, your brawser does
+      not support Web Storage...";<br />
+      }<br />
+      &lt;/script&gt;<br />
+    </code>
+    <p>Відображатиметься так:</p>
+
+    <div id="result"></div>
+    <script>
+      //Check browser support
+      if (typeof Storage !== "undefined") {
+        //Store
+        localStorage.setItem("lastname", "Smith");
+        //Retrieve
+        document.getElementById("result").innerHTML =
+          localStorage.getItem("lastname");
+      } else {
+        document.getElementById("result").innerHTML =
+          "Sorry, your brawser does not support Web Storage...";
+      }
+    </script>
+    <p>Приклад пояснення:</p>
+    <ul>
+      <li>
+        Створіть пару ім'я/значення для локального сховища з name="lastname" i
+        value="Smith"
+      </li>
+      <li>Отримайте значення lastname і вставте його в елемент id="result"</li>
+    </ul>
+    <p>Наведений нижче приклад також можна записати так:</p>
+    <code>
+      //Store <br />
+      localSrorage.lastname = "Smith"; <br />
+      //Retrieve <br />
+      document.getElementById("result").innerHTML = localStorage.lastname;
+    </code>
+    <p>Синтаксис для видалення елемента localStorage "прізвище" такий:</p>
+    <code> localStorage.removeItem("lastname"); </code>
+    <p>
+      <b>Примітка.</b> Пари ім'я/значення завжди зберігаються як рядки. За
+      потреби не забудьте конвертувати їх в інший формат! <br />
+      У наступному прикладі підраховується, скільки разів користувач натиснув
+      кнопку. У цьому коді рядок значення перетворюється на число, щоб можна
+      було збільшити лічильник:
+    </p>
+    <code>
+      &lt;script&gt; <br />
+      function clickCounter(){ <br />
+      if(typeof(Storage) !== "undefined"){ <br />
+      if (localStorage.clickcount){ <br />
+      localStorage.clickcount = Number(localStorage.clickcount)+1; <br />
+      } else { <br />
+      localStorage.clickcount = 1; <br />
+      } <br />
+      document.getElementById("result1").innerHTML = "You have clicked the
+      button " + localStorage.clickcount + " time(s)." <br />
+      } else { <br />
+      document.getElementById("result1").iinerHTML = "Sorry, your browser does
+      not support web storage..."; <br />
+      } <br />
+      } <br />
+      &lt;/script&gt; &lt;p&gt; &lt;button onclick="clickCounter()"
+      type="button"&gt;Click me!&lt;/button&gt; &lt;/p&gt; <br />
+      &lt;div id="result1"&gt;&lt;/div&gt;
+    </code>
+    <p>Відображатиметься так:</p>
+    <p><button onclick="clickCounter()" type="button">Click me!</button></p>
+    <div id="result1"></div>
+    <hr />
+
+    <h2>Об'єкт sessionStorage</h2>
+    <p>
+      Об'єкт sessionStorage дорівнює об'єкту localSrorage, за винятком того, що
+      він зберігає дані лише для одного сеансу. Дані видаляються, коли
+      користувач закриває певну вкладку браузера. <br />
+      У наступному прикладі підраховано, скільки разів користувач натиснув
+      кнопку в поточному сеансі:
+    </p>
+    <code>
+      &lt;script&gt; <br />
+      function SessionclickCounter() { <br />
+      if (typeof Storage !== "undefined") { <br />
+      if (sessionStorage.clickcount) { <br />
+      sessionStorage.clickcount = Number(sessionStorage.clickcount) + 1; <br />
+      } else { <br />
+      sessionStorage.clickcount = 1; <br />
+      } <br />
+      document.getElementById("result2").innerHTML = <br />
+      "You have clicked the button " + <br />
+      sessionStorage.clickcount + <br />
+      " time(s)."; <br />
+      } else { <br />
+      document.getElementById("result2").iinerHTML = <br />
+      "Sorry, your browser does not support web storage..."; <br />
+      } <br />
+      } <br />
+      &lt;/script&gt; &lt;p&gt; &lt;button onclick="SessionclickCounter()"
+      type="button"&gt;Click me!&lt;/button&gt; &lt;/p&gt; <br />
+      &lt;div id="result2"&gt;&lt;/div&gt;
+    </code>
+    <p>Відображається так:</p>
+    <p>
+      <button onclick="SessionclickCounter()" type="button">Click me!</button>
+    </p>
+    <div id="result2"></div>
+    <hr />
+  </body>
+</html>
