@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>HTML SSE API</title>
+  </head>
+  <body>
+    <h1>HTML SSE API</h1>
+    <p>
+      Події, надіслані сервером (SSE), дозволяють веб-сторінці отримувати
+      оновлення з сервера.
+    </p>
+    <hr />
+
+    <h2>Події, надіслані сервером - односторонній обмін повідомленнями</h2>
+    <p>
+      Подія, надіслана сервером, - це коли веб сторінки автоматично отримує
+      онолення від сервера. <br />
+      Це також було можливо раніше, але на веб-сторінці потрібно було запитати,
+      чи доступні оновлення. Якщо події, надіслані сервером, оновлення надходять
+      автоматично. <br />
+      Приклади: оновлення Facebook/Twitter, онолення цін на акції, стрічки
+      новин, спортивні результати тощо.
+    </p>
+    <hr />
+
+    <h2>Отримувати повідомлення про події, надіслані сервером</h2>
+    <p>
+      Об'єкт EventSource використовується для отримання сповіщень про події,
+      надісланих сервером:
+    </p>
+    <code>
+      &lt;h3&gt;Getting server updates&lt;/h3&gt; <br />
+      &lt;div id="result"&gt;&lt;/div&gt; <br />
+      &lt;script&gt; <br />
+      if(typeof(EventSource) !== "undefined") { <br />
+      var source = new EventSourse("demo_sse.php"); <br />
+      source.onmessage = function(event){ <br />
+      document.getElementById("result").innerHTML +=event.data +"&lt;br&gt;";
+      <br />
+      };<br />
+      } else { <br />
+      document.getElementById("result").innerHTML = "Sorry, your browser does
+      not support server-sent events..."; <br />
+      } <br />
+      &lt;/script&gt;
+    </code>
+    <p>Відображатиметься так:</p>
+    <h3>Getting server updates</h3>
+    <div id="result"></div>
+    <script>
+      if (typeof EventSource !== "undefined") {
+        var source = new EventSourse("demo_sse.php");
+        source.onmessage = function (event) {
+          document.getElementById("result").innerHTML += event.data + "<br/>";
+        };
+      } else {
+        document.getElementById("result").innerHTML =
+          "Sorry, your browser does not support server-sent events...";
+      }
+    </script>
+    <p>Приклад пояснення:</p>
+    <ul>
+      <li>
+        Створіть новий об'єкт EventSource і вкадіть URL-адресу сторінки, яка
+        надсилає оновлення (у цьому прикладі "demo_sse.php")
+      </li>
+      <li>Щоразу, коли надходить оновлення, підбувається подія onmessage</li>
+      <li>
+        Коли відбувається подія onmessage, помістіть отримані дані в елемент з
+        id="result"
+      </li>
+    </ul>
+    <hr />
+
+    <h2>Перевірте підтримку подій, надісланих сервером</h2>
+    <p>
+      У наведеному вище прикладі tryit було кілька додаткових рядків коду для
+      перевірки підтримки браузером подій, надісланих сервером:
+    </p>
+    <code>
+      if (typeof (EventSource) !== "undefined"){ <br />
+      Yes! Server-sent events support! <br />
+      Some code... <br />
+      } else {<br />
+      Sorry! No server-sent event support... <br />
+      }
+    </code>
+    <hr />
+
+    <h2>Приклад коду на стороні сервера</h2>
+    <p>
+      Щоб наведений вище приклад працював, вам потрібен сервер, здатний
+      надсилати оновлення даних (наприклад, PHP або ASP). <br />
+      Синтаксис потоку подій на сторінці сервера простий. Встановіть заголовок
+      "Content-Type" на "text/event stream". Тепер ви можете почати надсилати
+      потоки подій. <br />
+      Код на PHP (demo_sse.php):
+    </p>
+    <code>
+      &lt;?php <br />
+      header('Content-Type: text/event-stream'); <br />
+      header('Cache-Controle: no-cache'); <br />
+      <br />
+      $time = date('r'); <br />
+      echo "data: The server time is: {$time}\n\n"; <br />
+      flush(); <br />
+      ?&gt; <br />
+    </code>
+    <p>Пояснення коду:</p>
+    <ul>
+      <li>Встановіть заголовок "Content-Type" на "text/event=stream"</li>
+      <li>Вкажіть, що сторінка не повинна кешуватися</li>
+      <li>
+        Виведіть дані для надсилання ( <strong>завжди</strong> починайте з
+        "data:")
+      </li>
+      <li>Вивести вихідні дані назад на веб-сторінку</li>
+    </ul>
+    <hr />
+
+    <h2>Об'єкт EventSource</h2>
+    <p>
+      У наведених вище прикладах ми використовували подію onmessage для
+      отримання повідомлень. Але доступні й інші події:
+    </p>
+    <ul>
+      <li>onopen</li>
+      <li>onmessage</li>
+      <li>onerror</li>
+    </ul>
+  </body>
+</html>

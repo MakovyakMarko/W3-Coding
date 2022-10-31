@@ -1,0 +1,96 @@
+<!DOCTYPE html> 
+<html lang="ua-UA">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Marko Makovyak">
+        <meta name="description" content="responsive Web Design">
+        <title>Adaptyvnyj web-dyzajn</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            *{ 
+            box-sizing:border0box;
+        }
+        .menu{
+            float: left;
+            width:20%;
+        }
+        .menuitem{
+            padding:8px;
+            margin-top:7px;
+        }
+        .main{
+            float:left;
+            width:60%;
+            padding: 0 20px;
+            overflow:hiden;
+        }
+        .right{
+            background-color:lightblue;
+            float: right;
+            width:20%;
+            padding: 10px 15px;
+            margin-top: 7px;
+        }
+        @media only screen and (max-width:800px){
+            .main{
+                width:80%;
+                padding:0;
+            }
+            .right{
+                width:100%;
+            }
+        }
+        @media only screen and (max-width:500px){
+            .menu,.main,.right{
+                width:100%;
+            }
+        }
+        </style> 
+        
+    </head>
+    <body>
+        <div style="backgound-color:#f1f1f1;padding:15px;">
+            <h1>Cinque Terre</h1>
+            <h3>Resize the browser window</h3>
+        </div>  
+        <div style="overflow:auto">
+                <div class="menu">
+                    <div class="menuitem">TheWalk</div>
+                    <div class="menuitem">Transport</div>
+                    <div class="menuitem">History</div>
+                    <div class="menuitem">Gallery</div>
+                </div>
+
+                <div class="main">
+                    <h2>The Walk</h2>
+                    <p>
+                        The wslk from Monterosso to Riomaggiore will take you approximately two hours,
+                        give or take on hour depending on the weather conditions and your physical shape.
+                    </p>
+                    <img src="img_5terre.jpg" style="width:100%">
+                </div>
+                
+                <div class="right">
+                    <h2>What?</h2>
+                    <p>
+                        Cinque Terre compires five villages:
+                        Monterosso, Vernazza, Corniglia, Manarola, and 
+                        Riomaggiore.
+                    </p>
+                    <h2>Where?</h2>
+                    <p>
+                        On the northwest cost of the Italian Riviera, north of the city La Specia
+                    </p>
+                    <h2>Price?</h2>
+                    <p>The walk is free!</p>
+                </div>
+        </div>
+        <div style="background-color:#f1f1f1; text-align:center; padding:10px;margin-top:7px;font-size:12px;">
+            This web page is a part of demontration of fluid web design made by w3schools.com. Resize the brouser window
+            to see the content respond to the resizing.
+        </div>
+
+        
+    </body>
+</html>

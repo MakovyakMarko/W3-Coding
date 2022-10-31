@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ua-UA">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Iframe HTML</title>
+        <link rel="stylesheet" href="../styles.css">
+    </head>
+    <body>
+        <h1>Ifrejmy HTML</h1>
+        <p>
+            HTML Iframe vykorystovuetjsja dlja vidobrazennja web-storinky na web-storinci.
+        </p>
+        <hr>
+        <h2>Syntaksys HTML iframe</h2>
+        <p>
+            Teh HTML <ins>iframe</ins> vyznachaje cbudovanyj frejm. <br>
+            Vbudovanyj frejm vykorystovuetjsja dlja vbydyvannja inshogo dokumenta v potochnuj HTML-dokument. <br>
+            Syntaksys: <br>
+            iframe src="url" title="description" /iframe <br>
+            <b>Porada.</b> Rekomenduetjsja zavzdy vkljuchaty <ins>title</ins> atrybut dlja <ins>iframe</ins>. Ce vykorystovujetjsja programamy zchytuvannja z ekrana,schob zchytuvaty vmist iframe. <br>
+        </p>
+        <hr>
+        <h2>Iframe - ustanovka vysoty i shyryny</h2>
+        <p>
+            Vykorystovujte atrybuty <ins>height</ins> i <ins>width</ins>, schob ukazaty rozmir iframe. <br>
+            Vysota i shyryna vkazujutjsja v pikseljah za zamovchuvannjam: <br> 
+        </p>
+        <iframe src="W3SchoolsTutorial.html" height="200" width="300" title="Iframe Example"></iframe>
+        <p>
+            Abo vy mozete dodaty <ins>style</ins> atrybut i vykorystovuvaty CSS <ins>height</ins> i <ins>width</ins> vlastyvosti:
+        </p>
+        <iframe src="W3SchoolsTutorial.html style="height:200px;width:300px;" title="Iframe Examlpe"></iframe>
+        <hr>
+        <h2>Iframe - vydalyty mezu</h2>
+        <p>
+            Za zamovchuvannjam iframe maje mezu navkolo njogo. <br>
+            Schob vydalyty mezu, dodajte atrybut <ins>style</ins> i skorystajtesj vlastyvistju CSS <ins>border</ins>
+        </p>
+        <iframe src="W3SchoolsTutorial.html" style="boder:none;" title="Iframe example"></iframe>
+        <p>
+            Za dopomogoju CSS vy takoz mozete zminyty rozmir, stylj i kolir ramky iframe:
+        </p>
+        <iframe src="W3SchoolsTutorial.html" style="border: 2px solid red;" title="Iframe example"></iframe>
+        <hr>
+        <h2>Iframe - cilj dlja posylannja</h2>
+        <p>
+            Iframe mozna vykorystovuvaty jak ciljovyj kadr dlja posulannja. <br>
+            Atrybut posylannja <ins>target</ins> maje posylatusja na <ins>name</ins> atrybut iframe:
+        </p>
+        <iframe src="W3SchoolsTutorial.html" name="iframe_a" title="Iframe example"></iframe>
+        <p><a href="ifreimy HTML.html" target="iframe_a">Ifreimy HTML</a></p>
+        <hr>
+        <h2>Pidsymok rozdilu</h2>
+        <ul>
+            <li>
+                Teg html <ins>iframe</ins> vyznachaje vbydovanuj frame
+            </li>
+            <li>
+                Atrybut <ins>src</ins> vyznachaje URL-adresu storinky, jaku potribno vstavyty
+            </li>
+            <li>
+                Zavzdy vkljuchajte <ins>title</ins> atrybut (dlja program zchytuvannja z ekrana)
+            </li>
+            <li>
+                Atrybuty <ins>height</ins> ta <ins>width</ins> vyznachajutj rozmir iframe
+            </li>
+            <li>
+                Vykorystovujte <ins>border:none</ins> dlja vydalennja ramky navkolo iframe
+            </li>
+            <li>
+                Vykorystovujte <ins>name</ins> atrybut v iframe dlja posulannja na freim jak na ciljovyj kadr
+            </li>
+        </ul>
+    </body>
+</html>

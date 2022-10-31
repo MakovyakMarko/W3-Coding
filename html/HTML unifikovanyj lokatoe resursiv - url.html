@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ua-UA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Marko Makovyak" />
+    <meta name="description" content="HTML URL" />
+    <meta name="keywords" content="url" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>HTML Url's</title>
+    <style>
+      th,
+      td {
+        border: 1px solid blue;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HTML Uniform Resurs Locator (URL)</h1>
+    <p>
+      URL-адреса - це "наступне слово" для веб-адреси. <br />
+      URL-адреса може складатися язі слів (наприклад, w3schools.com) або адреси
+      інтернет-протоколу (IP) (наприклад, 192.68.20.50) <br />
+      Більшість людей вводять ім'я під час серфіегу, тому що імена легше
+      запам'ятати, нід цифри.
+    </p>
+    <hr />
+
+    <h2>URL - уніфікований локатор ресурсів</h2>
+    <p>
+      Веб-ресурси запитують сторінки з веб-серверів за допомогою url-адреси.
+      <br />
+      Уніфікований локатор ресурсів (URL) використовується для адресації
+      документа (вбо інших данних) в Інтернеті. <br />
+      Веб-адреса, як-от https://www.google.com.ua/html/file1.asp, відповідає
+      таким правилам синтаксису: <br />
+      scheme://prefix.domain:port/path/filename <br />
+    </p>
+    <ul>
+      <li>
+        sheme - визначає тип інтернет-сервісу (найпоширенішим є http або htpps)
+      </li>
+      <li>
+        prefix - визначає префікс домену (за замовчуванням для http є www)
+      </li>
+      <li>
+        domain - визначає доменне ім'я інтернету ( наприклад google.com.ua)
+      </li>
+      <li>
+        port - визначає номер порту на хості (за замовчуванням для http є 80)
+      </li>
+      <li>
+        path - визначає шлях на сервері (якщо опущено: корневий каталог сайту)
+      </li>
+      <li>filename - визначає назву документу або ресурсу</li>
+    </ul>
+    <hr />
+
+    <h2>Поширені схеми URL-адрес</h2>
+    <p>У таблиці нище, наведено деякі поширені схеми:</p>
+    <table>
+      <tr>
+        <th>Scheme</th>
+        <th>Short for</th>
+        <th>Used for</th>
+      </tr>
+      <tr>
+        <td>http</td>
+        <td>Hyper Text Transfer Protocol</td>
+        <td>Common web pages. Not encryoted</td>
+      </tr>
+      <tr>
+        <td>https</td>
+        <td>Secure Hyper Text Transfer Protocol</td>
+        <td>Secure web pages. Encrypted</td>
+      </tr>
+      <tr>
+        <td>ftp</td>
+        <td>File Trasfer Protocol</td>
+        <td>Downloading or Uploading files</td>
+      </tr>
+      <tr>
+        <td>file</td>
+        <td>&nbsp;</td>
+        <td>A file on your computer</td>
+      </tr>
+    </table>
+    <hr />
+
+    <h2>Кодування URL</h2>
+    <p>
+      URL-адреси можна надсилати лише через Інтернет, використовуючи набір
+      символів ASCII. Якщо url-адреса містить символи за межами набору ASCII,
+      url-адресу потрібно перетворити. <br />
+      Кодування url-адреси перетворює сиволи відмінні від ASCII, у формат, який
+      можна передавати через Інтернет. <br />
+      Кодування URL-адреси замінює символи, відмінні від ANCII, на %, зя якими
+      слідують шіснадцяткові цифрию URL-адреси не можуть містити пробіли.
+      Кодування url-адреси зазвичай замінює пробіли знаком плюс (+) або %20
+    </p>
+    <hr />
+
+    <h2>Приклади кодування URL-адрес</h2>
+    <p>
+      <a href="https://www.w3schools.com/tags/ref_urlencode.asp"
+        >Довідник із кодування URL-адрес</a
+      >
+    </p>
+  </body>
+</html>

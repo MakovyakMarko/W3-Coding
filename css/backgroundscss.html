@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Фони CSS</title>
+  </head>
+  <body>
+    <h1>Фони CSS</h1>
+    <p>
+      Властивості фону CSS використовуються для додавання фонових ефектів для
+      елементів. <br />
+      У цих розділах ви дізнаєтесь про такі властивості фону CSS:
+    </p>
+    <ul>
+      <li>background-color</li>
+      <li>background-image</li>
+      <li>background-repeat</li>
+      <li>background-attachment</li>
+      <li>background-position</li>
+      <li>background</li>
+    </ul>
+    <hr />
+
+    <h2>Колір тла CSS</h2>
+    <p>
+      Властивість background-color визначає колір фону елемента. <br />
+      <strong>Приклад.</strong> Колір фону сторінки встановлюється так:
+    </p>
+    <code>
+      body{ <br />
+      background-color: lightblue; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="bgcolor.html"
+      frameborder="1"
+      width="100%;"
+      height="250px;"
+    ></iframe>
+    <p>У CSS колір найчастіше визначається:</p>
+    <ul>
+      <li>дійсна назва кольору, наприклад "червоний"</li>
+      <li>шістнадцядкове значення, наприклад "#ff0000"</li>
+      <li>значення RGB, наприклад "rgb(255,0,0)"</li>
+    </ul>
+    <hr />
+
+    <h2>Інші елементи</h2>
+    <p>
+      Ви можете встановити колір фону для будь-яких елементів HTML: <br />
+      <strong>Приклад.</strong> Тут елементи h1,p,div матимуть різні фонові
+      кольори:
+    </p>
+    <code>
+      h1{<br />
+      background-color: green; <br />
+      } <br />
+      div{ <br />
+      background-color: lightblue; <br />
+      } <br />
+      p{<br />
+      background-color:yellow; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="bgcolorexmpl.html"
+      frameborder="1"
+      width="100%"
+      height="250px;"
+    ></iframe>
+    <hr />
+
+    <h2>Непрозорість / Прозорість</h2>
+    <p>
+      Властивість opacity визначає непрозорість/прозорість елемента. Він може
+      приймати значення від 0,0 до 1,0. Чим менше значення, тим прозоріше:
+    </p>
+    <code>
+      div{ <br />
+      background-color: green; <br />
+      opacity: 0.3; }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="bgcoloropacity.html"
+      frameborder="1"
+      width="100%"
+      height="300px;"
+    ></iframe>
+    <p>
+      <strong>Примітка.</strong> У разі використання opacity властивості для
+      додавання прозорості фону елемента всі його дочірні елементи успадкують
+      однакову прозорість. Це може ускладнити читання тексту всередині повністю
+      прозорого елемента.
+    </p>
+    <hr />
+
+    <h2>Прозорість за допомогою RGBA</h2>
+    <p>
+      Якщо ви не хочете застосувати непрозорість до дочірніх елементів, як у
+      нашому прикладі вище, використовуйте значення кольорів RGBA. У наступному
+      прикладі встановлюється непрозорість для кольору фону, а не таксту:
+    </p>
+    <code>
+      div{ <br />
+      background: rgba(0,128,0,0.3) <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="rgbabg.html"
+      frameborder="1"
+      width="100%"
+      height="600px;"
+    ></iframe>
+  </body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Як додати CSS</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <h1>Як додати CSS</h1>
+    <p>
+      Коли браузер читає таблицю стилів, віе форматує документ HTML відповідно
+      до інформації в таблиці стилів.
+    </p>
+    <hr />
+
+    <h2>Три способи вставити CSS</h2>
+    <p>Існує три способи вставлення таблиці стилів:</p>
+    <ul>
+      <li>Зовнішній CSS</li>
+      <li>Внутрішній CSS</li>
+      <li>Вбудований CSS</li>
+    </ul>
+    <hr />
+
+    <h2>Зовнішній CSS</h2>
+    <p>
+      За допомогою зовнішньої таблиці стилів ви можете змінити вигляд цілого
+      веб-сайту, змінивши лише один файл! <br />
+      Кожна HTML-сторінка має містити посилання на зовнішній файл таблиці стилів
+      всередині елемента &lt;link&gt; у розділі head. <br />
+      <strong>Приклад.</strong> Зовнішні стилі визначають в елементі link у
+      розділі head сторінки HTML:
+    </p>
+    <code>
+      &lt;!DOCTYPE html&gt; <br />
+      &lt;html lang="en"&gt; <br />
+      &lt;head&gt; <br />
+      &lt;link rel="stylesheet" href="mystyle.css"&gt; <br />
+      &lt;/head&gt; <br />
+      &lt;body&gt; <br />
+      &lt;h1&gt;This is heading&lt;/h1&gt; <br />
+      &lt;p&gt;This is paragraph&lt;/p&gt; <br />
+      &lt;/body&gt; <br />
+      &lt;/html&gt; <br />
+    </code>
+    <p>
+      Зовнішню таблицю стилів можна написати в будь-якому текстовому редакторі,
+      її потрібно зберегти з розширенням .css <br />
+      Зовнішній файл .css не повинен містити тегів HTML. <br />
+      Ось як виглядає файл "mystyle.css":
+    </p>
+    <code>
+      body{ <br />
+      background-color:lightblue; <br />
+      } <br />
+      h1 { <br />
+      color:navy; <br />
+      margin-left:20px; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="addcssrel.html"
+      frameborder="1"
+      width="100%"
+      height="250px"
+    ></iframe>
+    <p>
+      <strong>Примітка.</strong> Не додавайте пробіл між значенням властивості
+      та одиницею: <br />
+      Неправильно(пробіл): margin-left: 20 px; <br />
+      Правильно(без пробілу): margin-left: 20px; <br />
+    </p>
+    <hr />
+
+    <h2>Внутрішній CSS</h2>
+    <p>
+      Внутрішню таблицю стилів можна використовувати, якщо одна сторінка HTML
+      має унікальний стиль. <br />
+      Внутрішній стиль визначається всередині елемента style всередині head.
+      <br />
+      <strong>Приклад.</strong> Внутрішні стилі визначаються в елементі style
+      всередині розділу head сторінки HTML:
+    </p>
+    <code>
+      &lt;!DOCTYPE html&gt; <br />
+      &lt;html lang="en"&gt; <br />
+      &lt;head&gt; <br />
+      &lt;style&gt; <br />
+      body{ <br />
+      background-color: linen; <br />
+      } <br />
+      h1{ <br />
+      color: maroon; <br />
+      margin-left: 40px; <br />
+      } <br />
+      &lt;/style&gt; <br />
+      &lt;/head&gt; <br />
+      &lt;body&gt; <br />
+      &lt;h1&gt;This is heading&lt;/h1&gt; <br />
+      &lt;p&gt;This is paragraph&lt;/p&gt; <br />
+      &lt;/body&gt; <br />
+      &lt;/html&gt; <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="internalcss.html"
+      frameborder="1"
+      width="100%"
+      height="250px"
+    ></iframe>
+    <hr />
+
+    <h2>Вбудований CSS</h2>
+    <p>
+      Вбудований стиль можна використовувати для застосування унікального стилю
+      до окремого елемента. <br />
+      Щоб використовувати вбудовані стилі, додайте атрибут style до відповідного
+      елемента. Атрибут style може містити будь-яку властивість CSS. <br />
+      <strong>Приклад.</strong> Вбудовані стилі визначаються в атрибуті style
+      відповідного елемента:
+    </p>
+    <code>
+      &lt;!DOCTYPE html&gt; <br />
+      &lt;html lang="en"&gt; <br />
+      &lt;head&gt; <br />
+      &lt;/head&gt; <br />
+      &lt;body&gt; <br />
+      &lt;h1 style="color:blue; text-align:center;"&gt;This is
+      heading&lt;/h1&gt; <br />
+      &lt;p style="color:red;"&gt;This is paragraph&lt;/p&gt; <br />
+      &lt;/body&gt; <br />
+      &lt;/html&gt; <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="inlinecss.html"
+      frameborder="1"
+      width="100%"
+      height="250px"
+    ></iframe>
+    <p>
+      <strong>Порада:</strong> вбудований стиль втрачає багато переваг таблиць
+      стилів (через змішування вмісту з представленням). Використовуйте цей
+      метод помірно.
+    </p>
+    <hr />
+
+    <h2>Кілька таблиць стилів</h2>
+    <p>
+      Якщо деякі властивості були визначені для того самого селектора (елемента)
+      в різних таблицях стилів, буде використано значення з останньої прочитаної
+      таблиці стилів. <br />
+      Припустімо, що зовнішня таблиця стилів має такий стиль для елемента
+      &lt;h1&gt;:
+    </p>
+    <code>
+      h1{ <br />
+      color:navy; <br />
+      } <br />
+    </code>
+    <p>
+      Потім припустимо, що внутрішня таблиця стилів також має такий стиль для
+      елемента &lt;h1&gt;:
+    </p>
+    <code>
+      h1{ <br />
+      color:orange; <br />
+      } <br />
+    </code>
+    <p>
+      <strong>Приклад.</strong> Якщо внутрішній стиль визначено
+      <b>після</b> посилання на зовнішню таблицю стилів, елементи &lt;h1&gt;
+      будуть "orange"(помаранчевими):
+    </p>
+    <code>
+      &lt;!DOCTYPE html&gt; <br />
+      &lt;html lang="en"&gt; <br />
+      &lt;head&gt; <br />
+      &lt;link rel="stylesheet" href="mystyle.css"&gt; <br />
+      &lt;style&gt; <br />
+      h1{ <br />
+      color: orange; <br />
+      } <br />
+      &lt;/style&gt; <br />
+      &lt;/head&gt; <br />
+      &lt;body&gt; <br />
+      &lt;h1&gt;This is heading&lt;/h1&gt; <br />
+      &lt;p&gt;This is paragraph&lt;/p&gt; <br />
+      &lt;/body&gt; <br />
+      &lt;/html&gt; <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="linkstylecss.html"
+      frameborder="1"
+      width="100%;"
+      height="250px;"
+    ></iframe>
+    <p>
+      <strong>Приклад.</strong> Однак, якщо внутрішній стиль визначено перед
+      посиланням на зовнішню таблицю стилів, елементи &lt;h1&gt; будуть navy
+      ("морськими"):
+    </p>
+    <code>
+      &lt;!DOCTYPE html&gt; <br />
+      &lt;html lang="en"&gt; <br />
+      &lt;head&gt; <br />
+      &lt;style&gt; <br />
+      h1{ <br />
+      color: orange; <br />
+      } <br />
+      &lt;/style&gt; <br />
+      &lt;link rel="stylesheet" href="mystyle.css"&gt; <br />
+      &lt;/head&gt; <br />
+      &lt;body&gt; <br />
+      &lt;h1&gt;This is heading&lt;/h1&gt; <br />
+      &lt;p&gt;This is paragraph&lt;/p&gt; <br />
+      &lt;/body&gt; <br />
+      &lt;/html&gt; <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="stylelinkcss.html"
+      frameborder="1"
+      width="100%;"
+      height="250px;"
+    ></iframe>
+    <hr />
+
+    <h1>Каскадний порядок</h1>
+    <p>
+      Який стиль використовуватиметься, якщо для елементи HTML задано більше ніж
+      один стиль? <br />
+      Усі стилі на сторінці "каскадуватимуть" у нову "віртуальну" таблицю стилів
+      за такими правилами, де номер один має найвищий пріорітет:
+    </p>
+    <ol>
+      <li>Вбудований стиль (всередині елемента HTML)</li>
+      <li>Зовнішні та внутрішні таблиці стилів (у головному розділі)</li>
+      <li>Браузер за замовчуванням</li>
+    </ol>
+    <p>
+      Таким чином, вбудований стиль має найвищий пріоритет і перекриває зовнішні
+      та внутрішні стилі та стандартні налаштування браузера.
+    </p>
+  </body>
+</html>

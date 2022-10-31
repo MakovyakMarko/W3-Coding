@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Відео YouTube у форматі HTML</title>
+  </head>
+  <body>
+    <h1>Відео YouTube у форматі HTML</h1>
+    <p>
+      Найпростіший спосіб відтворювати відео в HTML - використовувати YouTube.
+    </p>
+    <hr />
+
+    <h2>Проблеми з форматами відео?</h2>
+    <p>
+      Перетворення відео в різні формати може бути складним і трудомістким.
+      <br />
+      Простіше рішення - дозволити YouTube відтворювати відео на вашій
+      веб-сторінці.
+    </p>
+    <hr />
+
+    <h2>Ідентифікатор відео YouTube</h2>
+    <p>
+      YouTube відображатиме ідентифікатор (наприклад, tbgNymZ7vqY), коли ви
+      збережете (або відтворите) відео. <br />
+      Ви можете використовувати цей ідентифікатор і посилатися на своє відео в
+      коді HTML.
+    </p>
+    <hr />
+
+    <h2>Відтворення відео YouTube у HTML</h2>
+    <p>Щоб відтворити відео на веб-сторінці, виконайте такі дії:</p>
+    <ul>
+      <li>Завантажте відео на YouTube</li>
+      <li>Зверніть увагу на ідентифікатор відео</li>
+      <li>Визначте &lt;ifame&gt; елемент на своїй сторінці</li>
+      <li>Нехай src атрибут вказує URL-адресу відео</li>
+      <li>
+        Використовуйте атрибут width i height, щоб указати розмір програвача
+      </li>
+      <li>Додайте будь-які інші параметри до URL-адреси</li>
+    </ul>
+    <code>
+      &lt;iframe width="420" height="315"
+      src="https://www.youtube.com/embed/tgbNymZ7vqY"&gt;&lt;/iframe&gt;
+    </code>
+    <p>відображатиметься так:</p>
+    <iframe
+      width="420"
+      height="315"
+      src="https://www.youtube.com/embed/tgbNymZ7vqY"
+      frameborder="0"
+    ></iframe>
+    <hr />
+
+    <h2>YouTube Autoplay + Mute</h2>
+    <p>
+      Ви можете дозволити автоматичний запуск відео, коли користувач відвідує
+      сторінку, додавши autoplay=1 до URL-адреси YouTube. Однак автоматичний
+      запуск відео дратує ваших відвідувачів! <br />
+      Додайте muted=1 після autoplay=1, щоб відео почало відтворюватись
+      автоматично (але без звуку).
+    </p>
+    <code>
+      &lt;iframe width="420" height="315"
+      src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1&gt;&lt;/iframe&gt;
+    </code>
+    <p>Відобтиметься так:</p>
+    <iframe
+      width="420"
+      height="315"
+      src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1"
+      frameborder="0"
+    ></iframe>
+    <hr />
+
+    <h2>Список відтворення YouTube</h2>
+    <p>
+      Відокремлений комами список відео для відтворення (на додаток до
+      оригінальної URL-адреси).
+    </p>
+    <hr />
+
+    <h2>YouTube Loop</h2>
+    <p>
+      Додайте loop=1, щоб ваше відео постійно відтворювалося. <br />
+      Значення 0 (за замовчуванням): відео відтворюватиметься лише раз. <br />
+      Значення 1: відео буде повторюватись (вічно).
+    </p>
+    <code>
+      &lt;iframe width="420" height="315"
+      src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1&gt;&lt;/iframe&gt;
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      width="420"
+      height="315"
+      src="https://www.youtube.com/embed/tgbNymZ7vqY?playlist=tgbNymZ7vqY&loop=1"
+      frameborder="0"
+    ></iframe>
+    <hr />
+
+    <h2>Елементи керування YouTube</h2>
+    <p>
+      Додати controls=0, щоб не відображати елементи керування у відеоплеєрі.
+      <br />
+      Значення 0: елементи керування програвачем не відображаються. <br />
+      Значення 1 (за замовчуванням): елементи керування доступні.
+    </p>
+    <code>
+      &lt;iframe width="420" height="315"
+      src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0&gt;
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      width="420"
+      height="315"
+      src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0"
+      frameborder="0"
+    ></iframe>
+  </body>
+</html>

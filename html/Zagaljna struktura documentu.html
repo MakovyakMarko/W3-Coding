@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ua-UA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Загальні відомості</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <style>
+      .code {
+        background-color: white;
+        color: black;
+        border: none;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Загальна структура документу</h1>
+    <p>
+      Спочатку йде декларація !DOCTYPE html. Потім йде загальний тег html,
+      котрим починається і закінчується документ. Потім йде тег head в якому
+      вказується назва сайту за допомогою тега title, яка відображаеться на
+      вкладці браузера, а також вказується за допомогою тега meta інформація про
+      сайт і за допомогою атрибуту name вказується що ми описуємо для пошукових
+      систем, які дивляться на цей тег, і за допомогою атрибута content ми
+      записуємо короткі відомості про сайт.Видима частина знаходиться між тегами
+      body.
+    </p>
+    <code>
+      &lt;!DOCTYPE html&gt; <br />
+      &lt;html&gt; <br />
+      &lt;body&gt; <br />
+      &lt;h1&gt;Мій заголовок&lt;/h1&gt; <br />
+      &lt;p&gt;Мій параграф&lt;/p&gt; <br />
+      &lt;/body&gt; <br />
+      &lt;/html&gt;
+    </code>
+    <hr />
+    <h2>Заголовки і параграфи</h2>
+
+    <code>
+      &lt;h1&gt; Мій n-заголовок h1 &lt;/h1&gt; <br />
+      &lt;h2&gt; Мій n-заголовок h2 &lt;/h2&gt; <br />
+      &lt;h3&gt; Мій n-заголовок h3 &lt;/h3&gt; <br />
+      &lt;h4&gt; Мій n-заголовок h4 &lt;/h4&gt; <br />
+      &lt;h5&gt; Мій n-заголовок h5 &lt;/h5&gt; <br />
+      &lt;h6&gt; Мій n-заголовок h6 &lt;/h6&gt; <br />
+      &lt;p&gt;Мій n-параграф&lt;/p&gt; <br />
+      &lt;p&gt;Це інший параграф &lt;/p&gt; <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <h1 class="code">Мій n-заголовок h1</h1>
+    <h2 class="code">Мій n-заголовок h2</h2>
+    <h3 class="code">Мій n-заголовок h3</h3>
+    <h4 class="code">Мій n-заголовок h4</h4>
+    <h5 class="code">Мій n-заголовок h5</h5>
+    <h6 class="code">Мій n-заголовок h6</h6>
+    <p class="code">Мій n-параграф</p>
+    <p class="code">Це інший параграф</p>
+    <hr />
+
+    <h2>Посилання</h2>
+    <code
+      >&lt;a href="https://www.google.com" target="_blank"&gt;This is a link to
+      google.com&lt;/a&gt;</code
+    >
+    <br />
+    <br />
+    <p>відображатиметься так:</p>
+    <a href="https://www.google.com" target="_blank"
+      >This is a link to google.com</a
+    >
+    <hr />
+    <h2>Зображення</h2>
+    <code>&lt;img src="1.jpg" alt="Ukraine" width="400" height="270"&gt;</code>
+    <br />
+    <p>Відображатиметься так:</p>
+    <img src="1.jpg" alt="Ukraine" width="400" height="270" />
+  </body>
+</html>

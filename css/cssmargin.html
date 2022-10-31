@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>CSS поля (margin)</title>
+  </head>
+  <body>
+    <h1>CSS поля (margins)</h1>
+    <p>
+      Поля (margin) використовуються для створення простору навколо елементів за
+      межами будь-яких визначених меж.
+    </p>
+    <iframe
+      src="margincss.html"
+      frameborder="1"
+      width="100%;"
+      height="160px;"
+    ></iframe>
+    <hr />
+
+    <h2>Поля СSS</h2>
+    <p>
+      Властивості CSS margin використовуються для створення простору навколо
+      елементів поза будь-якими визначеними межами.
+    </p>
+    <p>
+      З СSS ви маєте повний контроль над полями. Існують властивості для
+      встановлення поля для кожної сторони елемента (верхньої, правої, нижньої
+      та лівої).
+    </p>
+    <hr />
+
+    <h2>Поле - окремі сторони</h2>
+    <p>CSS має властивості для визначення поля для кожної сторони елемента:</p>
+    <ul>
+      <li>margin-top</li>
+      <li>margin-right</li>
+      <li>margin-bottom</li>
+      <li>margin-left</li>
+    </ul>
+    <p>Усі властивості поля можуть мати такі значення:</p>
+    <ul>
+      <li>auto - браузер розраховує поле.</li>
+      <li>довжина - вказує поле в px, pt,cm тощо.</li>
+      <li>% - визначає відступ у % від ширини елемента</li>
+      <li>
+        inherit - вказує, що поле має бути успадковане від батьківського
+        елемента
+      </li>
+    </ul>
+    <p><strong>Порада:</strong> довзволені від'ємні значення.</p>
+    <code>
+      p{ <br />
+      margin-top: 100px; <br />
+      margin-botom: 100px; <br />
+      margin-right: 150px; <br />
+      margin-left: 80px; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="marginsides.html"
+      frameborder="1"
+      width="100%"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Margin - скорочена властивість</h2>
+    <p>
+      Щоб скоротити код, можна вказати всі властивості поля в одній властивості.
+    </p>
+    <p>
+      Ця margin властивість є скоротченою властивістю для таких індивідуальних
+      властивостей поля:
+    </p>
+    <ul>
+      <li>margin-top</li>
+      <li>margin-right</li>
+      <li>margin-bottom</li>
+      <li>margin-left</li>
+    </ul>
+    <p>Отже, ось як це працює:</p>
+    <p>Якщо margin властивість має чотири значення:</p>
+    <ul>
+      <li><b>поле: 25px 50px 75px 100px;</b></li>
+      <ul>
+        <li>верхнє поле стиновить 25 пікселів</li>
+        <li>праве поле становить 50 пікселів</li>
+        <li>нижнє поле становить 75 пікселів</li>
+        <li>ліве поле становить 100 пікселів</li>
+      </ul>
+    </ul>
+    <code>
+      p{ <br />
+      margin: 25px 50px 75px 100px; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="marginsidesuni.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <p>Якщо margin властивість має три значення:</p>
+    <ul>
+      <li><b>поле: 25px 50px 75px;</b></li>
+      <ul>
+        <li>верхнє поле становить 25 пікселів</li>
+        <li>праве і ліве поле становить 50 пікселів</li>
+        <li>нижнє поле становить 75 пікселів</li>
+      </ul>
+    </ul>
+    <code>
+      p{ <br />
+      margin: 25px 50px 75px; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="marginthreesides.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <p>Якщо margin властивість має два значення:</p>
+    <ul>
+      <li><b>поле: 25px 50px;</b></li>
+      <ul>
+        <li>верхнє і нижнє поле становлять 25 пікселів</li>
+        <li>праве і ліве поля становлять 50 пікселів</li>
+      </ul>
+    </ul>
+    <code>
+      p{ <br />
+      margin: 25px 50px; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="margintwosides.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <p>Якщо margin властивість має одне значення:</p>
+    <ul>
+      <li><b>поле: 25px;</b></li>
+      <ul>
+        <li>всі чотири поля становлять 25 пікселів</li>
+      </ul>
+    </ul>
+    <code>
+      p{ <br />
+      margin: 25px; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="marginoneside.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Автоматичне значення</h2>
+    <p>
+      Ви можете встановити властивість margin auto на горизонтальне центрування
+      елемента в його контейнері.
+    </p>
+    <p>
+      Тоді елемент займе вказану ширину, а простір, що залишився, буде порівну
+      розподілено між лівим і правим полями.
+    </p>
+    <code>
+      div{ <br />
+      width: 300px; <br />
+      margin: auto; <br />
+      border: 1px solid red; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="marginauto.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Успадковане значення</h2>
+    <p>
+      У цьому прикладі ліве поле елемента &lt;p class="ex1"&gt; успадковуєьтся
+      від батьківського елемента (&lt;div&gt;):
+    </p>
+    <code>
+      div{ <br />
+      border: 1px solid red; <br />
+      margin-left: 100px; <br />
+      } <br />
+      p.ex1 { <br />
+      margin-left: inherit; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="margininherit.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+  </body>
+</html>

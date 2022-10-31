@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Межі CSS (borders)</title>
+    <style>
+      p.border {
+        border: 1px solid black;
+        padding: 10px;
+      }
+      p.bottomborder {
+        border-bottom: 1px solid red;
+        padding: 10px;
+      }
+      p.grayborder {
+        border-radius: 10px;
+        border: 1px solid grey;
+        padding: 10px;
+      }
+      p.leftborder {
+        border-left: 5px solid blue;
+        background-color: lightblue;
+        padding: 10px;
+      }
+      p.dashed {
+        border-style: dashed;
+      }
+      p.solid {
+        border-style: solid;
+      }
+      p.double {
+        border-style: double;
+      }
+      p.ridge {
+        border-style: ridge;
+      }
+      p.groove {
+        border-style: groove;
+      }
+      p.outset {
+        border-style: outset;
+      }
+      p.none {
+        border-style: none;
+      }
+      p.hidden {
+        border-style: hidden;
+      }
+      p.mix {
+        border-style: dotted dashed solid double;
+      }
+      p.inset {
+        border-style: inset;
+      }
+      p.dotted {
+        border-style: dotted;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Межі CSS (borders)</h1>
+    <p>
+      Властивості рамки CSS дозволяють вказати стиль, ширину та колір рамки
+      елемента
+    </p>
+    <p class="border">У мене з усіх боків рамка</p>
+    <p class="bottomborder">У мене червона нижня облямівка.</p>
+    <p class="grayborder">У мене закруглені межі</p>
+    <p class="leftborder">У мене синя ліва рамка</p>
+    <hr />
+
+    <h2>Стиль рамки CSS</h2>
+    <p>Властивість border-style визначає тип рамки для відображення.</p>
+    <p>Допускаються такі значення:</p>
+    <ul>
+      <li>dotted - Визначає пунктирну (крапками) рамку</li>
+      <li>dashed - Визначає пунктирну рамку</li>
+      <li>solid - Визначає суцілну рамку</li>
+      <li>double - Визначає подвійну рамку</li>
+      <li>
+        groove - Визначає 3D рифлену межу. Ефект залежить від значення кольору
+        рамки
+      </li>
+      <li>
+        ridge- Визначає 3D-ребристу межу. Ефект залежить від значення кольору
+        рамки
+      </li>
+      <li>
+        inset- Визначає рамку 3D-вставки. Ефект залежить від значення кольору
+        рамки
+      </li>
+      <li>
+        outset- Визначає початкову межу 3D. Ефект залежить від значення кольору
+        рамки
+      </li>
+      <li>none- Не визначає межі</li>
+      <li>hidden- Визначає приховану межу</li>
+    </ul>
+    <p>
+      Властивість border-style може мати від одного до чотирьох значень (для
+      верхньої мержі, правої межі, нижньої межі, та лівої межі)
+    </p>
+    <code>
+      p.dotted border-style: dotted; <br />
+      p.dashed {border-style: dashed;} <br />
+      p.solid {border-style: solid;} <br />
+      p.double {border-style: double;} <br />
+      p.groove {border-style: groove;} <br />
+      p.ridge {border-style: ridge;} <br />
+      p.inset {border-style: inset;} <br />
+      p.outset {border-style: outset;} <br />
+      p.none {border-style: none;} <br />
+      p.hidden {border-style: hidden;} <br />
+      p.mix {border-style: dotted dashed solid double;} <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <p class="dotted">A dotted border.</p>
+    <p class="dashed">A dashed border.</p>
+    <p class="solid">A solid border.</p>
+    <p class="double">A double border.</p>
+    <p class="groove">
+      A groove border. The effect depends on the border-color value.
+    </p>
+    <p class="ridge">
+      A ridge border. The effect depends on the border-color value.
+    </p>
+    <p class="inset">
+      An inset border. The effect depends on the border-color value.
+    </p>
+    <p class="outset">
+      An outset border. The effect depends on the border-color value.
+    </p>
+    <p class="none">No border.</p>
+    <p class="hidden">A hidden border.</p>
+    <p class="mix">A mixed border.</p>
+    <p>
+      <strong>Примітка.</strong> Жодна з ІНШИХ властивостей кордону CSS (про які
+      ви дізнаєтесь більше в наступних розділах) не матиме ЖОДНОГО ефекту, якщо
+      border-style властивість не встановлено!
+    </p>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ua_UA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML posylannja - rizni koljory</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <h1>HTML posylannja - rizni koljory</h1>
+    <p>
+      Posylannja HTML vidobrazaetjsja inshym koljorom zalezno vid togo, chy bulo
+      vono vidvidane, ne vidviduvane chy actyvne
+    </p>
+    <hr />
+    <h3>Koljory posylanj HTML</h3>
+    <p>
+      Za zamovchuvannjam posylannja vidobrazatymetjsja takym chynom (u vsih
+      brauzerah):
+    </p>
+    <ul>
+      <li>Nevidvidane posylannja pidkreslene ta synje</li>
+      <li>Vidvidane posylannja pidkreslene i fioletove</li>
+      <li>Aktyvne posylannja pidkreslene i chervone</li>
+    </ul>
+    <p>
+      Vy mozete zminyty koljory stanu posylannja za dopomogoju CSS:<br />
+      <b>Pryklad</b><br />
+      Tyt nevidvidane posylannja byde zelenym bez pidkreslennja. Vidvidane
+      posylannja bude rozevym bez pidkreslennja. Actyvne posylannja bude zovtym
+      i pidkreslenym.Krim togo,jakscho navesty kursor na posylannja (a:hover),
+      vono stane chervonym i pidkreslenym:<br />
+    </p>
+    <p style="text-align: left" ;>
+      style<br />
+      a:link {<br />
+      color: green;<br />
+      background-color: transparent;<br />
+      text-decoration: none;<br />
+      }<br />
+      a:visited {<br />
+      color:pink;<br />
+      background-color: transparent;<br />
+      text-decoration: none;<br />
+      }<br />
+      a:hover{<br />
+      color:red;<br />
+      background-color: transparent;<br />
+      text-decoration: underline;<br />
+      }<br />
+      a:active{<br />
+      color:yellow;<br />
+      background-color: transparent;<br />
+      text-decoration: underline;<br />
+      }<br />
+    </p>
+    <hr />
+    <h3>Knopky posylanj</h3>
+    <p>Posylannja takoz mozna oformyty jak knopku za dopomogoju CSS:</p>
+    <a
+      href="https://www.google.com"
+      style="
+        background-color: #f44336;
+        color: white;
+        padding: 15px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+      "
+      title="Google.com"
+      >Ce posulannja</a
+    >
+    <p style="text-align: left">
+      style<br />
+      a:link, a:visited {<br />
+      color: white;<br />
+      background-color: #f44336;<br />
+      text-decoration: none;<br />
+      padding:15px 25px;<br />
+      text-align:center;<br />
+      display: inline-block;<br />
+      }<br />
+      a:hover, a:active{ <br />
+      badckground-color: red; }<br />
+    </p>
+  </body>
+</html>

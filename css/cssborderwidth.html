@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Ширина межі CSS</title>
+    <style>
+      p.one {
+        border-style: solid;
+        border-width: thin;
+      }
+      p.two {
+        border-style: solid;
+        border-width: medium;
+      }
+      p.three {
+        border-style: solid;
+        border-width: thick;
+      }
+      p.four {
+        border-style: solid;
+        border-width: 10px;
+      } 
+      p.five {
+      border-style: solid; 
+      border-width: 5px 20px; /* 5px top and bottom, 20px on the sides */ 
+      }      
+      p.six {
+      border-style: solid; 
+      border-width: 20px 5px; /* 20px top and bottom, 5px on the sides */ 
+      }     
+      p.seven { 
+      border-style: solid; 
+      border-width: 25px 10px 4px 35px; /* 25px top, 10px right, 4px bottom and
+      35px left */
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Ширина межі CSS (border-width)</h1>
+    <hr />
+
+    <h2>Ширина межі CSS (border-width)</h2>
+    <p>Властивість border-width визначає ширину чотирьох меж. <br /></p>
+    <p>
+      Ширину можна встановити як певний розмір (у px,pt,cm,em тощо) або за
+      допомогою одного з трьох попередньо визначених значень: тонкий, середній,
+      або товстий:
+    </p>
+    <code>
+      p.one{ <br />
+      border-style: solid; <br />
+      border-width: thin; <br />
+      } <br />
+      p.two{ <br />
+      border-style: solid; <br />
+      border-width: medium; <br />
+      } <br />
+      p.three{ <br />
+      border-style: solid; <br />
+      border-width: thick; <br />
+      } <br />
+      p.four{ <br />
+      border-style: solid; <br />
+      border-width: 10px; <br />
+      }
+    </code>
+    <p>
+        Відображатиметься так:
+    </p>
+    <p class="one">Thin border-width</p>
+    <p class="two">Medium border-width</p>
+    <p class="three">Thick border-width</p>
+    <p class="four">10 pixels border-width</p>
+    <hr />
+
+    <h2>Конкретні ширини сторін</h2>
+    <p>
+      Властивість border-width може мати від одного до чотирьох значень (для
+      верньої межі, правої межі, нижньої межі, лівої межі):
+    </p>
+    <code>
+      p.five { <br />
+      border-style: solid; <br />
+      border-width: 5px 20px; /* 5px top and bottom, 20px on the sides */ <br />
+      } <br />
+      <br />
+      p.six { <br />
+      border-style: solid; <br />
+      border-width: 20px 5px; /* 20px top and bottom, 5px on the sides */ <br />
+      } <br />
+      <br />
+      p.seven { <br />
+      border-style: solid; <br />
+      border-width: 25px 10px 4px 35px; /* 25px top, 10px right, 4px bottom and
+      35px left */ <br />
+      } <br />
+    </code>
+    <p>
+        Відображатиметься так:
+    </p>
+    <p class="five">Some text.</p>
+    <p class="six"">Some text.</p>
+    <p class="seven">Some text.</p>
+    
+  </body>
+</html>

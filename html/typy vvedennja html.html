@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="ua-UA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Типи введення HTML</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <h1>Типи введення HTML</h1>
+    <p>У цьому розділі описано різні типи input елемента HTML.</p>
+    <hr />
+
+    <h2>Типи введення HTML</h2>
+    <p>Ось різні типи введення, які можна використовувати в HTML:</p>
+    <ul>
+      <li>&lt;input type="button"&gt;</li>
+      <li>&lt;input type="checkbox"&gt;</li>
+      <li>&lt;input type="color"&gt;</li>
+      <li>&lt;input type="date"&gt;</li>
+      <li>&lt;input type="datetime-local"&gt;</li>
+      <li>&lt;input type="email"&gt;</li>
+      <li>&lt;input type="file"&gt;</li>
+      <li>&lt;input type="hidden"&gt;</li>
+      <li>&lt;input type="image"&gt;</li>
+      <li>&lt;input type="month"&gt;</li>
+      <li>&lt;input type="number"&gt;</li>
+      <li>&lt;input type="password"&gt;</li>
+      <li>&lt;input type="radio"&gt;</li>
+      <li>&lt;input type="range"&gt;</li>
+      <li>&lt;input type="reset"&gt;</li>
+      <li>&lt;input type="search"&gt;</li>
+      <li>&lt;input type="submit"&gt;</li>
+      <li>&lt;input type="tel"&gt;</li>
+      <li>&lt;input type="text"&gt;</li>
+      <li>&lt;input type="time"&gt;</li>
+      <li>&lt;input type="url"&gt;</li>
+      <li>&lt;input type="week"&gt;</li>
+    </ul>
+    <p><b>Примітка.</b> Значенням type атрибута за замовчуванням є text.</p>
+    <hr />
+
+    <h2>Тип введення text</h2>
+    <p>&lt;input type="text"&gt; визначає однорядкове поле введення тексту:</p>
+    <code>
+      &lt;form&gt; <br />
+      &lt;label for="fname"&gt;Ім'я:&lt;/label&gt; &lt;br/&gt; <br />
+      &lt;input type="text" id="fname" name="fname"&gt; &lt;br/&gt; <br />
+      &lt;label for="lname"&gt;Фамілія:&lt;/label&gt; &lt;br/&gt; <br />
+      &lt;input type="text" id="lname" name="lname"&gt; <br />
+      &lt;/form&gt;
+    </code>
+    <p>Відображається так:</p>
+    <form>
+      <label for="fname">Ім'я:</label> <br />
+      <input type="text" id="fname" name="fname" /> <br />
+      <label for="lname">Фамілія:</label> <br />
+      <input type="text" id="lname" name="lname" />
+    </form>
+    <hr />
+
+    <h2>Тип введення password</h2>
+    <p>&lt;input type="password"&gt; визначає поле пароля:</p>
+    <code>
+      &lt;form&gt; <br />
+      &lt;label for="username"&gt;Ім'я користувача:&lt;/label&gt; &lt;br/&gt;
+      <br />
+      &lt;input type="text" id="username" name="username"&gt; &lt;br/&gt; <br />
+      &lt;label for="pwd"&gt;Пароль:&lt;/label&gt; &lt;br/&gt; <br />
+      &lt;input type="password" id="pwd" name="pwd"&gt; <br />
+      &lt;/form&gt;
+    </code>
+    <p>Відображається так:</p>
+    <form>
+      <label for="username">Ім'я користувача:</label> <br />
+      <input type="text" id="username" name="username" /> <br />
+      <label for="pwd">Пароль:</label> <br />
+      <input type="password" id="pwd" name="pwd" />
+    </form>
+    <p>
+      <b>Примітка.</b> Символи в полі пароля маскуються (відображаються
+      зірочками або кружечками).
+    </p>
+    <hr />
+
+    <h2>Тип введення submit</h2>
+    <p>
+      &lt;input type="submit"&gt; визначає кнопку для передачі даних форми
+      обробнику форми. Обробник форми, як правило, являє собою сторінку сервера
+      зі скриптом для обробки вхідних даних. Обробник форми вказується в action
+      атрибуті форми:
+    </p>
+    <code>
+      &lt;form action="action_page.php"&gt; <br />
+      &lt;label for="fname"&gt;Ім'я&lt;/label&gt; &lt;br/&gt; <br />
+      &lt;input type="text" id="fname" name="fname" value="John"&gt; &lt;br/&gt;
+      <br />
+      &lt;label for="lname"&gt;Фамілія:&lt;/label&gt; &lt;br/&gt;<br />
+      &lt;input type="text" id="lname" name="lname" value="Doe"&gt; &lt;br/&gt;
+      &lt;br/&gt; <br />
+      &lt;input type="submit" value="Надіслати"&gt; <br />
+      &lt;/form&gt;
+    </code>
+    <p>Відображається так:</p>
+    <form action="action_page.php">
+      <label for="fname">Ім'я</label> <br />
+      <input type="text" id="fname" name="fname" value="John" /> <br />
+      <label for="lname">Фамілія:</label> <br />
+      <input type="text" id="lname" name="lname" value="Doe" /> <br />
+      <br />
+      <input type="submit" value="Надіслати" />
+    </form>
+    <p>
+      Якщо ви пропустите атрибут value кнопки submit, кнопка отримає текст за
+      замовчуванням:
+    </p>
+    <hr />
+
+    <h2>Скидання типу введення</h2>
+    <p>
+      &lt;input type="reset"&gt; визначає кнопку скидання, яка скине всі
+      значення форми до значень за замовчуванням:
+    </p>
+    <code>
+      &lt;form action="action_page.php"&gt; <br />
+      &lt;label for="fname"&gt;Ім'я&lt;/label&gt; &lt;br/&gt; <br />
+      &lt;input type="text" id="fname" name="fname" value="John"&gt; &lt;br/&gt;
+      <br />
+      &lt;label for="lname"&gt;Фамілія:&lt;/label&gt; &lt;br/&gt;<br />
+      &lt;input type="text" id="lname" name="lname" value="Doe"&gt; &lt;br/&gt;
+      &lt;br/&gt; <br />
+      &lt;input type="submit" value="Надіслати"&gt; <br />
+      &lt;input type="reset" value="Скинути"&gt; &lt;/form&gt;
+    </code>
+    <p>Відображається так:</p>
+    <form action="action_page.php">
+      <label for="fname">Ім'я</label> <br />
+      <input type="text" id="fname" name="fname" value="John" /> <br />
+      <label for="lname">Фамілія:</label> <br />
+      <input type="text" id="lname" name="lname" value="Doe" /> <br />
+      <br />
+      <input type="submit" value="Надіслати" />
+      <input type="reset" value="Скинути" />
+    </form>
+    <hr />
+
+    <h2>Тип введення radio</h2>
+    <p>
+      &lt;input type="radio"&gt; визначає перемикач. <br />
+      Перемикач дозволяє користувачеві вибрати ЛИШЕ ОДИН з обмеженої кількості
+      варіантів:
+    </p>
+    <code>
+      &lt;p&gt;Виберіть улюблену мову веб-програмування:&lt;/p&gt; <br />
+      &lt;form&gt; <br />
+      &lt;input type="radio" id="html" name="fav_language" value="HTML"&gt;
+      <br />
+      &lt;label for="html"&gt;HTML&lt;/label&gt; &lt;br/&gt; <br />
+      &lt;input type="radio" id="css" name="fav_language" value="CSS"&gt; <br />
+      &lt;label for="css"&gt;CSS&lt;/label&gt; &lt;br/&gt; <br />
+      &lt;input type="radio" id="javascript" name="fav_language"
+      value="JavaScript"&gt; &lt;label
+      for="javascript"&gt;JavaScript&lt;/label&gt; &lt;/form&gt;
+    </code>
+    <p>Відображається так:</p>
+    <p>Виберіть улюблену мову веб-програмування:</p>
+    <form>
+      <input type="radio" id="html" name="fav_language" value="HTML" />
+      <label for="html">HTML</label> <br />
+      <input type="radio" id="css" name="fav_language" value="CSS" />
+      <label for="css">CSS</label> <br />
+      <input
+        type="radio"
+        id="javascript"
+        name="fav_language"
+        value="JavaScript"
+      />
+      <label for="javascript">JavaScript</label>
+    </form>
+    <hr />
+
+    <h2>Тип введення checkbox</h2>
+    <p>
+      &lt;input type="checkbox"&gt; визначає прапорець. <br />
+      Прапорці дозволяють користувачеві вибрати НУЛЬ або БІЛЬШЕ значень
+      параметрів з обмеженої кількості варіантів.
+    </p>
+    <code>
+      &lt;form&gt; <br />
+      &lt;input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"&gt;
+      <br />
+      &lt;label for="vehicle1"&gt;Я маю велосипед&lt;/label&gt; &lt;br/&gt;
+      <br />
+      &lt;input type="checkbox" id="vehicle2" name="vehicle2" value="Car"&gt;
+      <br />
+      &lt;label for="vehicle2"&gt;Я маю машину&lt;/label&gt; &lt;br/&gt; <br />
+      &lt;input type="checkbox" id="vehicle3" name="vehicle3" value="Boat"&gt;
+      <br />
+      &lt;label for="vehicle3"&gt;Я маю лодку&lt;/label&gt; <br />
+      &lt;/form&gt;
+    </code>
+    <p>Відображається так:</p>
+    <form>
+      <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+      <label for="vehicle1">Я маю велосипед</label> <br />
+      <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
+      <label for="vehicle2">Я маю машину</label> <br />
+      <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat" />
+      <label for="vehicle3">Я маю човен</label>
+    </form>
+    <hr />
+
+    <h2>Тип введення button</h2>
+    <p>&lt;input type="button"&gt; визначає кнопку:</p>
+    <code>
+      &lt;input type="button" onclick="alert('Hello World!') value="Click
+      Me!"&gt;
+    </code>
+    <p>Відображається так:</p>
+    <input type="button" onclick="alert('Hello World!')" value="Click Me!" />
+    <hr />
+
+    <h2>Тип введення color</h2>
+    <p>
+      Використовується &lt;input type="color"&gt; для полів введення, які мають
+      колір. <br />
+      Залежно від підтримки браузера в полі введення може відображатися засіб
+      вибору кольору.
+    </p>
+    <code>
+      &lt;form&gt; <br />
+      &lt;label for="favcolor"&gt;Виберіть улюблений колір&lt;/label&gt; <br />
+      &lt;input type="color" id="favcolor" name="favcolor"&gt; <br />
+      &lt;/form&gt; <br />
+    </code>
+    <p>Відображається так:</p>
+    <form>
+      <label for="favcolor">Виберіть улюблений колір:</label> <br />
+      <input type="color" id="favcolor" name="favcolor" />
+    </form>
+    <hr />
+
+    <h2>Тип введення date</h2>
+    <p>
+      Використовується &lt;input type="date"&gt; для полів введення, які мають
+      містити дату. <br />
+      Залежно від підтримки браузера засіб вибору дати може відображатися в полі
+      введення.
+    </p>
+    <code>
+      &lt;form&gt;<br />
+      &lt;label for="birthday"&gt;Дата народження:&lt;/label&gt;<br />
+      &lt;input type="date" id="birthday" name="birthday"&gt;<br />
+      &lt;/form&gt;<br />
+    </code>
+    <p>Відображається так:</p>
+    <form>
+      <label for="birthday">Дата народження:</label>
+      <input type="date" id="birthday" name="birthday" />
+    </form>
+    <p>
+      Ви також можете використовувати атрибути min та max, щоб додати обмеження
+      до дат:
+    </p>
+    <code>
+      &lt;form&gt;<br />
+      &lt;label for="datemax"&gt;Введіть дату до 1980-01-01&lt;/label&gt;<br />
+      &lt;input type="date" id="datemax" name="datemax" max="1979-12-31"&gt;
+      &lt;br/&gt; &lt;br/&gt; &lt;label for="datemin"&gt;Введіть дату від
+      1999-12-31&lt;/label&gt; &lt;input type="date" id="datemin" name="datemin"
+      min="2000-01-01&gt;
+    </code>
+    <form>
+      <label for="fatemax">Введіть дату до 1980-01-01</label><br />
+      <input
+        type="date"
+        id="datemax"
+        name="datemax"
+        max="1979-12-31"
+      /><br /><br />
+      <label for="fatemin">Введіть дату після 1999-12-31</label><br />
+      <input type="date" id="datemin" name="datemin" min="1999-12-31" /> <br />
+    </form>
+    <hr />
+
+    <h2>Тип введення datetime-local</h2>
+    <p>
+      &lt;input type="datetime-local"&gt; указує поле введення дати та часу без
+      часового поясу. <br />
+      Залежно від підтримки браузера засіб виводу дати може відображатися в полі
+      введення.
+    </p>
+    <code>
+      &lt;form&gt;<br />
+      &lt;label for="birthdaytime"&gt;День народження (дата та
+      час):&lt;/label&gt;<br />
+      &lt;input type="datetime-local" id="birthdaytime"
+      name="birthdaytime"&gt;<br />
+      &lt;/form&gt;<br />
+    </code>
+    <p>Відображається так:</p>
+    <form>
+      <label for="birthdaytime">День народження (дата та час):</label>
+      <input type="datetime-local" id="birthdaytime" name="birthdaytime" />
+    </form>
+    <hr />
+
+    <h2>Тип введення e-mail</h2>
+    <p>
+      Використовується &lt;input type="email"&gt; для полів введення, які мають
+      містити адресу електронної пошти. <br />
+      Залежно від підтримки браузера, адресу електронної пошти можна автоматично
+      перевіряти під час насилання. <br />
+      Деякі смартфони розпізнають тип введення елевтронної пошти та додають
+      ".com" на клавіатуру, щоб відповідати введеним електронним адресам. <br />
+    </p>
+    <code>
+      &lt;form&gt;<br />
+      &lt;label for="email"&gt;Введіть свій email:&lt;/label&gt;<br />
+      &lt;input type="email" id="email" name="email"&gt;<br />
+      &lt;/form&gt;
+    </code>
+    <p>Відображається так:</p>
+    <form>
+      <label for="email">Введіть свій email:</label><br />
+      <input type="email" id="email" name="email" />
+    </form>
+    <hr />
+
+    <h2>Тип введення file</h2>
+    <p>
+      &lt;input type="file"&gt; визначає поле для вибору файлу та кноипку огляд
+      для завантаження файлів.
+    </p>
+    <code>
+      &lt;label for="myfyle"&gt;Виберіть файл&lt;/label&gt;<br />
+      &lt;input type="file" id="myfile" name="myfile"&gt;<br />
+      &lt;/form&gt;<br />
+    </code>
+    <p>Відображається так:</p>
+    <form>
+      <label for="myfile">Виберіть файл</label> <br />
+      <input type="file" id="myfile" name="myfile" /> <br />
+    </form>
+    <hr />
+
+    <h2>Тип введення hidden</h2>
+    <p>
+      Визначає &lt;input type="hidden"&gt; приховане поле введення (не видиме
+      для користувача). <br />
+      Приховане поле дозволяє веб-розробникам включати дані, які користувачі не
+      можуть побачити або змінити під час надсилання форми. <br />
+      У прихованому полі часто зберігається запис бази даних, який потрібно
+      оновити під час надсилання форми. <br />
+      <b>Примітка.</b> Хоча значення не відображається користувачеві у вмісті
+      сторінки, воно видиме (і може бути відредаговано) за допомогою
+      інтсрументів веб-розробника будь-якого веб-переглядача або функції
+      "Переглянути джерело". Не використовуйте приховані введення як форму
+      безпеки!
+    </p>
+    <code>
+      &lt;form&gt; <br />
+      &lt;label for="fname"&gt;Ім`я&lt;/label&gt;<br />
+      &lt;input type="text" id="fname" name="fname"&gt;&lt;br/&gt;&lt;br/&gt;<br />
+      &lt;input type="hidden" id="cusId" name="casId" value="3487"&gt;<br />
+      &lt;input type="submit" value="Відправити"&gt;<br />
+      &lt;/form&gt;<br />
+    </code>
+    <p>Відображається так:</p>
+    <form>
+      <label for="fname">Ім`я</label>
+      <input type="text" id="fname" name="fname" /><br /><br />
+      <input type="hidden" id="cusId" name="cusId" value="3487" />
+      <input type="submit" value="Відппавити" />
+    </form>
+    <hr />
+
+    <h2>Тип введення month</h2>
+    <p>
+      &lt;input type="month"&gt; дозволяє користувачеві вибрати місяць і рік.
+      <br />
+      Залежно від підтримки браузера засіб вибору дати може відображатися в полі
+      введення.
+    </p>
+    <code>
+      &lt;form&gt; <br />
+      &lt;label for="bdaymonth"&gt;День народження (місяць і рік):&lt;/label&gt;
+      <br />
+      &lt;input type="month" id="bdaymonth" name="bdaymonth"&gt; <br />
+      &lt;/form&gt;
+    </code>
+    <p>Відображається так:</p>
+    <form>
+      <label for="bdaymonth">День народження (місяць і рік):</label> <br />
+      <input type="month" id="bdaymoth" name="bdaymonth" />
+    </form>
+    <hr />
+
+    <h2>Тип введення number</h2>
+    <p>
+      &lt;input type="number"&gt; визначає числове поле введення. <br />
+      Ви також можете встановити обмеження щодо приймання номерів. <br />
+      У наступному прикладі відображається числове поле введення, куди можна
+      ввести значення від 1 до 5:
+    </p>
+    <code>
+      &lt;form&gt; <br />
+      &lt;label for="quantity"&gt;Кількість (від 1 до 5):&lt;/label&gt; <br />
+      &lt;input type="number id="quantity" name="quantuty" min="1"
+      max="5"&gt;<br />
+      &lt;/form&gt;
+    </code>
+    <p>Відображається так:</p>
+    <form>
+      <label for="quantity">Кількість (від 1 до 5):</label><br />
+      <input type="number" id="quantity" name="quantity" min="1" max="5" />
+    </form>
+    <p>
+      В наступному прикладі відображається числове поле введення, куди можна
+      ввести значення від 0 до 100 з кроком по 10. Значення за замовчуванням
+      -30.
+    </p>
+    <code>
+      &lt;form&gt;<br />
+      &lt;label for="quantity"&gt;Кількість:&lt;/label&gt; <br />
+      &lt;input type="number" id="quantity" name="quantity" min="0" max="100"
+      step="10" value="30"&gt; <br />
+      &lt;/form&gt;
+    </code>
+    <p>Відображається так:</p>
+    <form>
+      <label for="quantity">Кількість:</label> <br />
+      <input
+        type="number"
+        id="quantity"
+        name="quantity"
+        min="0"
+        max="100"
+        step="10"
+        value="30"
+      />
+    </form>
+    <hr />
+
+    <h2>Тип введення range (діапазон)</h2>
+    <p>
+      &lt;input type="range"&gt; визначає елемент керування для введення числа,
+      точне значення якого не є важливим, наприклад повзунок. Діапазон за
+      замовчуванням становить від 0 до 100. Однак ви можете встановити обмеження
+      на те, які числа приймаються за допомогою атрибутів min,max,step
+    </p>
+    <code>
+      &lt;form&gt; <br />
+      &lt;label for="vol"&gt;Гучність (між 0 та 50):&lt;/label&gt; <br />
+      &lt;input type="range" id="vol" name="vol" min="0" max="50"&gt; <br />
+      &lt;form&gt;
+    </code>
+    <p>Відображається так:</p>
+    <form>
+      <label for="vol">Гучність (між 0 та 50):</label> <br />
+      <input type="range" id="vol" name="vol" min="0" max="50" />
+    </form>
+    <hr />
+
+    <h2>Тип введення search</h2>
+    <p>
+      &lt;input type="search"&gt; використовується для полів пошуку (поле пошуку
+      веде себе як звичайне текстове поле).
+    </p>
+    <code>
+      &lt;form&gt;<br />
+      &lt;label for="gsearch"&gt;Пошук в Google:&lt;/label&gt;<br />
+      &lt;input type="search" id="gsearch" name="gsearch"&gt;<br />
+      &lt;/form&gt;
+    </code>
+    <p>Відображається так:</p>
+    <form>
+      <label for="gsearch">Пошук в Google:</label><br />
+      <input type="search" id="gsearch" name="gsearch" />
+    </form>
+    <hr />
+
+    <h2>Тип введення tel</h2>
+    <p>
+      &lt;input type="tel"&gt; використовується для полів введення, які мають
+      містити номер телефону.
+    </p>
+    <code>
+      &lt;form&gt;<br />
+      &lt;label for="phone"&gt;Введіть ваш номер телефону:&lt;/label&gt;<br />
+      &lt;input type="phone" id="phone" name="phone"
+      pattern="+38-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"&gt;
+    </code>
+    <p>Відображається так:</p>
+    <form>
+      <label for="phone">Введіть ваш номер телефону:</label> <br />
+      <input
+        type="phone"
+        id="phone"
+        name="phone"
+        pattern="+38-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+      />
+    </form>
+    <hr />
+
+    <h2>Тип введення time</h2>
+    <p>
+      &lt;input type="time"&gt; дозволяє користувачеві вибрати час (без часового
+      поясу). <br />
+      Залежно від підтрики веб-переглядача, у полі введення може відображатися
+      щасіб вибору часу.
+    </p>
+    <code>
+      &lt;form&gt;<br />
+      &lt;label for="appt"&gt;Виберіть час:&lt;/label&gt;<br />
+      &lt;input type="time" id="appt" name="appt"&gt;<br />
+      &lt;/form&gt;
+    </code>
+    <p>Відображається так:</p>
+    <form>
+      <label for="appt">Виберіть час:</label> <br />
+      <input type="time" id="appt" name="appt" />
+    </form>
+    <hr />
+
+    <h2>Тип введення url</h2>
+    <p>
+      &lt;input type="url"&gt; використовується для полів введення, які мають
+      містити URL-адресу. <br />
+      Залежно від підтримки браузера, поле URL-адреси може автоматично
+      перевірятися під час надсилання. <br />
+      Деякі смартфони розпізнають тип URL-адреси та додають на клавіатуру
+      ".com", щоб відповідати введеній URL-адресі.
+    </p>
+    <code>
+      &lt;form&gt;<br />
+      &lt;label for="homepage"&gt;Додайте свою домашню
+      сторінку:&lt;/label&gt;<br />
+      &lt;input type="url" id="homepage" name="homepage"&gt;<br />
+      &lt;/form&gt;
+    </code>
+    <p>Відображається так:</p>
+    <form>
+      <label for="homepage">Дадайте свою домашню сторінку:</label> <br />
+      <input type="url" id="homepage" name="homepage" />
+    </form>
+    <hr />
+
+    <h2>Тип введення week</h2>
+    <p>
+      &lt;input type="week"&gt; дозволяє користувачеві вибрати тиждень і рік.
+      <br />
+      Залежно від підтримки браузера засіб вибору дати може відображатися в полі
+      введення.
+    </p>
+    <code>
+      &lt;form&gt;<br />
+      &lt;label for"week"&gt;Виберіть тиждень:&lt;/label&gt; <br />
+      &lt;input type="week" id="week" name="week"&gt;<br />
+      &lt;/form&gt;
+    </code>
+    <p>Відображається так:</p>
+    <form>
+      <label for="week">Виберіть тиждень:</label><br />
+      <input type="week" id="week" name="week" />
+    </form>
+  </body>
+</html>

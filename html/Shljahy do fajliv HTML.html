@@ -1,0 +1,97 @@
+<!DOCTYPE html> 
+<html lang="ua_UA">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shljahy do fajliv</title>
+        <link rel="stylesheet" href="../styles.css">
+        <style>
+            .tables{
+                width:100%;
+            }
+            td,th{
+                border: 2px solid black;
+                border-radius: 10px;
+                padding:5px;
+                margin:5px;
+                background-color: lightblue;
+            }
+            td:hover{
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Shljahy do fajliv</h1>
+        <p>
+            Shljah do fajlu opysuje roztashuvannja fajlu v strukturi papok web-sajtu.
+        </p>
+        <h2>Pryklady shljahu do fajly</h2>
+        <table class="tables">
+            <tr>
+                <th>Shljah</th>
+                <th>Opys</th>
+            </tr>
+            <tr>
+                <td>img src="picture.jpg"</td>
+                <td>Fajl "picture.jpg" znahodytjsja v tij samij papci, scho i potochna storinka</td>
+            </tr>
+            <tr>
+                <td>img src="image/picture.jpg"</td>
+                <td>Fajl "picture.jpg" roztashovanyj v papci zobrazenj potochnoji papky</td>
+            </tr>
+            <tr>
+                <td>img src="/image/picture.jpg"</td>
+                <td>Fajl "picture.jpg" roztachovanyj y papci zobrazenj u koreni potochnoji merezi</td>
+            </tr>
+            <tr>
+                <td>img src="../picture.jpg"</td>
+                <td>Fajl "picture.jpg" roztashovanyj u papci na odyn rivenj vysche potochnoji papky</td>
+            </tr>    
+        </table>
+        <hr>
+        <h2>Shljahy do fajliv HTML</h2>
+        <p>
+            Shljah do faylu opysuje roztashuvannja faylu v strukturi papok web-sajty. <br>
+            Shljahy do fajliv vykorystovujutjsja pid chas posylanj na zovnishni fajly, napryklad: <br>
+            <ul>
+                <li>
+                    web-storinky
+                </li>
+                <li>
+                    zobrazennja
+                </li>
+                <li>
+                    tablyci styliv
+                </li>
+                <li>
+                    JavaScript
+                </li>
+            </ul>
+        </p>
+        <hr>
+        <h2>Absoljutno shljahy do fajliv</h2>
+        <p>
+            Absoljutnyj shljah do fajlu- ce povna URL-adresa fajlu: <br>
+            img src="https://www.w3schools.com/image/picture.jpg" alt="Mountain"
+        </p>
+        <hr>
+        <h2>Vidnosni shljahy do fajliv</h2>
+        <p>
+            Vidnosnyj shljah do fajlu vkazuje na fajl vidnosno potochnoji storinky. <br>
+            U nastupnomy prykladi shljah do fajlu vkazuje na fajl u papci zobrazenj, roztashovanomu v koreni potochnogo web-sajtu: <br>
+            img src="/image/picture.jpg" alt="Mountain" <br>
+            U nastupnomu prykladi shljah do fajlu vkazuje na fajl u papci zobrazenj, roztashovanomy v potochnij papci: <br>
+            img src="image/picture.jpg" alt="Mountain" <br>
+            Y nastupnomu prykladi shljah do fajlu vkazuje na fajl u papci zobrazennja,roztashovanomu v papci na odym rivenj vysche potochnoji papky: <br>
+            img src="../image/picture.jpg" alt="Mountain" <br>
+        </p>
+        <hr>
+        <h2>Njkrascha praktyka</h2>
+        <p>
+            Najkrasche vykorystovuvaty vidnosni schljahy do fajliv (jakscho mozkyvo). <br>
+            Pry vykrystanni vidnosnyh shla=jahiv do fajliv vashi web-storinky ne budutj pryvjazani do vashoji potochnoji bazovoji url-adresy. 
+            Usi posylannja pracjuvatymutj na vashomu vlasnomu kompjuteri (lokaljnuj host), a takoz u vashomu potochnomu zagaljnodostupnomu domeni ta u vashyh majbutnih publichnyh domenah.
+        </p>
+    </body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>CSS Tutorial</title>
+    <style>
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+      }
+      li {
+        float: none;
+      }
+      li a {
+        display: block;
+        color: rgb(2, 49, 255);
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+      }
+      li a:hover {
+        background-color: blue;
+        color: rgb(255, 249, 249);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      header {
+        background-color: rgb(254, 254, 255);
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+        color: white;
+      }
+      nav {
+        float: left;
+        width: 25%;
+        height: 100%;
+        background: #ffffff;
+        padding: 5px;
+      }
+      nav ul {
+        list-style-type: none;
+        padding: 30;
+      }
+      article {
+        float: left;
+        padding: 10px;
+        width: 70%;
+        background-color: #ffffff;
+        height: 3000px;
+        right: 10px;
+      }
+
+      section::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      footer {
+        background-color: #ffffff;
+        padding: 10px;
+        text-align: center;
+        color: rgb(7, 7, 7);
+        height: 200px;
+      }
+      @media (max-width: 600px) {
+        nav,
+        article {
+          width: 100%;
+          height: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <h1>Підручник з CSS</h1>
+      <ul>
+        <li>
+          <a href="vvedennjavcss.html" target="iframe_css">Введення в CSS</a>
+        </li>
+        <li>
+          <a href="syntaxcss.html" target="iframe_css">Синтаксис CSS</a>
+        </li>
+        <li>
+          <a href="cssselectors.html" target="iframe_css">CSS селектори</a>
+        </li>
+        <li>
+          <a href="addcss.html" target="iframe_css">Як додати CSS</a>
+        </li>
+        <li>
+          <a href="csscomments.html" target="iframe_css">CSS коментарії</a>
+        </li>
+        <li>
+          <a href="csscolors.html" target="iframe_css">Кольори CSS</a>
+        </li>
+        <li>
+          <ul>
+            <h2>CSS background</h2>
+            <li>
+              <a href="backgroundscss.html" target="iframe_css"
+                >Фони CSS (background)</a
+              >
+            </li>
+            <li>
+              <a href="bgimage.html" target="iframe_css"
+                >Фонове зображення CSS (background-image)</a
+              >
+            </li>
+            <li>
+              <a href="bgrepeat.html" target="iframe_css"
+                >Фонове повторення CSS (background-repeat)</a
+              >
+            </li>
+            <li>
+              <a href="bgattachment.html" target="iframe_css"
+                >Вкладення фону CSS (background-attachment)</a
+              >
+            </li>
+            <li>
+              <a href="bgshorthend.html" target="iframe_css"
+                >СSS стенографія фону (background)
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <h2>CSS borders</h2>
+            <li>
+              <a href="cssborders.html" target="iframe_css"
+                >Межі CSS (borders)</a
+              >
+            </li>
+            <li>
+              <a href="cssborderwidth.html" target="iframe_css"
+                >Ширина межі CSS (border-width)</a
+              >
+            </li>
+            <li>
+              <a href="bordercolorcss.html" target="iframe_css"
+                >Колір межі CSS</a
+              >
+            </li>
+            <li>
+              <a href="bordersides.html" target="iframe_css"
+                >Сторони межі CSS</a
+              >
+            </li>
+            <li>
+              <a href="shortheandborder.html" target="iframe_css"
+                >Коротка властивість межі CSS</a
+              >
+            </li>
+            <li>
+              <a href="roundedborders.html" target="iframe_css"
+                >Округлені межі CSS (border-radius)</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <h2>CSS Margins</h2>
+            <li>
+              <a href="cssmargin.html" target="iframe_css">CSS поля (margin)</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <section>
+      <iframe
+        src="indexcss.html"
+        width="75%;"
+        height="5500px;"
+        name="iframe_css"
+        style="border: none; float: right"
+      ></iframe>
+    </section>
+  </body>
+</html>

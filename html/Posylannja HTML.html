@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ua-UA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Posylannja HTML</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <h1>Posylannja HTML</h1>
+    <p>
+      Posylannja mozna znajty majze na vsih storinkah. Posulannja dozvoljajutj
+      korystuvasham perehodyty vid storinky do storinky.
+    </p>
+    <hr />
+    <h3>HTML posylannja - giperposylannja</h3>
+    <p>
+      HTML posylannja e giperposylannjam.<br />
+      Vu mozete natysnytu posylannja ta perejty do inshogo dokumenta.<br />
+      Koly vy navedete kursor myshi na posylannja, strilka myshi peretvorytjsja
+      na malenjku ruchku.
+      <b>Prumitka.</b> Posulannja ne povynno buty tekstovym. Posylannja moze
+      buty zobrazennja abo budj-jakuj inshuj element.
+    </p>
+    <hr />
+    <h3>Posylannja HTML - Syntaksys</h3>
+    <p>
+      Teg HTML <ins>a</ins> vuznachae giperposylannja. Vin mae nastupnyj
+      suntaksys:<br />
+      a href="url" link text /a<br />
+      Najvazlyvishym atrybutom <ins>a</ins> elementa je <ins>href</ins> atrybut,
+      jakju vkazuje na pryznachennja posylannja.<br />
+      Tekst posylannja - ce chastyna, jaka bude vydyma chutachevi.<br />
+      Klacnuvshy na teksti posylannja, chytach bude vidpravlenyj na vkazanu
+      URL-adresu.<br />
+      Pruklad:
+    </p>
+    <a href="https://www.w3schools.com/">Visit W3Schools.com!</a>
+    <p>
+      Za zamovchuvannjam y vsih brauzerah posylannja vidobrazatymutjsja takym
+      chynom:
+    </p>
+    <ul>
+      <li>Nevidvidane posylannja pidkreslene i synje</li>
+      <li>Vidvidane posylannja pidkreslene i fioletove</li>
+      <li>Aktyvne posylannja pidkreslene i chervone</li>
+    </ul>
+    <p>
+      <b>Porada.</b> Posulannja, zvychajno, mozna stylizuvaty za dopomogoju CSS,
+      schob otrymaty inshyj vugljad
+    </p>
+    <hr />
+    <h3>Posylannja HTML - ciljovyj atrybut</h3>
+    <p>
+      Za zamovchuvannjam povyazana storinka vidobrazaetjsja u potochnomy vikni
+      brauzera. Schob zminutu ce, vy povynni vkazaty inshu maetu dlja
+      posylannja.<br />
+      Atrybut <ins>target</ins> vuznachae, de vidkryvatu povjazanyj document.<br />
+      Atrybut <ins>target</ins> moze maty odne z takyh znachenj:
+    </p>
+    <ul>
+      <li>
+        _self - za zamovchuvannjam. Vidkryvae document u tomu samomu
+        vikni/vkladci, de jogo bulo natusnyto
+      </li>
+      <li>_blank - vidkryvae document u novomu vikni/vkladci.</li>
+      <li>_parent - vidkryvae document u batjkivsjkomu frejmi.</li>
+      <li>_top - vidkryvae document u povnomu obsjazi vikna.</li>
+    </ul>
+    <p>Pruklad:</p>
+    <a href="https://www.w3schools.com/" target="_parent"
+      >_parent atrybut target</a
+    ><br />
+    <a href="https://www.w3schools.com/" target="_top">_top atrybut target</a>
+    <hr />
+    <h3>Absoljutni URL-adresy ta vidnosni URL-adresy</h3>
+    <p>
+      Odydnva vyshchenavedeni pruklady vykorystovyjutj absoljutnu URL-adresu
+      (povnu web-adresy) v href atrybuti.<br />
+      Lokaljne posulannja (posylannja na storinky v mezah togo samogo web-sajtu)
+      vkazuetjsja z vidnosnoju URL-adresoju (bez chastyny "https://www"):<br />
+      Pryklad:
+    </p>
+    <h4>Absolutni URL-y</h4>
+    <p><a href="https://www.google.com.ua">Google UA</a></p>
+    <p><a href="https://www.w3schools.com">W3Schools</a></p>
+    <h4>Vidnosni URL-y</h4>
+    <p><a href="W3SchoolsTutorial.html">Moja shporgalka</a></p>
+    <hr />
+    <h3>Posylannja HTML - vykorystovujte zobrazennja jak posylannja</h3>
+    <p>
+      Schob vykorystovuvaty zobrazennja jak posylannja, prosto pomistitj
+      <ins>img</ins> teg useredyni <ins>a</ins> tegu:<br />
+    </p>
+    <a href="https://www.google.com"
+      ><img
+        src="4.jpg"
+        alt="Google.com"
+        width="400"
+        height="270"
+        title="Google.com"
+    /></a>
+    <hr />
+    <h3>Posylannja na adresu elektronnoji pochty</h3>
+    <p>
+      Vykorystonujte <ins>mailto:</ins> vsereduni <ins>href</ins> atrybuta,schob
+      stvoryty posylannja, jake vidkryvae programu elektronnoji pochty
+      korystuvacha (schob dozvolyty jomu nadislaty elektronnyj lyst):<br />
+      a href="mailto:makovyak.marko@gmail.com" Send email /a
+    </p>
+    <a href="mailto:makovyak.marko@gmail.com"> Send email</a>
+    <hr />
+    <h3>Konpka jak posylannja</h3>
+    <p>
+      Schob vykorystovuvaty HTML_knopku jak posylannja, potribno dodaty kod
+      JavaScript.<br />
+      JavaScript dozvoljae vkazaty, scho vidbuvaetjsja pid chas pevnyh podij,
+      napryklad, natyskannja knopky:<br />
+      button onclick="document.lacation='default.asp'" HTML Tutorial /button
+    </p>
+    <button onclick="document.location='default.aps'">HTML Titorial</button>
+    <hr />
+    <h3>Nazvy posylanj</h3>
+    <p>
+      Atrybut <ins>title</ins> vkazue dodatkovu info pro element.Informacija
+      najchastishe vidobrazaetjsja jak tekst pidkazty, koly kursor myshi
+      peremishuetjsja nad elementom.<br />
+      <a
+        href="https://www.w3schools.com/html/"
+        title="Go to w3Schools HTML section"
+        >Visit our HTML Tutorial</a
+      >
+    </p>
+    <hr />
+
+    <h2>Інші форми ссилок</h2>
+    <ul>
+      <li>
+        <a
+          href="mailto:makovyak.marko@gmail.com?subject=Гіпер привіт&body=як тобі крутість цієї заготовленої ссилки?"
+          >Ссилка на email</a
+        >
+        з заготовленою темою та текстом
+      </li>
+      <li>Ссилка на телефон <a href="tel:+380960247021">+380960247021</a></li>
+      <li>
+        <a href="skype:Marko Makovyak?chat">Ссилка на скайп - почати чат</a>
+      </li>
+      <li>
+        <a href="skype:Marko Makovyak?call">Ссилка на скайп</a> - зробити
+        дзвінок
+      </li>
+    </ul>
+    <h3>Pisumok rozdilu</h3>
+    <ul>
+      <li>Vykorystovujte <ins>a</ins> element,schob vyznachyty posylannja</li>
+      <li>
+        Vykorystovujte <ins>href</ins> atrybut, schob vyznachyty adresu
+        posylannja
+      </li>
+      <li>
+        Vykorystovujte <ins>target</ins> atrybut, schob vuznachyty, de
+        vidkryvaty povjazanyj document
+      </li>
+      <li>
+        Vykorystovujte <ins>img</ins> element (vseredyni <ins>a</ins>), schob
+        vykorystovuvaty zobrazennja jak posylannja
+      </li>
+      <li>
+        Vykorystovujte <ins>mailto:</ins> shemu vseredyni href atrybuta, schob
+        stvoryty posylannja, jake vidkryvae programy elektronnoji pochty
+        korystuvacha
+      </li>
+    </ul>
+  </body>
+</html>

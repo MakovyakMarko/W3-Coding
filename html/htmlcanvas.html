@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Графіка HTML Canvas</h1>
+    <hr />
+
+    <p>
+      Елемент HTML canvas використовується для малювання графіки на
+      веб-сторінці. <br />
+      <img src="./grafik.png" alt="garfik" align="left" hspace="5" vspace="5" />
+      Графік ліворуч створено за допомогою canvas. Він показує чотири елементи:
+      червоний прямокутник, градієнтний прямокутник, багатоколірний прямокутник
+      і багатоколірний текст.
+    </p>
+    <hr />
+
+    <h2>Що таке HTML Canvas?</h2>
+    <p>
+      Елемент HTML &lt;canvas&gt; використовується для малювання графіки на
+      льоту за допомогою JavaScript. <br />
+      Елемент HTML &lt;canvas&gt; є лише контейнером для графіки. Ви повиння
+      використовувати JavaScript, щоб фактично намалювати графіку. <br />
+      Canvas має кілька методів малювання контурів, прямокутників, кіл, тексту
+      ті додавання зображеннь.
+    </p>
+    <hr />
+
+    <h2>Приклади полотна</h2>
+    <p>
+      Полотно - це прямокутна область на сторінці HTML. За замовчанням полотно
+      не має рамок і вмісту. <br />
+      Розмітка вигляднає так:
+    </p>
+    <code>
+      &lt;canvas id="myCanvas" width="200" height="100"&gt;&lt;/canvas&gt;
+    </code>
+    <p>
+      <b>Примітка.</b> Завжди вказуйте id атрибут (на який потрібно посилатися в
+      сценарії) width i height атрибут для визначення розміру полотна. Щоб
+      додати межу, використовуйте style атрибут. <br />
+      Ось приклад базового полотна:
+    </p>
+    <code>
+      &lt;canvas id="myCanvas" width="200" height="100" style="border:1px solid
+      #000000;"&gt;&lt;/canvas&gt;
+    </code>
+    <p>Відображається так:</p>
+    <canvas
+      id="myCanvas"
+      width="200"
+      height="100"
+      style="border: 1px solid #000000"
+    ></canvas>
+    <hr />
+
+    <h2>Додайте JavaScript</h2>
+    <p>
+      Після створення прямокутної області полотна ви повинні додати JavaScript,
+      щоб виконати малюнок. <br />
+      Ось кілька прикладів:
+    </p>
+    <h3>Намалюйте лінію</h3>
+    <code>
+      &lt;canvas id="myCanvasLine" width="200" height="100" style="border: 1px
+      solid #000000;"&gt;Ваш браузер не підтримує canvas&lt;/canvas&gt; <br />
+      &lt;script&gt; <br />
+      var c = document.getElementById("myCanvasLine"); <br />
+      var ctx = c.getContext("2d"); <br />
+      ctx.moveTo(0, 0); <br />
+      ctx.lineTo(200, 100); <br />
+      ctx.stroke(); <br />
+      &lt;/script&gt; <br />
+    </code>
+    <p>Відображається так:</p>
+    <iframe
+      src="canvasline.html"
+      frameborder="0"
+      width="250"
+      height="150"
+    ></iframe>
+    <hr />
+
+    <h3>Намалюйте коло</h3>
+    <code>
+      &lt;canvas id="myCanvasArc" width="200" height="100" style="border: 1px
+      solid #000000;&gt;Ваш браузер не підтримує canvas&lt;/canvas&gt; <br />
+      &lt;script&gt; <br />
+      var c = document.getElementById("myCanvasArc"); <br />
+      var ctx = c.getContext("2d"); <br />
+      ctx.beginPath(); <br />
+      ctx.arc(95,50,40,0,2*Math.PI); <br />
+      ctx.stroke(); <br />
+      &lt;/script&gt; <br />
+    </code>
+    <p>Відображається так:</p>
+    <iframe
+      src="canvasarc.html"
+      frameborder="0"
+      width="250"
+      height="150"
+    ></iframe>
+    <hr />
+
+    <h3>Намалюйте текст</h3>
+    <code>
+      &lt;canvas id="myCanvasText" width="200" height="100" style="border: 1px
+      solid #000000;&gt;Ваш браузер не підтримує canvas&lt;/canvas&gt; <br />
+      &lt;script&gt; <br />
+      var c = document.getElementById("myCanvasText"); <br />
+      var ctx = c.getContext("2d"); <br />
+      ctx.font="30px Georgia"; <br />
+      ctx.fillText("Hello World",10,50); <br />
+      &lt;/script&gt; <br />
+    </code>
+    <p>Відображається так:</p>
+    <iframe
+      src="canvastext.html"
+      frameborder="0"
+      width="250"
+      height="150"
+    ></iframe>
+    <hr />
+
+    <h3>Обведення тексту</h3>
+    <code>
+      &lt;canvas id="myCanvasStrokeText" width="200" height="100" style="border:
+      1px solid #000000;&gt;Ваш браузер не підтримує canvas&lt;/canvas&gt;
+      <br />
+      &lt;script&gt; <br />
+      var c = document.getElementById("myCanvasStrokeText"); <br />
+      var ctx = c.getContent("2d"); <br />
+      ctx.font="30px Georgia"; <br />
+      ctx.strokeText("Hello World",10,50); <br />
+      &lt;/script&gt; <br />
+    </code>
+    <p>Відображається так:</p>
+    <iframe
+      src="canvasstroketext.html"
+      frameborder="0"
+      width="250"
+      height="150"
+    ></iframe>
+    <hr />
+
+    <h3>Намалюйте лінійний градієнт</h3>
+    <code>
+      &lt;canvas id="myCanvasLinearGradient" width="200" height="100"
+      style="border: 1px solid #000000;&gt;Ваш браузер не підтримує
+      canvas&lt;/canvas&gt;
+      <br />
+      &lt;script&gt; <br />
+      var c = document.getElementById("myCanvasLinearGradient"); <br />
+      var ctx = c.getContent("2d"); <br />
+      var grd= ctx.createLinearGradient(0,0,200,0); <br />
+      <!--create Gradient-->
+      grd.addColorStop(0,"blue"); <br />
+      grd.addColorStop(.50, "yellow"); <br />
+      <!--fill with Gradient-->
+      ctx.fillStyle = grd; <br />
+      ctx.fillRect(10,10,150,80); <br />
+      &lt;/script&gt; <br />
+    </code>
+    <p>Відображається так:</p>
+    <iframe
+      src="canvaslineargradient.html"
+      frameborder="0"
+      width="250"
+      height="150"
+    ></iframe>
+    <hr />
+
+    <h3>Намалюйте круговий градієнт</h3>
+    <code>
+      &lt;canvas id="myCanvasRadialGradient" width="200" height="100"
+      style="border: 1px solid #000000;&gt;Ваш браузер не підтримує
+      canvas&lt;/canvas&gt;
+      <br />
+      &lt;script&gt; <br />
+      var c = document.getElementById("myCanvasRadialGradient"); <br />
+      var ctx = c.getContent("2d"); <br />
+      var grd= ctx.createRadialGradient(75,50,5,90,60,100); <br />
+      <!--create Gradient-->
+      grd.addColorStop(0,"blue"); <br />
+      grd.addColorStop(.50, "yellow"); <br />
+      <!--fill with Gradient-->
+      ctx.fillStyle = grd; <br />
+      ctx.fillRect(10,10,150,80); <br />
+      &lt;/script&gt; <br />
+    </code>
+    <p>Відображається так:</p>
+    <iframe
+      src="canvasredialgradient.html"
+      frameborder="0"
+      width="250"
+      height="150"
+    ></iframe>
+    <hr />
+
+    <h3>Намалювати зображення</h3>
+    <code>
+      &lt;p&gt;Image to use:&lt;/p&gt;<br />
+      &lt;img id="scream" src="scream.jpg" alt="The scraem" width="220"
+      height="277"&gt; <br />
+
+      &lt;p&gt;Canvas to fill&lt;/p&gt;<br />
+
+      &lt;canvas id="myCanvasImage" width="250" height="300" style="border: 1px
+      solid #000000;&gt;Ваш браузер не підтримує canvas&lt;/canvas&gt;<br />
+
+      &lt;script&gt; <br />
+      function myCanvasImage(){ var c =
+      document.getElementById("myCanvasRadialGradient"); <br />
+      var ctx = c.getContent("2d"); <br />
+      var img = document.getElementById("scream"); <br />
+      ctx.drawImage(img,10,10); }<br />
+      &lt;/script&gt; <br />
+    </code>
+    <p>Відображається так:</p>
+    <iframe
+      src="canvasimage.html"
+      frameborder="0"
+      width="350"
+      height="1000"
+    ></iframe>
+    <hr />
+  </body>
+</html>

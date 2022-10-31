@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>CSS стенографія фону</title>
+  </head>
+  <body>
+    <h1>CSS стенографія фону</h1>
+    <hr />
+
+    <h2>Фон CSS - властивість скоротчення</h2>
+    <p>
+      Щоб скоротити код, також можна вказати всі властивості фону в одній
+      властивості. Це називається властивістю скорочення. <br />
+      Замість написання:
+    </p>
+    <code>
+      body{ <br />
+      backgournd-color: #ffffff; <br />
+      background-image: url("img/bg2.jpeg"); <br />
+      background-repeat: no-repeat; <br />
+      background-position: right-top; <br />
+      }
+    </code>
+    <p>Ви можете використовувати властивість скорочення background:</p>
+    <code>
+      body{ <br />
+      background: #ffffff url("img/bg2.jpeg") no-repeat right top; }
+    </code>
+    <p>
+      При використанні скороченної властивості порядок значень властивостей
+      такий:
+    </p>
+    <ul>
+      <li>background-color</li>
+      <li>background-image</li>
+      <li>background-repeat</li>
+      <li>background-attachment</li>
+      <li>background-position;</li>
+    </ul>
+    <p>
+      Немає значення, якщо одне зі значень властивостей відсутнє, доки інші
+      знаходяться в такому порядку. Зауважте, що ми не використовуємо
+      властивість background-attachment у наведених вище прикладах, оскільки
+      вона не має значення.
+    </p>
+  </body>
+</html>

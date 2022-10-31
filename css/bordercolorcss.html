@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Колір рамки CSS</title>
+    <style>
+      p.one {
+        border-style: solid;
+        border-color: red;
+      }
+      p.two {
+        border-style: solid;
+        border-color: green;
+      }
+      p.three {
+        border-style: dotted;
+        border-color: blue;
+      }
+      p.four {
+        border-style: solid;
+        border-color: red green blue yellow;
+      }
+      p.five {
+        border-style: solid;
+        border-color: #ff0000;
+      }
+      p.six {
+        border-style: solid;
+        border-color: rgb(255, 0, 0);
+      }
+      p.seven {
+        border-style: solid;
+        border-color: hsl(0, 100%, 50%);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Колір рамки CSS</h1>
+    <hr />
+
+    <h2>Колір рамки CSS</h2>
+    <p>
+      Властивість border-color використовується для встановлення кольору
+      чотирьох рамок.
+    </p>
+    <p>Колір можна встановити:</p>
+    <ul>
+      <li>назва - вкажіть назву кольору, наприклад "червоний"</li>
+      <li>HEX - вкажіть значення HEX, наприклад "#ff0000"</li>
+      <li>RGB - вкажіть значення RGB, наприклад "rgb(255,0,0)"</li>
+      <li>HSL - вкажіть значення HSL, наприклад "hsl(0,100%,50%)"</li>
+      <li>прозорий</li>
+    </ul>
+    <p>
+      <strong>Примітка.</strong> Якщо border-color не встановлено, він
+      успадковує колір елемента.
+    </p>
+    <p><strong>Приклад.</strong> Демонстрація різних кольорів рамки:</p>
+    <code>
+      p.one { <br />
+      border-style: solid; <br />
+      border-color: red; <br />
+      } <br />
+      <br />
+      p.two { <br />
+      border-style: solid; <br />
+      border-color: green; <br />
+      } <br />
+      <br />
+      p.three { <br />
+      border-style: dotted; <br />
+      border-color: blue; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <p class="one">Red border</p>
+    <p class="two">Green border</p>
+    <p class="three">Blue border</p>
+    <hr />
+
+    <h2>Спеціальні кольори сторін</h2>
+    <p>
+      Властивість border-color може мати від одного до чотирьох значень (для
+      верхньої межі, правої межі, нижньої межі та лівої межі).
+    </p>
+    <code>
+      p.four{ <br />
+      border-style: solid; <br />
+      border-color: red green blue yellow; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <p class="four">A solid multycolor border</p>
+    <hr />
+
+    <h2>Шістнадцяткове значення</h2>
+    <p>
+      Колір рамки також можна вказати за допомогою шістнадцяткового значення
+      (HEX):
+    </p>
+    <code>
+      p.five{ <br />
+      border-style: solid; <br />
+      border-color: #ff0000; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <p class="five">A solid red border</p>
+    <hr />
+
+    <h2>Значення RGB</h2>
+    <p>Або за допомогою значень RGB:</p>
+    <code>
+      p.six { <br />
+      border-style: solid; <br />
+      border-color: rgb(255, 0, 0); /* red */ <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <p class="six">A solid red border</p>
+    <hr />
+
+    <h2>Значення HSL</h2>
+    <p>Ви також можете використовувати значення HSL:</p>
+    <code>
+      p.seven { <br />
+      border-style: solid; <br />
+      border-color: hsl(0, 100%, 50%); <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <p class="seven">A solid red border</p>
+  </body>
+</html>

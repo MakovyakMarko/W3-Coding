@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Document</title>
+    <style>
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+      }
+      li {
+        float: none;
+      }
+      li a {
+        display: block;
+        color: rgb(2, 49, 255);
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+      }
+      li a:hover {
+        background-color: blue;
+        color: rgb(255, 249, 249);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      header {
+        background-color: rgb(254, 254, 255);
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+        color: white;
+      }
+      nav {
+        float: left;
+        width: 25%;
+        height: 100%;
+        background: #ffffff;
+        padding: 5px;
+      }
+      nav ul {
+        list-style-type: none;
+        padding: 30;
+      }
+      article {
+        float: left;
+        padding: 10px;
+        width: 70%;
+        background-color: #ffffff;
+        height: 3000px;
+        right: 10px;
+      }
+
+      section::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      footer {
+        background-color: #ffffff;
+        padding: 10px;
+        text-align: center;
+        color: rgb(7, 7, 7);
+        height: 200px;
+      }
+      @media (max-width: 600px) {
+        nav,
+        article {
+          width: 100%;
+          height: auto;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <h1>Підручник з HTML</h1>
+      <ul>
+        <li>
+          <a href="Zagaljna struktura documentu.html" target="iframe_html"
+            >Загальна структура документу</a
+          >
+        </li>
+        <li>
+          <a href="Elementy HTML.html" target="iframe_html">Елементи HTML</a>
+        </li>
+        <li>
+          <a href="HTML atrybuty.html" target="iframe_html">HTML атрибути</a>
+        </li>
+        <li>
+          <a href="HTML zagolovky.html" target="iframe_html">HTML заголовки</a>
+        </li>
+        <li>
+          <a href="Abzacy HTML.html" target="iframe_html">Абзаци HTML</a>
+        </li>
+        <li>
+          <a href="Styli HTML.html" target="iframe_html">Стилі HTML</a>
+        </li>
+        <li>
+          <a href="Formatuvannja tekstu HTML.html" target="iframe_html"
+            >Форматування тексту HTML</a
+          >
+        </li>
+        <li>
+          <a href="Elementy cytat HTML.html" target="iframe_html"
+            >Елементи цитат HTML</a
+          >
+        </li>
+        <li>
+          <a href="Komentari HTML.html" target="iframe_html">Коментарі HTML</a>
+        </li>
+        <li>
+          <a href="Koljory HTML.html" target="iframe_html">Кольори HTML</a>
+        </li>
+        <li>
+          <a href="Koljory HTML RGB i RGBA.html" target="iframe_html"
+            >Кольори HTML RGB i RGBA</a
+          >
+        </li>
+        <li>
+          <a href="HTML HEX koljory.html" target="iframe_html"
+            >HTML HEX кольори</a
+          >
+        </li>
+        <li>
+          <a href="Koljory HTML HSL i HSLA.html" target="iframe_html"
+            >Кольори HTML HSL i HSLA</a
+          >
+        </li>
+        <li>
+          <a href="Styli HTML CSS.html" target="iframe_html">Стилі HTML CSS</a>
+        </li>
+        <li>
+          <a href="Posylannja HTML.html" target="iframe_html">Посилання HTML</a>
+        </li>
+        <li>
+          <a href="HTML posylannja - rizni koljory.html" target="iframe_html"
+            >HTML посилання - різні кольори</a
+          >
+        </li>
+        <li>
+          <a
+            href="Posylannja HTML - stvorennja zakladok.html"
+            target="iframe_html"
+            >Посилання HTML -створення закладок</a
+          >
+        </li>
+        <li>
+          <a href="Zobrazennja HTML.html" target="iframe_html"
+            >Зображення HTML</a
+          >
+        </li>
+        <li>
+          <a href="HTML karty zobrazenj.html" target="iframe_html"
+            >HTML карти зображення</a
+          >
+        </li>
+        <li>
+          <a href="Fonovi zobrazennja HTML.html" target="iframe_html"
+            >Фонові зображення HTML</a
+          >
+        </li>
+        <li>
+          <a href="Element HTML picture.html" target="iframe_html"
+            >Елемент HTML picture</a
+          >
+        </li>
+        <li>
+          <a href="Ikonka HTML.html" target="iframe_html">Іконка HTML</a>
+        </li>
+        <li>
+          <a href="Tablyci HTML.html" target="iframe_html">Таблиці HTML</a>
+        </li>
+        <li>
+          <a href="Mezi tablyci HTML.html" target="iframe_html"
+            >Межі таблиці HTML</a
+          >
+        </li>
+        <li>
+          <a href="Rozmiry tablycj HTML.html" target="iframe_html"
+            >Розміри таблиці HTML</a
+          >
+        </li>
+        <li>
+          <a href="Zagolovky tablyci HTML.html" target="iframe_html"
+            >Заголовки таблиці HTML</a
+          >
+        </li>
+        <li>
+          <a
+            href="Zapovnennja ta intervaly HTML tablyci.html"
+            target="iframe_html"
+            >Заповнення та інтервали HTML таблиці</a
+          >
+        </li>
+        <li>
+          <a href="HTML Tablycja - colspan i rowspan.html" target="iframe_html"
+            >HTML елементи colspan i rowspan</a
+          >
+        </li>
+        <li>
+          <a href="Styli tablycj HTML.html" target="iframe_html"
+            >Стилі таблиці HTML</a
+          >
+        </li>
+        <li>
+          <a href="Tablycja HTML Colgroup.html" target="iframe_html"
+            >Елемент таблиць HTML Colgroup</a
+          >
+        </li>
+        <li>
+          <a href="Spysky HTML.html" target="iframe_html">Списки HTML</a>
+        </li>
+        <li>
+          <a href="Neuporjadkovani spysky HTML.html" target="iframe_html"
+            >Невпорядковані списки HTML</a
+          >
+        </li>
+        <li>
+          <a href="Vporjadkovani spysky HTML.html" target="iframe_html"
+            >Спорядковані списки HTML</a
+          >
+        </li>
+        <li>
+          <a href="Inshi spysky HTML.html" target="iframe_html"
+            >Інші списки HTML</a
+          >
+        </li>
+        <li>
+          <a href="Blok i inline elementy HTML.html" target="iframe_html"
+            >Блочні та вбудовані елементи HTML</a
+          >
+        </li>
+        <li>
+          <a href="Atrybut klasu HTML.html" target="iframe_html"
+            >Атрибут HTML class</a
+          >
+        </li>
+        <li>
+          <a href="Atrybut HTML id.html" target="iframe_html"
+            >Атрибут HTML id</a
+          >
+        </li>
+        <li>
+          <a href="Ifreimy HTML.html" target="iframe_html">Iframe HTML</a>
+        </li>
+        <li>
+          <a href="HTML JavaScript.html" target="iframe_html"
+            >HTML JavaScript</a
+          >
+        </li>
+        <li>
+          <a href="Shljahy do fajliv HTML.html" target="iframe_html"
+            >Шляхи до файлів</a
+          >
+        </li>
+        <li>
+          <a href="Element HTML head.html" target="iframe_html"
+            >Елемент HTML head</a
+          >
+        </li>
+        <li>
+          <a href="Elementy ta pryjomy HTML maketu.html" target="iframe_html"
+            >Елементи та прийоми HTML макету</a
+          >
+        </li>
+        <li>
+          <a href="HTML adaptyvnyj web-dyzajn.html" target="iframe_html"
+            >HTML адаптивний веб-дизайн</a
+          >
+        </li>
+        <li>
+          <a href="Elementy kompjuternogo kodu HTML.html" target="iframe_html"
+            >Елементи комп'ютерного коду HTML</a
+          >
+        </li>
+        <li>
+          <a href="Semantychni elementy HTML.html" target="iframe_html"
+            >Семантичні елементи HTML</a
+          >
+        </li>
+        <li>
+          <a href="Posibnyk zi stylju HTML.html" target="iframe_html"
+            >Правила напсання коду HTML</a
+          >
+        </li>
+        <li>
+          <a href="sutnosti.html" target="iframe_html">Сутності HTML</a>
+        </li>
+        <li>
+          <a href="symvoly.html" target="iframe_html">Символи HTML</a>
+        </li>
+        <li>
+          <a href="html koduvannja.html">HTML Кодування (набори символів)</a>
+        </li>
+        <li>
+          <a
+            href="HTML unifikovanyj lokatoe resursiv - url.html"
+            target="iframe_html"
+            >HTML уніфікований локатор ресурсів URL</a
+          >
+        </li>
+        <li>
+          <a href="HTML vs XHTML.html" target="iframe_html">HTML проти XHTML</a>
+        </li>
+      </ul>
+      <h1>HTML форми</h1>
+      <ul>
+        <li>
+          <a href="formy.html" target="iframe_html">HTML форми</a>
+        </li>
+        <li>
+          <a href="atrybut formu html.html" target="iframe_html"
+            >HTML атрибути форми</a
+          >
+        </li>
+        <li>
+          <a href="elementy formy html.html" target="iframe_html"
+            >HTML елементи форми</a
+          >
+        </li>
+        <li>
+          <a href="typy vvedennja html.html" target="iframe_html">
+            Типи Input HTML</a
+          >
+        </li>
+        <li>
+          <a href="Input atrybuty html.html" target="iframe_html"
+            >Input атрибути HTML</a
+          >
+        </li>
+        <li>
+          <a href="HTML form input Attributes.html" target="iframe_html"
+            >Атирбути Input форми HTML</a
+          >
+        </li>
+      </ul>
+      <h1>Графіка HTML</h1>
+      <ul>
+        <li>
+          <a href="htmlcanvas.html" target="iframe_html">HTML Canvas</a>
+        </li>
+        <li>
+          <a href="grafikahtmlsvg.html" target="iframe_html"
+            >Графіка HTML SVG</a
+          >
+        </li>
+      </ul>
+      <h1>HTML медіа</h1>
+      <ul>
+        <li>
+          <a href="htmlmultimedia.html" target="iframe_html"
+            >HTML мультимедіа</a
+          >
+        </li>
+        <li>
+          <a href="htmlvideo.html" target="iframe_html">HTML Відео</a>
+        </li>
+        <li>
+          <a href="hmtlaudio.html" target="iframe_html">HTML Аудіо</a>
+        </li>
+        <li>
+          <a href="htmlplugins.html" target="iframe_html">HTML плагіни</a>
+        </li>
+        <li>
+          <a href="htmlyoutubevideo.html" target="iframe_html"
+            >Відео YouTube у форматі HTML</a
+          >
+        </li>
+      </ul>
+      <h1>HTML API</h1>
+      <ul>
+        <li>
+          <a href="htmlgeolocationapi.html" target="iframe_html"
+            >HTML API геолокації</a
+          >
+        </li>
+        <li>
+          <a href="htmldraganddropapi.html" target="iframe_html"
+            >HTML Drag and Drop API</a
+          >
+        </li>
+        <li>
+          <a href="webstorageapi.html" target="iframe_html"
+            >HTML веб-сховища API</a
+          >
+        </li>
+        <li>
+          <a href="webworkersapi.html" target="iframe_html"
+            >HTML Web Workers API</a
+          >
+        </li>
+        <li>
+          <a href="htmlsseapi.html" target="iframe_html">HTML SSE API</a>
+        </li>
+      </ul>
+    </nav>
+    <section>
+      <iframe
+        src="index1.html"
+        width="75%;"
+        height="5500px;"
+        name="iframe_html"
+        style="border: none; float: right"
+      ></iframe>
+    </section>
+  </body>
+</html>

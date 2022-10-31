@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>CSS селектори</title>
+  </head>
+  <body>
+    <h1>CSS селектори</h1>
+    <p>Селектор CSS вибирає HTML-елементи, до яких потрібно додати стиль.</p>
+    <hr />
+
+    <h2>Селектори CSS</h2>
+    <p>
+      Селектори CSS використовуються для "знаходження" (або вибору) елементів
+      HTML, які хочете стилізувати. <br />
+      Ми можемо розділити селектори CSS на п'ять категорій:
+    </p>
+    <ul>
+      <li>
+        Прості селектори (вибір елементів на основі імені, ідентифікатора,
+        класу)
+      </li>
+      <li>
+        Селектори комбінаторів (вибір елементів на основі певного зв'язку між
+        ними)
+      </li>
+      <li>Селекотри псевдокласів (вибір елементів на основі певного стану)</li>
+      <li>Селектори псевдоелементів (вибір і стиль частини елемента)</li>
+      <li>
+        Селектори атрибутів (вибір елементів на основі атрибутів або значення
+        атрибута)
+      </li>
+    </ul>
+    <p>На цій сторінці пояснюються найпростіші селектори CSS.</p>
+    <hr />
+
+    <h2>Селектор елементів CSS</h2>
+    <p>
+      Селектор елементів вибирає елементи HTML на основі імені елемента. <br />
+      <strong>Приклад.</strong> Тут усі елементи p на сторінці будуть вирівняні
+      по центру з червоним кольором тексту:
+    </p>
+    <code>
+      p { <br />
+      text-align:center; <br />
+      color: red; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="selectorcss.html"
+      frameborder="1"
+      width="100%"
+      height="250px"
+    ></iframe>
+    <hr />
+
+    <h2>Селектор ідентифікатора CSS</h2>
+    <p>
+      Селектор id використовує атрибут id елемента HTML для вибору певного
+      елемента. <br />
+      Ідентифікатор елемента є унікальним на сторінці, тому селектор
+      ідентифікатора використовується для вибору одного унікального елемента!
+      <br />
+      Щоб вибрати елемент із певним ідентифікатором, напишіть символ решітки
+      ("#"), а потім ідентифікатор елемента. <br />
+      <strong>Приклад.</strong> Наведене нижче правило CSS буде застосовано до
+      елемента HTML з id="para1":
+    </p>
+    <code>
+      #para1{ <br />
+      text-align:center; <br />
+      color: red; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="idselectorcss.html"
+      frameborder="1"
+      width="100%"
+      height="250px"
+    ></iframe>
+    <hr />
+
+    <h2>Селектор класів CSS</h2>
+    <p>
+      Селектор класу вибирає елементи HTML із певним атрибутом класу. <br />
+      Щоб вибрати елементи з певним класом, напишіть крапку ("."), а потім назву
+      класу. <br />
+      <strong>Приклад.</strong> У цьому прикладі всі елементи HTML із
+      class="center" будуть червоними та вирівняні по центру:
+    </p>
+    <code>
+      .center{ <br />
+      text-align:center; <br />
+      color: red; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="classselectorcss.html"
+      frameborder="1"
+      width="100%"
+      height="250px"
+    ></iframe>
+    <p>
+      Ви також можете вказати, що клас має впливати лише на певні елементи HTML.
+      <br />
+      <strong>Приклад.</strong> У цьому прикладі лише елементи p з
+      class="center" будуть червоними та вирівняними по центру:
+    </p>
+    <code>
+      p.center{ <br />
+      text-align:center; <br />
+      color: red; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="elementclassselectorcss.html"
+      frameborder="1"
+      width="100%"
+      height="250px"
+    ></iframe>
+    <p>
+      Елементи HTML також можуть посилатися на декілька класів. <br />
+      <strong>Приклад.</strong> У цьому прикладі елемент p буде стилізовано
+      відповідно до class="center" i class="large":
+    </p>
+    <code> p class="center large" <br /> </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="fewclassselectorcss.html"
+      frameborder="1"
+      width="100%"
+      height="380px"
+    ></iframe>
+    <hr />
+
+    <h2>Універсальний селектор CSS</h2>
+    <p>
+      Універсальний селектор ("*") вибирає всі елементи HTML на сторінці. <br />
+      <strong>Приклад.</strong> Наведене нижче правило CSS впливає на кожен
+      елемент HTML на сторінці
+    </p>
+    <code>
+      *{ <br />
+      text-align:center; <br />
+      color: blue; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="universalclassselectorcss.html"
+      frameborder="1"
+      width="100%"
+      height="250px"
+    ></iframe>
+    <hr />
+
+    <h2>Селектор групування CSS</h2>
+    <p>
+      Селектор групування вибирає всі елементи HTML з однаковими визначеннями
+      стилю. <br />
+      Подивіться на наступний код CSS (елементи h1,h2,p мають однакові
+      визначення стилю):
+    </p>
+    <code>
+      h1 { <br />
+      text-align:center; <br />
+      color: red; <br />
+      } <br />
+      h2 { <br />
+      text-align:center; <br />
+      color: red; <br />
+      } <br />
+      p { <br />
+      text-align:center; <br />
+      color: red; <br />
+      } <br />
+    </code>
+    <p>
+      Краще буде згрупувати селектори, щоб згорнути код. <br />
+      Щоб згрупувати селектори, розділіть їх комою. <br />
+      <strong>Приклад.</strong> У цьому прикладі ми згрупували селектори з коду
+      вище:
+    </p>
+    <code>
+      h1,h2,p { <br />
+      text-align:center; <br />
+      color: red; <br />
+      } <br />
+    </code>
+  </body>
+</html>

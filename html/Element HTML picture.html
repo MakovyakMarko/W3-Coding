@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ua-UA">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"
+        <title>Element HTML picture</title>
+        <link rel="stylesheet" href="../styles.css">
+    </head>
+    <body>
+        <h1>Element HTML picture</h1>
+        <p>
+            Element html <ins>picture</ins> nadae web-rozrobnykam biljshu gnuchkistj u vyznachenni resyrsiv zobrazenj.
+            <br>
+            Element <ins>picture</ins> mistytj odyn abo kiljka <ins>source</ins> elementiv, kozen
+            z jakyh posylaetjsja na rizni zobrazennja cherez <ins>srcset</ins> atrybut. takym
+            chynom brauzer moze vybrety zobrazennja, jake najkrasche vidpovidae potochnomu vygljadu
+            ta/abo prystroju.<br>
+            Kozen <ins>source</ins> element mae <ins>media</ins> atrybut, jakyj vyznachae, koly zobrazennja e najbiljsh pidhodjaschym.
+            <br> </p>
+        <picture>
+            <source media="(min-width: 650px)" srcset="2.jpeg">
+            <source media="(min-width: 850px)" srcset="4.jpg">
+            <img src="3.jpeg" style="width:auto">
+        </picture>
+        <p>
+            <b>Prymitka.</b> Zavzdy vkazujte <ins>img</ins> element jak ostannij dochirnuj element <ins>picture</ins> elementa.
+            Element <ins>img</ins> vykorystovuetjsja brayzeramy, jaki ne pidtrymujutj cej <ins>picture</ins> element, jakscho
+            zoden z <ins>source</ins> tegiv ne vidpovidae.
+        </p>
+        <hr>
+        <h3>Koly vykorystovuetjsja element zobrazennja</h3>
+        <p>
+            E dvi osnovni cili <ins>picture</ins> elementa: <br>
+        </p>
+        <h4>1.Propuskna zdatnistj</h4> <br>
+        <p>
+            Jakscho u vas malenjkyj ekran abo orystrij, ne potribno zavantazyvaty velykyj fail zobrazennja.
+            Brayzer vykorystovuvatyme perschyj element iz vidpovidnym znachennjam atrybutiv i ignoruvatyme bydj-jakyj z nastupnyh elementiv.
+        </p>
+        <h4>2.Pidtrumka formatu</h4>
+        <p>
+            Dejaki brauzery abo prystrji mozutj pidtrymuvaty ne sci formaty zobrazenj. Vykorystovujuchy <ins>picture</ins> element, vy mozete
+            dodavaty zobrazennja vsih formativ, i brauser vykorystovuvatyme pershyj format, jakyj vin rozpiznae, i ignoruvatyme budj-jakyj z nastupnyh elementiv.    
+        </p>
+        <picture>
+            <source srcset="guse.gif">
+            <source srcset="3.jpeg">
+            <img src="2.jpeg" alt="picture" style="width:auto">
+        </picture>
+    </body>
+</html>

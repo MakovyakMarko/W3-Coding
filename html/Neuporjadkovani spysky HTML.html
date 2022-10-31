@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ua-UA">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neuporjadkovani spysky HTML</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <h1>Neuporjadkovani spysky HTML</h1>
+    <p>
+      Teg HTML <ins>ul</ins> vyznachae nevporjadkovanyj (markovanyj) spysok.
+    </p>
+    <hr />
+    <h1>Neuporjadkovanuj spysok HTML</h1>
+    <p>
+      Neyporjadkovanyj spysok pochynaetjsja z <ins>ul</ins> tega. Kozen element
+      spysku pochynaetjsja z <ins>li</ins> tegu. <br />
+      Elementy spysky bydytj poznacheni markeramy za zamovchuvannjam:
+    </p>
+    <ul>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+    <hr />
+    <h3>Neuporjadkovanyj spysok HTML - vyberitj marker elementa spysku</h3>
+    <p>
+      Vlastyvistj CSS <ins>list-style-type</ins> vykorystovuetjsja dlja
+      vyznachennja stylju markera elemnta spysku. Vin moze maty odne z takyh
+      znachenj: <br />
+      disk - za zamovchuvannjam <br />
+      circle <br />
+      square <br />
+      none <br />
+    </p>
+    <ul style="list-style-type: circle">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+    <ul style="list-style-type: square">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+    <ul style="list-style-type: none">
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+    <hr />
+    <h3>Vkladeni spysky HTML</h3>
+    <p>Spysky mozutj buty vkladenymy (spysok vseredyni spysku):</p>
+    <ul>
+      <li>Coffee</li>
+      <li>
+        Tea
+        <ul>
+          <li>Coffee</li>
+          <li>Tea</li>
+          <li>Milk</li>
+        </ul>
+      </li>
+      <li>Milk</li>
+    </ul>
+    <p>
+      <b>Prymitka.</b> Elementy spysku (<ins>li</ins>) moze mistyty novyj spysok
+      ta inshi elementy HTML,jak-to zobrazennja, posylannja, toscho.
+    </p>
+    <hr />
+    <h3>Goryzontaljnyj spysok iz CSS</h3>
+    <p>
+      Spysky HTML mozna stylizuvaty riznymy sposobamy za dopomogoju CSS. <br />
+      Odnym iz populjarnyh sposobiv je stvorenja stylju spysky po goryzontali,
+      scho stvoryty navigacijne menju:
+    </p>
+    <p style="text-align: left">
+      style <br />
+      ul{ <br />
+      list-style-type:none; <br />
+      margin:0; <br />
+      padding:0; <br />
+      overflow:hidden; <br />
+      background-color:#333333; <br />
+      } <br />
+      li{ <br />
+      float:left; <br />
+      } <br />
+      li a{ <br />
+      display: block; <br />
+      color: white; <br />
+      text-align: center; <br />
+      padding:16px; <br />
+      text-decoration:none; <br />
+      } <br />
+      li a:hover{ <br />
+      background color:red; <br />
+      } <br />
+      /style <br />
+    </p>
+    <hr />
+    <h3>Pidsumky rozdilu</h3>
+    <ul>
+      <li>
+        Vykorystovujte <ins>ul</ins> element HTML, schob vyznachyty
+        nevporjadkovanyj spysok
+      </li>
+      <li>
+        Vykorystovujte <ins>list-style-type</ins> vlastyvistj CSS, schob
+        vyznachyty marker elementa spysku
+      </li>
+      <li>Spysky mozytj buty vkladenymy</li>
+      <li>Elementy spysku mozytj mistyty inshi elementy html</li>
+      <li>
+        Vykorystovujte vlastyvistj CSS <ins>float:left</ins> schob vidobazyty
+        spysok po goryzontali
+      </li>
+    </ul>
+  </body>
+</html>
