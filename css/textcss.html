@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Текст CSS</title>
+  </head>
+  <body>
+    <h1>Текст CSS</h1>
+    <p>CSS має багато властивостей для форматування тексту.</p>
+    <code>
+      div{ <br />
+      border: 1px solid gray; <br />
+      padding: 8px; <br />
+      } <br />
+      h1{ <br />
+      text-align: center; <br />
+      text-transform: uppercase; <br />
+      color: #4CAF50; <br />
+      } <br />
+      p{ <br />
+      text-indent: 50px; <br />
+      text-align: justify; <br />
+      letter-spacing: 3px; <br />
+      } <br />
+      a{ <br />
+      text-decoration: none; <br />
+      color: #008CBA; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="textformatingcss.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Колір тексту</h2>
+    <p>
+      Властивість color використовується для встановлення кольору тексту. Колір
+      визначається:
+    </p>
+    <ul>
+      <li>назва кольору - як "red"</li>
+      <li>шістнадцяткове значення, наприклад "#ff0000"</li>
+      <li>значення RGB, наприклад "rgb(255,0,0)"</li>
+    </ul>
+    <p>
+      За замовчеванням колір тексту для сторінки визначається в селекторі body.
+    </p>
+    <code>
+      body { <br />
+      color:blue; <br />
+      } <br />
+      h1{ <br />
+      color:green; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="bodytextcolor.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Колір тексту та колір фону</h2>
+    <p>
+      У цьому прикладі ми визначаємо і background-color властивість, i color
+      властивість:
+    </p>
+    <code>
+      body{ <br />
+      background-color: lightgrey; <br />
+      color: blue; <br />
+      } <br />
+      h1{ <br />
+      background-color: black; <br />
+      color: white; <br />
+      } <br />
+      div{ <br />
+      background-color: blue; <br />
+      color: white; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="bgcolortextcolor.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <p>
+      <strong>Важливо:</strong> висока контрасність дуже важлива для людей із
+      проблемами зору. Тому завжди переконайтесь, що контраст між кольором
+      тексту та фоновим кольором (або фоновим зображенням) є хорошим!
+    </p>
+  </body>
+</html>

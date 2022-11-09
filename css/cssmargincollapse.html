@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Згортання поля CSS</title>
+  </head>
+  <body>
+    <h1>CSS Margin Collapse</h1>
+    <p>Іноді два поля згортаються в одне поле.</p>
+    <hr />
+
+    <h2>Згортання поля</h2>
+    <p>
+      Верхнє ти нижнє поля елементів іноді згортаються в одне поле, що дорівнює
+      найбільшому з двох полів.
+    </p>
+    <p>
+      Цього не відбувається на лівому та правому полях! Лише верхні та нижні
+      поля!
+    </p>
+    <p>Подивіться на наступний приклад:</p>
+    <code>
+      h1{ <br />
+      margin: 0 0 50px 0; <br />
+      } <br />
+      h2{ <br />
+      margin: 20px 0 0 0; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="margincollapse.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <p>
+      У наведеному вище прикладі елемент h1 має нижнє поле 50 пікселів, а
+      елемент h2 має верхнє поле 20 пікселів.
+    </p>
+    <p>
+      Здоровий глузд припускає, що вертикальне поле між h1 i h2 становитиме 70
+      пікселів (50+20 пікселів). Але через згортання поля фактичне поле дорівнює
+      50 пікселям.
+    </p>
+  </body>
+</html>

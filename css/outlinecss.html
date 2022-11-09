@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>СSS контур</title>
+  </head>
+  <body>
+    <h1>СSS контур</h1>
+    <p>Контур - це лінія, проведена за межами елемента.</p>
+    <code>
+      p{ <br />
+      border: 2px solid black; <br />
+      outline: #4CAF50 solid 10px; <br />
+      margin: auto; <br />
+      padding: 20px; <br />
+      text-align: center; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="outline.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Контур CSS</h2>
+    <p>
+      Контур - це лінія, яку малюють навколо елементів поза межами, щоб зробити
+      елемент "виділяючимся".
+    </p>
+    <p>CSS має такі властивості структури:</p>
+    <ul>
+      <li>outline-style</li>
+      <li>outline-color</li>
+      <li>outline-width</li>
+      <li>outline-offset</li>
+      <li>outline</li>
+    </ul>
+    <p>
+      <strong>Примітка.</strong> Контур відрізняється від межі(рамки)! На
+      відміну від рамки, контур малюється за межами елемента та може перекривати
+      інший вміст. Крім того, контур НЕ є частиною розмірів елемента; ширина
+      контуру не впливає на загальну ширину та висоту елемента.
+    </p>
+    <hr />
+
+    <h2>Стиль контуру СSS</h2>
+    <p>
+      Властивість outline-style визначає стиль контуру та може мати одне з таких
+      значень:
+    </p>
+    <ul>
+      <li>dotted - визначає пунктирний контур</li>
+      <li>dashed - визначає пунктирний контур</li>
+      <li>solid - визначає суцільний контур</li>
+      <li>double - визначає подвійний контур</li>
+      <li>groove - визначає 3D рифлений контур</li>
+      <li>ridge - визначає тривимірний ребристий контур</li>
+      <li>inset - визначає контур 3D-вставки</li>
+      <li>outset - визначає початковий контур 3D</li>
+      <li>none - не визначає контурів</li>
+      <li>hidden - визначає прихований контур</li>
+    </ul>
+    <p>У наступному прикладі показано різні outline-style значення:</p>
+    <code>
+      p.dotted {outline-style: dotted;} <br />
+      p.dashed {outline-style: dashed;} <br />
+      p.solid {outline-style: solid;} <br />
+      p.double {outline-style: double;} <br />
+      p.groove {outline-style: groove;} <br />
+      p.ridge {outline-style: ridge;} <br />
+      p.inset {outline-style: inset;} <br />
+      p.outset {outline-style: outset;} <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="outlinestyle.html"
+      frameborder="1"
+      width="100%;"
+      height="500px;"
+    ></iframe>
+  </body>
+</html>

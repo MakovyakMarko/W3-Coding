@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>CSS Outline Offset</title>
+  </head>
+  <body>
+    <h1>CSS Outline Offset</h1>
+    <hr />
+
+    <h2>CSS Outline Offset</h2>
+    <p>
+      Властивість outline-offset додає простір між контуром і межею елемента.
+      Простір між елементом і його контуром прозорий.
+    </p>
+    <p>У наступному прикладі вказано контур на 15 пікселів за межами краю.</p>
+    <code>
+      p{ <br />
+      margni:30px; <br />
+      border: 1px solid black; <br />
+      outline: 1px solid red; <br />
+      outline-offset: 15px; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="outlineoffset1.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <p>
+      У наступному прикладі показано, що простір між елементом і його контуром
+      прозорий:
+    </p>
+    <code>
+      p{ <br />
+      margni:30px; <br />
+      background: yellow; <br />
+      border: 1px solid black; <br />
+      outline: 1px solid red; <br />
+      outline-offset: 15px; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="outlineoffset2.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+  </body>
+</html>

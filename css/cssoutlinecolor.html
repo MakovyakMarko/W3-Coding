@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Колір контуру CSS</title>
+  </head>
+  <body>
+    <h1>Колір контуру CSS</h1>
+    <hr />
+
+    <h2>Колір контуру CSS</h2>
+    <p>
+      Властивість outline-color використовується для встановлення кольору
+      контуру.
+    </p>
+    <p>Колір можна встановити:</p>
+    <ul>
+      <li>назва - вкажіть назву кольору, наприклад "red"</li>
+      <li>HEX - вкажіть шістнадцяткове значення, наприклад "#ff0000"</li>
+      <li>RGB - вкажіть значення RGB, наприклад "rgb(255,0,0)"</li>
+      <li>HSL - вкажіть значення HSL, наприклад "hsl(0,100%,50%)"</li>
+      <li>
+        інвертувати - виконує інверсію кольорів (що забезпечує видимість контуру
+        назелажно від кольору фону)
+      </li>
+    </ul>
+    <p>
+      У наступному прикладі показано кілька різних контурів різними кольорами.
+      Також зауважте, що ці елементи також мають тонку чорну рамку всередині
+      контуру:
+    </p>
+    <code>
+      p.ex1{ <br />
+      border: 2px solid black; <br />
+      outline-style: solid; <br />
+      outline-color: red; <br />
+      } <br />
+      p.ex2{ <br />
+      border: 2px solid black; <br />
+      outline-style: dotted; <br />
+      outline-color: blue; <br />
+      } <br />
+      p.ex3{ <br />
+      border: 2px solid black; <br />
+      outline-style: outset; <br />
+      outline-color: grey; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="outlinecolor.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+  </body>
+</html>
