@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Вирівнювання тексту CSS</title>
+  </head>
+  <body>
+    <h1>Вирівнювання тексту CSS</h1>
+    <hr />
+
+    <h2>Вирівнювання тексту та напрямок тексту</h2>
+    <p>У цьому розділі ви дізнаєтесь про такі властивості:</p>
+    <ul>
+      <li>text-align</li>
+      <li>text-align-last</li>
+      <li>direction</li>
+      <li>unicode-bidi</li>
+      <li>vertical-align</li>
+    </ul>
+    <hr />
+
+    <h2>Вирівнювання тексту</h2>
+    <p>
+      Властивість text-align використовується для встановлення горизонтального
+      вирівнювання тексту.
+    </p>
+    <p>
+      Текст можна вирівняти за лівим або правим краєм, по центру або за шириною
+    </p>
+    <p>
+      У наведеному нижче прикладі показано вирівнювання тексту по центру,
+      ліворуч і праворуч (вирівнювання за лівим краєм за замовчуванням, якщо
+      напрямок тексту зліва направо, і вирівнювання за правим краєм за
+      замовчуванням, якщо напрямок тексту справа наліво):
+    </p>
+    <code>
+      h1{ <br />
+      text-align: center; <br />
+      } <br />
+      h2 { <br />
+      text-align: left; <br />
+      } <br />
+      h3{ <br />
+      text-align: right; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="textalignside.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <p>
+      Коли для text-align властивості встановлено значення "justify", кожен
+      рядок розтягується так, щоб кожен рядок мав однакову ширину, а ліве та
+      праве поля були прямими (як у журналах і газетах)
+    </p>
+    <code>
+      div{ <br />
+      text-align: justify; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="textalignjustify.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Вирівнювання останнього рядка</h2>
+    <p>
+      Властивість text-align-last визначає спосіб вирівнювання останнього рядка
+      тексту.
+    </p>
+    <code>
+      p.a{ <br />
+      text-align-last: right; } <br />
+      p.b{ <br />
+      text-align-last: center; <br />
+      } <br />
+      p.c{ <br />
+      text-align-last: justify; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="textalignlast.html"
+      frameborder="1"
+      width="100%;"
+      height="500px;"
+    ></iframe>
+    <hr />
+
+    <h2>Напрямок тексту</h2>
+    <p>
+      Властивості direction i unicode-bidi можна використовувати для зміни
+      напрямку тексту елемента:
+    </p>
+    <code>
+      p{ <br />
+      direction: rtl; <br />
+      unicode-bidi: bidi-override; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="directionunicodebidi.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Вертикальне вирівнювання</h2>
+    <p>Властивість vertical-align задає вертикальне вирівнювання елемента.</p>
+    <code>
+      img.a{ <br />
+      vertical-align: baseline; <br />
+      } <br />
+
+      img.b{ <br />
+      vertical-align: text-top; <br />
+      } <br />
+
+      img.c{ <br />
+      vertical-align: text-bottom; <br />
+      } <br />
+
+      img.d{ <br />
+      vertical-align: sub; <br />
+      } <br />
+
+      img.e{ <br />
+      vertical-align: super; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="verticalalign.html"
+      frameborder="1"
+      width="100%;"
+      height="550px;"
+    ></iframe>
+  </body>
+</html>

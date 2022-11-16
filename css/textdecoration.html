@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Оформлення тексту CSS</title>
+  </head>
+  <body>
+    <h1>Оформлення тексту CSS</h1>
+    <hr />
+
+    <h2>Прикраса тексту</h2>
+    <p>У цьому розділі ви дізнаєтесь про такі властивості:</p>
+    <ul>
+      <li>text-decoration-line</li>
+      <li>text-decoration-color</li>
+      <li>text-decoration-style</li>
+      <li>text-decoration-thickness</li>
+      <li>text-decoration</li>
+    </ul>
+    <hr />
+
+    <h2>Додайте декоративну лінію до тексту</h2>
+    <p>
+      Властивість text-decoration-line використовується для додавання
+      декоративної лінії до тексту.
+    </p>
+    <p>
+      <strong>Порада.</strong> Ви можете комбінувати більше ніж одне значення,
+      як-от підкреслення та підкреслення, щоб відображати рядки над текстом і
+      під ним.
+    </p>
+    <code>
+      h1{ <br />
+      text-decoration-line: overline; <br />
+      } <br />
+      h2{ <br />
+      text-decoration-line: line-through; <br />
+      } <br />
+      h3{ <br />
+      text-decoration-line: underline; <br />
+      } <br />
+      p.ex{ <br />
+      text-decoration-line: overline underline; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="textdecorationline.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <p>
+      <strong>Примітка.</strong> Не рекомендується підкреслювати текст, який не
+      є посиланням, оскільки це часто заплутує читача.
+    </p>
+    <hr />
+
+    <h2>Вкажіть колір для декоративної лінії</h2>
+    <p>
+      Властивість text-decoration-color використовується для встановлення
+      кольору декоративної лінії.
+    </p>
+    <code>
+      h1{ <br />
+      text-decoration-line: overline; <br />
+      text-decoration-color: red; <br />
+      } <br />
+      h2{ <br />
+      text-decoration-line: line-through; <br />
+      text-decoration-color: blue; <br />
+      } <br />
+      h3{ <br />
+      text-decoration-line: underline; <br />
+      text-decoration-color: green; <br />
+      } <br />
+      p.ex{ <br />
+      text-decoration-line: overline underline; <br />
+      text-decoration-color: purple; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="textdecorationcolor.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Вкажіть стиль для декоративної лінії</h2>
+    <p>
+      Властивість text-decoration-style використовується для встановлення стилю
+      лінії декорування.
+    </p>
+    <code>
+      h1{ <br />
+      text-decoration-line: underline; <br />
+      text-decoration-style: solid; <br />
+      } <br />
+      h2{ <br />
+      text-decoration-line: underline; <br />
+      text-decoration-style: double; <br />
+      } <br />
+      h3{ <br />
+      text-decoration-line: underline; <br />
+      text-decoration-style: dotted; <br />
+      } <br />
+      p.ex1{ <br />
+      text-decoration-line: underline; <br />
+      text-decoration-style: dashed; <br />
+      } <br />
+      p.ex2{ <br />
+      text-decoration-line: underline; <br />
+      text-decoration-style: wavy; <br />
+      } <br />
+      p.ex3{ <br />
+      text-decoration-line: underline; <br />
+      text-decoration-color: red; <br />
+      text-decoration-style: wavy; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="textdecorationstyle.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Вкажіть товщину декоративної лінії</h2>
+    <p>
+      Властивість text-decoration-thickness використовується для встановлення
+      товщини декоративної лінії.
+    </p>
+    <code>
+      h1{ <br />
+      text-decoration-line: underline; <br />
+      text-decoration-thickness: auto; <br />
+      } <br />
+      h2{ <br />
+      text-decoration-line: underline; <br />
+      text-decoration-thickness: 5px; <br />
+      } <br />
+      h3{ <br />
+      text-decoration-line: underline; <br />
+      text-decoration-thickness: 25%; <br />
+      } <br />
+      p{ <br />
+      text-decoration-line: underline; <br />
+      text-decoration-color: red; <br />
+      text-decoration-style: double; <br />
+      text-decoration-thickness: 5px; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="textdecorationthickness.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Властивість скорочення</h2>
+    <p>Властивість text-decoration є скороченою властивістю для:</p>
+    <ul>
+      <li>text-decoration-line (вимагається)</li>
+      <li>text-decoration-color (не обов'язково)</li>
+      <li>text-decoration-style (не обов'язково)</li>
+      <li>text-decoration-thickness (не обов'язково)</li>
+    </ul>
+    <code>
+      h1{ <br />
+      text-decoration: underline; <br />
+      } <br />
+      h2{ <br />
+      text-decoration: underline red; <br />
+      } <br />
+      h3{ <br />
+      text-decoration: underline red double; <br />
+      } <br />
+      p{ <br />
+      text-decoration: underline red double 3px; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="textdecorationexample.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Невелика порада</h2>
+    <p>
+      Усі посилання в HTML за умовчанням підкреслені. Іноді ви бачите, що
+      посилання оформлені без підкреслення. Використовується text-decoration:
+      none; для видалення підкреслення з посилань, наприклад
+    </p>
+    <code>
+      a{ <br />
+      text-decoration: none; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="textdecorationnone.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+  </body>
+</html>
