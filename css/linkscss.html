@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Посилання CSS</title>
+  </head>
+  <body>
+    <h1>Посилання CSS</h1>
+    <p>За допомогою CSS посилання можна стилізувати різними способами.</p>
+    <hr />
+
+    <h2>Стильні посилання</h2>
+    <p>
+      Посилання можна стилізувати за допомогою будь-якої властивості CSS
+      (наприклад, color, font-family, background тощо.)
+    </p>
+    <code>
+      a{ <br />
+      color: hotpink; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="linkcolor.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <p>
+      Крім того, посилання можна оформляти по-різному залежно від того, в якому
+      вони <b>стані</b>.
+    </p>
+    <p>Чотири стани посилань:</p>
+    <ul>
+      <li>a:link - звичайне, невідвідане посилання</li>
+      <li>a:visited - посилання, яке відвідав користувач</li>
+      <li>a:hover - посилання, коли користувач наводить на нього курсор</li>
+      <li>a:active - посилання в момент натискання</li>
+    </ul>
+    <code>
+      a:link{ <br />
+      color: red; <br />
+      } <br />
+      a:visited{ <br />
+      color: green; <br />
+      } <br />
+      a:hover{ <br />
+      color: hotpink; <br />
+      } <br />
+      a:active{ <br />
+      color: blue; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="linkcolorpseudo.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <p>
+      <strong>Примітка:</strong> при встановленні стилю для кількох станів
+      посилання існують деякі правила порядку:
+    </p>
+    <ul>
+      <li>a:hover ПОВИНЕН бути після a:link i a:visited</li>
+      <li>a:active ПОВИНЕН бути після a:hover</li>
+    </ul>
+    <hr />
+
+    <h2>Прикраса тексту</h2>
+    <p>
+      Властивість text-decoration переважно використовується для видалення
+      підкреслень із посилань:
+    </p>
+    <code>
+      a:link{ <br />
+      text-decoration: none; <br />
+      } <br />
+      a:visited{ <br />
+      text-decoration: none; <br />
+      } <br />
+      a:hover{ <br />
+      text-decoration: underline; <br />
+      } <br />
+      a:active{ <br />
+      text-decoration: underline; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="linktextdecoration.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Колір фону</h2>
+    <p>
+      Властивість background-color можна використовувати для визначення кольору
+      фону для посилань:
+    </p>
+    <code>
+      a:link{ <br />
+      background-color: yellow; <br />
+      } <br />
+      a:visited{ <br />
+      background-color: cyan; <br />
+      } <br />
+      a:hover{ <br />
+      background-color: lightgreen; <br />
+      } <br />
+      a:active{ <br />
+      background-color: hotpink; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="linkbgcolor.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Кнопки посилання</h2>
+    <p>
+      Цей приклад демонструє більш просунутий приклад, де ми об'єднуємо кілька
+      властивостей CSS для відображення посилань у вигляді полів/кнопок:
+    </p>
+    <code>
+      a:link, a:visited{ <br />
+      background-color: #f44336; <br />
+      color: white; <br />
+      padding: 14px 25px; <br />
+      text-align: center; <br />
+      text-decoration: none; <br />
+      display: inline-block; <br />
+      } <br />
+      a:hover, a:ative{ <br />
+      background-color: red; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="linkbutton.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Більше прикладів</h2>
+    <p>
+      <strong>Приклад.</strong> Цей приклад демонструє, як додати інші стилі до
+      гіперпосилань
+    </p>
+    <code>
+      a.one:link{color:#ff0000;} <br />
+      a.one.visited{color:#0000ff;} <br />
+      a.one:hover{color:#ffcc00;} <br />
+      <br />
+      a.two:link{color:#ff0000;} <br />
+      a.two:visited{color:#0000ff;} <br />
+      a.two:hover{font-size:150%;} <br />
+      <br />
+      a.three:link{color:#ff0000;} <br />
+      a.three:visited{color:#0000ff;} <br />
+      a.three:hover{background:#66ff66;} <br />
+      <br />
+      a.four:link{color:#ff0000;} <br />
+      a.four:visited{color:#0000ff;} <br />
+      a.four:hover{font-family:monospace;} <br />
+      <br />
+      a.five:link{color:#ff0000; text-decoration:none;} <br />
+      a.five:visited{color:#0000ff; text-decoration:none;} <br />
+      a.five:hover{text-decoration:underline;} <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="linkstyles.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <p><strong>Приклад.</strong> Інший приклад створення посилань/кнопок:</p>
+    <code>
+      a:link,a:visited{ <br />
+      background-color: white; <br />
+      color: black; <br />
+      boder: 2px solid green; <br />
+      padding: 10px 20px; <br />
+      text-align: center; <br />
+      text-decoration: none; <br />
+      display:inline-block; <br />
+      } <br />
+      a:hover, a:active{ <br />
+      background-color: green; <br />
+      color: white; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="linkbuttonbg.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <p>
+      <strong>Приклад.</strong> Цей приклад демонструє різні типи курсорів (може
+      бути корисним для посилань):
+    </p>
+    <code> </code>
+  </body>
+</html>

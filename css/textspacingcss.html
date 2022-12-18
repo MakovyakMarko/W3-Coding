@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Інтервал між текстом CSS</title>
+  </head>
+  <body>
+    <h1>Інтервал між текстом CSS</h1>
+    <hr />
+
+    <h2>Інтервал між текстом</h2>
+    <p>У цьому розділі ви дізнаєтесь про такі властивості:</p>
+    <ul>
+      <li>text-indent</li>
+      <li>letter-spacing</li>
+      <li>line-height</li>
+      <li>word-spacing</li>
+      <li>white-space</li>
+    </ul>
+
+    <h2>Відступи тексту</h2>
+    <p>
+      Властивість text-indent використовується для визначення відступу першого
+      рядка тексту:
+    </p>
+    <code>
+      p{ <br />
+      text-indent: 50px; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="textindent.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Інтервал між літерами</h2>
+    <p>
+      Властивість letter-spacing використовується для визначення інтервалу між
+      символами в тексті.
+    </p>
+    <p>
+      У наступному прикладі показано, як збільшити або зменшити пробіл між
+      символами:
+    </p>
+    <code>
+      h2{ <br />
+      letter-spacing: 5px; <br />
+      } <br />
+      h3{ <br />
+      letter-spacing: -2px; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="letterspacing.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Висота лінії</h2>
+    <p>
+      Властивість line-height використовується для визначення інтервалу між
+      рядками:
+    </p>
+    <code>
+      p.small{ <br />
+      line-height: 0.8; <br />
+      } <br />
+      p.big{ <br />
+      line-height: 1.8; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="lineheight.html"
+      frameborder="1"
+      width="100%"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Інтервал між словами</h2>
+    <p>
+      Властивість word-spacing використовується для визначення інтервалу між
+      словами в тексті.
+    </p>
+    <p>
+      У наступному прикладі показано, як збільшити або зменшити пробіл між
+      словами:
+    </p>
+    <code>
+      p.one{ <br />
+      word-spacing: 10px; } <br />
+      p.two{ <br />
+      word-spacing: -2px; } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="wordspacing.html"
+      frameborder="1"
+      width="100%"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Білий простір</h2>
+    <p>
+      Властивість white-space визначає, як обробляються пробіли всередині
+      елемента.
+    </p>
+    <p>
+      Цей приклад демонструє, як вимкнути обтікання текстом всередині елемента:
+    </p>
+    <code>
+      p{ <br />
+      white-space: nowrap; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="whitespace.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+  </body>
+</html>

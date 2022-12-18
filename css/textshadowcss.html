@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Тінь тексту CSS</title>
+  </head>
+  <body>
+    <h1>Тінь тексту CSS</h1>
+    <hr />
+
+    <h2>Тінь тексту</h2>
+    <p>Властивість text-shadow додає тінь до тексту</p>
+    <p>
+      У найпростішому випадку ви вказуєте лише горизонтальну тінь (2px) і
+      вертикальну тінь (2px):
+    </p>
+    <code>
+      h1{ <br />
+      text-shadow: 2px 2px; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="textshadow.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <p>Далі додайте колір (червоний) до тіні:</p>
+    <code>
+      h1{ <br />
+      text-shadow: 2px 2px red; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="textshadowcolor.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <p>Потім додайте до тіні ефект розмиття (5px):</p>
+    <code>
+      h1{ <br />
+      text-shadow: 2px 2px 5px red; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="textshadowblur.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Більше прикладів тіні тексту:</h2>
+    <p>Тінь тексту на більму тексті:</p>
+    <code>
+      h1{ <br />
+      color: white; <br />
+      text-shadow: 2px 2px 4px #000000; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="textshadowonwhite.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+
+    <p>Текст-тінь з червоним неоновим світінням:</p>
+    <code>
+      h1{ <br />
+      text-shadow: 0 0 3px #ff0000; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="textshadowredneon.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+
+    <p>Текст-тінь з червоним і синім неоновим світінням:</p>
+    <code>
+      h1{ <br />
+      text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="textshadowredandblueneon.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+
+    <p>Ше один приклад тіні</p>
+    <code>
+      h1{ <br />
+      color:white; <br />
+      text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="textshadoweffects.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+  </body>
+</html>

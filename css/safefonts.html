@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Безпечні веб-шрифти CSS</title>
+  </head>
+  <body>
+    <h1>Безпечні веб-шрифти CSS</h1>
+    <hr />
+
+    <h2>Що таке безпечні веб-шрифти?</h2>
+    <p>
+      Безпечні веб-шрифти - це шрифти, які універсально встановлюються на всіх
+      браузерах і пристроях.
+    </p>
+    <hr />
+
+    <h2>Резервні шрифти</h2>
+    <p>
+      Однак не існує 100% повністю базпечних веб-шрифтів. Завжди існує
+      ймовірність того, що шрифт не знайдено або встановлено неправильно.
+    </p>
+    <p>Тому дуже важливо завжди використовувати резервні шрифти.</p>
+    <p>
+      Це означає, що вам слід додати список подібних "резервних шрифтів" у
+      font-family властивості. Якщо перший шрифт не працює, браузер спробує
+      наступний і так далі. Завжди закінчуйте список загальною назвою сімейства
+      шрифтів.
+    </p>
+    <p>
+      <b>Приклад.</b> Тут є три типи шрифтів: Tahoma, Verdana та sans-serif.
+      Другий і третій шрифти є резервними, на випадок, якщо перший не знайдено
+    </p>
+    <code>
+      p{ <br />
+      font-family: Tahoma, Verdana, sans-serif; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="fontsfamily.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Найкращі безпечні веб-шрифти для HTML i CSS</h2>
+    <p>Нижче наведено список найкращих безпечних веб-шрифтів для HTML i CSS:</p>
+    <ul>
+      <li>Arial (без засічок)</li>
+      <li>Verdana (без засічок)</li>
+      <li>Tahoma (без засічок)</li>
+      <li>Trebuchet MS (без засічок)</li>
+      <li>Times New Roman (з засічками)</li>
+      <li>Georgia (з засічками)</li>
+      <li>Garamond (з засічками)</li>
+      <li>Courier New (моноширинний)</li>
+      <li>Brush Script MT (курсив)</li>
+    </ul>
+    <p>
+      <strong>Примітка.</strong> Перш ніж публікувати свій веб-сайт, завжди
+      перевіряйте, як ваші шрифти виглядають у різних браузерах і пристроях, і
+      завжди використовуйте <ins>резервні шрифти</ins>!
+    </p>
+    <hr />
+
+    <h2>Arial (без засічок)</h2>
+    <p>
+      Arial є найпоширенішим шрифтом як для онлайн, так і для друкованих ЗМІ.
+      Arial також є шрифтом за замовчанням у Google Documents
+    </p>
+    <p>
+      Arial є одним із найбезпечніших веб-шрифтів, і він доступний у всіх
+      основних операційних системах.
+    </p>
+    <code>
+      body{ <br />
+      font-family: Arial, sans-serif; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="arialfont.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Verdana (без засічок)</h2>
+    <p>
+      Verdana - дуже популярний шрифт. Verdana легко читається навіть за малих
+      розмірів шрифту.
+    </p>
+    <code>
+      body{ <br />
+      font-family: Verdana, sans-serif; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="verdanafont.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Tahoma (без засічок)</h2>
+    <p>Шрифт Tahoma має менше місця між символами.</p>
+    <code>
+      body{ <br />
+      font-family: Tahoma, sans-serif; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="tahomafont.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Trebuchet MS (без засічок)</h2>
+    <p>
+      Trebuchet MS розроблено Microsoft у 1996 році. Використовуйте цей шрифт
+      обережно. Підтримується не всіма мобільними операційними системами.
+    </p>
+    <code>
+      body{ <br />
+      font-family: 'Trebuchet MS', sans-serif; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="trebuchetfont.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Times New Roman (з засічками)</h2>
+    <p>
+      Times New Roman - один із найвідоміших шрифтів у світі. Це виглядає
+      професійно та використовується в багатьох газетах і на "новинних"
+      веб-сайтах. Це також основний шрифт для пристроїв і програм Windows.
+    </p>
+    <code>
+      body{ <br />
+      font-family: 'Times New Roman', serif; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="timesnewromanfont.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Georgia (з засічками)</h2>
+    <p>
+      Georgia - елегантний шрифт із засічками. Його добре читати з різними
+      розмірами шрифту, тому він є хорошим кандидатом для дизайну, адаптованого
+      до мобільних пристроїв.
+    </p>
+    <code>
+      body{ <br />
+      font-family: Georgia, serif; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="georgiafont.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Garamond (з засічками)</h2>
+    <p>
+      Garamond - це класичний шрифт, який використовується для багатьох
+      друкованих книг. Він має пазачасовий вигляд і добре читається.
+    </p>
+    <code>
+      body{ <br />
+      font-family: Garamond, serif; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="garamondfont.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Courier New (моноширинний)</h2>
+    <p>
+      Courier New - це найпоширеніший моноширинний шрифт із засічками. Courier
+      New часто використовується кодовими дисплеями, і багато постачальників
+      послуг електронної пошти використовують його як стандартний шрифт. Courier
+      New також є стандартним шрифтом для кіносценаріїв.
+    </p>
+    <code>
+      body{ <br />
+      font-family: 'Courier New', monospace; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="couriernewfont.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Brush Script MT (курсив)</h2>
+    <p>
+      Шрифт Brush Script MT створено для імітації рукописного введення. Він
+      елегантний і вишуканий, але його важко читати. Використовуйте його
+      обережно.
+    </p>
+    <code>
+      body{ <br />
+      font-family: 'Brush Script MT', coursive; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="brushscriptmtfont.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+  </body>
+</html>

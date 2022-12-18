@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Коротка властивість шрифту CSS</title>
+  </head>
+  <body>
+    <h1>Коротка властивість шрифту CSS</h1>
+    <hr />
+
+    <h2>Властивість шрифту CSS</h2>
+    <p>
+      Щоб скоротити код, також можна вказати всі окремі властивості шрифту в
+      одній властивості.
+    </p>
+    <p>Властивість font є скороченою властивістю для:</p>
+    <ul>
+      <li>font-style</li>
+      <li>font-variant</li>
+      <li>font-weight</li>
+      <li>font-size/line-height</li>
+      <li>font-family</li>
+    </ul>
+    <p>
+      <strong>Примітка.</strong> Значення font-size та font-family є
+      обов'язковим. Якщо одне з інших відсутнє, використовується значення за
+      умовчанням.
+    </p>
+    <code>
+      p.a{ <br />
+      font: 20px Arial,sans-serif; <br />
+      } <br />
+      p.b{ <br />
+      font: italic small-caps bold 12px/30px Georgia, serif; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="fontshorhand.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+  </body>
+</html>

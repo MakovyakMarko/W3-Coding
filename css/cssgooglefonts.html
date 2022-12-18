@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>CSS Google шрифти</title>
+  </head>
+  <body>
+    <h1>CSS Google шрифти</h1>
+    <hr />
+
+    <h2>Шрифти Google</h2>
+    <p>
+      Якщо ви не хочете використовувати жоден із стандартних шрифтів у HTML, ви
+      можете скористатися Google Fonts.
+    </p>
+    <p>
+      Шрифти Google безкоштовні для використання та пропонують понад 1000
+      шрифтів на вибір.
+    </p>
+    <hr />
+
+    <h2>Як користуватися Google Fonts</h2>
+    <p>
+      Просто додайте спеціальне посилання на таблицю стилів у розділі
+      &lt;head&gt;, а потім зверніться до шрифту в CSS.
+    </p>
+    <code>
+      &lt;head&gt; <br />
+      &lt;link rel="stylesheet"
+      href="http://fonts.googleapis.com/css?family=Sofia"&gt; <br />
+      &lt;style&gt; <br />
+      body { <br />
+      font-family:"Sofia", sans-serif; <br />
+      } <br />
+      &lt;/style&gt; <br />
+      &lt;/head&gt;
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="googlefontsofia.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <p>
+      <strong>Приклад.</strong> Тут ми хочемо використати шрифт під назвою
+      "Trirong" від Google Fonts:
+    </p>
+    <code>
+      &lt;head&gt; <br />
+      &lt;link rel="stylesheet"
+      href="http://fonts.googleapis.com/css?family=Trirong"&gt; <br />
+      &lt;style&gt; <br />
+      body { <br />
+      font-family:"Trirong", serif; <br />
+      } <br />
+      &lt;/style&gt; <br />
+      &lt;/head&gt;
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="googlefonttrirong.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <p>
+      <strong>Приклад.</strong> Тут ми хочемо використати шрифт під назвою
+      "Audiowide" від Google Fonts
+    </p>
+    <code>
+      &lt;head&gt; <br />
+      &lt;link rel="stylesheet"
+      href="http://fonts.googleapis.com/css?family=Audiowide"&gt; <br />
+      &lt;style&gt; <br />
+      body { <br />
+      font-family:"Audiowide", sans-serif; <br />
+      } <br />
+      &lt;/style&gt; <br />
+      &lt;/head&gt;
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="googlefontaudiowide.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <p>
+      <strong>Примітка.</strong> Указуючи шрифт у CSS, завжди вказуйте принаймні
+      один резервний шрифт (щоб уникнути неочікуваною поведінки). Отже, також
+      тут ви повинні додати загальне сімейство шрифтів (наприклад, serif або
+      sans-serif) у кінець списку.
+    </p>
+    <hr />
+
+    <h2>Використовуйте кілька шрифтів Google</h2>
+    <p>
+      Щоб використовувати декілька шрифтів Google, просто розділіть назви
+      шрифтів вертикальною рискою ( "|" ), як тут:
+    </p>
+    <code>
+      &lt;head&gt; <br />
+      &lt;link rel="stylesheet"
+      href="http://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong"&gt;
+      <br />
+      &lt;style&gt; <br />
+      h1.a { <br />
+      font-family:"Audiowide",sans-serif; <br />
+      } <br />
+      h1.b{ <br />
+      font-family:"Sofia",sans-serif; <br />
+      } <br />
+      h1.c{ <br />
+      font-family:"Trirong", serif; <br />
+      } <br />
+      &lt;/style&gt; <br />
+      &lt;/head&gt;
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="googlefontfewfonts.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <p>
+      <strong>Примітка.</strong> Запит калькох шрифтів може сповільнити роботу
+      веб-сторінок! Тому будьте обережні з цим.
+    </p>
+    <hr />
+
+    <h2>Стилізуйте Google Fonts</h2>
+    <p>
+      Звичайно, ви можете стилізувати Google Fonts як завгодно за допомогою CSS!
+    </p>
+    <code>
+      &lt;head&gt; <br />
+      &lt;link rel="stylesheet"
+      href="http://fonts.googleapis.com/css?family=Sofia"&gt; <br />
+      &lt;style&gt; <br />
+      body { <br />
+      font-family:"Sofia", sans-serif; <br />
+      font-size: 30px; <br />
+      text-shadow: 3px 3px 3px #ababab; <br />
+      } <br />
+      &lt;/style&gt; <br />
+      &lt;/head&gt;
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="googlefontsstyles.html"
+      frameborder="1"
+      width="100%;"
+      height="350px;"
+    ></iframe>
+    <hr />
+
+    <h2>Увімкнення ефектів шрифту</h2>
+    <p>
+      Google також увімкнув різні ефекти шрифтів, які ви можете використовувати.
+    </p>
+    <p>
+      Спочатку додайте Google API, а потім додайте спеціальну назву класу до
+      елемента, який використовуватиме спецефект. Ім'я класу завжди починається
+      з font-efect і закінчується effectname.
+    </p>
+    <code>
+      &lt;head&gt; <br />
+      &lt;link rel="stylesheet"
+      href="http://fonts.googleapis.com/css?family=Sofia&effect=fire"&gt; <br />
+      &lt;style&gt; <br />
+      body { <br />
+      font-family:"Sofia", sans-serif; <br />
+      font-size:30px; } <br />
+      &lt;/style&gt; <br />
+      &lt;/head&gt; <br />
+      &lt;body&gt; <br />
+      &lt;h1 class="font-effect-fire"&gt;Sofia on fire&lt;/h1&gt; <br />
+      &lt;/body&gt;
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="googlefonteffect.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <p>
+      Щоб запросити кілька ефектів шрифту, просто розділіть назви ефектів
+      вертикальною рискою ("|"), як тут:
+    </p>
+    <code>
+      &lt;head&gt; <br />
+      &lt;link rel="stylesheet"
+      href="http://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple"&gt;
+      <br />
+      &lt;style&gt; <br />
+      body { <br />
+      font-family:"Sofia", sans-serif; <br />
+      font-size:30px; } <br />
+      &lt;/style&gt; <br />
+      &lt;/head&gt; <br />
+      &lt;body&gt; <br />
+      &lt;h1 class="font-effect-neon"&gt;Neon Effect&lt;/h1&gt; <br />
+      &lt;h1 class="font-effect-outline"&gt;Outline Effect&lt;/h1&gt; <br />
+      &lt;h1 class="font-effect-emboss"&gt;Emboss Effect&lt;/h1&gt; <br />
+      &lt;h1 class="font-effect-shadow-multiple"&gt;Multiple Shadow
+      Effect&lt;/h1&gt; <br />
+      &lt;/body&gt;
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="googlefontfeweffects.html"
+      frameborder="1"
+      width="100%;"
+      height="700px;"
+    ></iframe>
+  </body>
+</html>

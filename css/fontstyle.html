@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Стиль шрифту CSS</title>
+  </head>
+  <body>
+    <h1>Стиль шрифту CSS</h1>
+    <hr />
+
+    <h2>Стиль шрифту</h2>
+    <p>
+      Властивість font-style здебільшого використовується для визначення тексту
+      курсивом.
+    </p>
+    <p>Ця властивість має три значення:</p>
+    <ul>
+      <li>normal - текст відображається нормально</li>
+      <li>italic - текст відображається курсивом</li>
+      <li>
+        oblique - текст "нахилений (oblique дуже схожий на курсив, але менше
+        підтримується)
+      </li>
+    </ul>
+    <code>
+      p.normal{ <br />
+      font-style: normal; <br />
+      } <br />
+      p.italic{ <br />
+      font-style: italic; <br />
+      } <br />
+      p.oblique{ <br />
+      font-style: oblique; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="fontstyledef.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Товщина шрифту</h2>
+    <p>Властивість font-wieght визначає товщину шрифту</p>
+    <code>
+      p.normal{ <br />
+      font-weight: normal; <br />
+      } <br />
+      p.thick{ <br />
+      font-weight: bold; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="fontweight.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Варіант шрифту</h2>
+    <p>
+      Властивість font-variant визначає, чи повинен текст відображатись малим
+      шрифтом.
+    </p>
+    <p>
+      У невеликому шрифті всі малі літери перетворюються на великі. Однак
+      перетворені великі літери відображаються меншим розміром шрифту, ніж
+      вихідні великі літери в тексті.
+    </p>
+    <code>
+      p.normal{ <br />
+      font-variant: normal; <br />
+      } <br />
+      p.small{ <br />
+      font-variant: small-caps; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="smallcaps.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+  </body>
+</html>
