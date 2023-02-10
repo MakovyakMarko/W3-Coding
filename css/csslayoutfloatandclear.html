@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Макет CSS - float i clear</title>
+  </head>
+  <body>
+    <h1>Макет CSS - float i clear</h1>
+    <p>Властивість CSS float визначає, як елемент має плавати.</p>
+    <p>
+      Властивість CSS clear визначає, які елементи можуть плавати поруч із
+      очищеним елементом і з якого боку.
+    </p>
+    <hr />
+
+    <h2>Властивість float</h2>
+    <p>
+      Властивість float використовується для розміщеня та форматування вмісту,
+      наприклад дозволити зображенню плавати ліворуч до тексту в контейнері.
+    </p>
+    <p>Властивість float може мати одне з таких значень:</p>
+    <ul>
+      <li>left - елемент плаває ліворуч від свого контейнера</li>
+      <li>right - елемент плаває праворуч від свого контейнера</li>
+      <li>
+        none - елемент не плаває (відображатиметься лише там, де він
+        зустрічається в тексті). Це за замовчуванням
+      </li>
+      <li>inherit - елемент успадковує значення float свого батька</li>
+    </ul>
+    <p>
+      У своєму найпростішому використанні float властивість можна
+      використовувати для обтікання текстом навколо зображення.
+    </p>
+    <hr />
+
+    <h2>Приклад - float:right;</h2>
+    <p>
+      У наступному прикладі показано, що зображення має плавати праворуч у
+      тексті:
+    </p>
+    <code>
+      img{ <br />
+      float: right; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="imgfloatright.html"
+      frameborder="1"
+      width="100%;"
+      height="350px;"
+    ></iframe>
+    <hr />
+
+    <h2>Приклад float:left;</h2>
+    <p>
+      У наступному прикладі показано, що зображення має плавати ліворуч у
+      тексті:
+    </p>
+    <code>
+      img{ <br />
+      float: left; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="imgfloatleft.html"
+      frameborder="1"
+      width="100%;"
+      height="400px;"
+    ></iframe>
+    <hr />
+
+    <h2>Приклад float:none;</h2>
+    <p>
+      У наступному прикладі зображення відображатиметься лише там, де воно
+      зустрічається у тексті (float:none;):
+    </p>
+    <code>
+      img{ <br />
+      float: none; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="imgfloatnone.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Приклад - плавати поруч один з одним</h2>
+    <p>
+      Зазвичай елементи div відображаються один над одним. Однак, якщо ми
+      використовуємо, float:left ми можемо дозволити елементам плавати поруч
+      один з одним:
+    </p>
+    <code>
+      div{ <br />
+      float: left; <br />
+      padding: 15px; <br />
+      } <br />
+      .div1{ <br />
+      background: red; <br />
+      } <br />
+      .div2{ <br />
+      background: yellow; <br />
+      } <br />
+      .div3{ <br />
+      background: green; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="divfloatleft.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Стиль таблиці CSS</title>
+  </head>
+  <body>
+    <h1>Стиль таблиці CSS</h1>
+    <hr />
+
+    <h2>Простір таблиці</h2>
+    <p>
+      Щоб контролювати простір між межею та вмістом у таблиці, використовуйте
+      padding властивість елементів &lt;td&gt; i &lt;th&gt;:
+    </p>
+    <code>
+      th,td{ <br />
+      padding: 15px; <br />
+      text-align:left; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="teblepadding.html"
+      frameborder="1"
+      width="100%;"
+      height="320px;"
+    ></iframe>
+    <hr />
+
+    <h2>Горизонтальні роздільники</h2>
+    <p>
+      Додайте border-bottom властивість до &lt;th&gt; i &lt;td&gt; для
+      горизонтальних роздільників
+    </p>
+    <code>
+      th,td{ <br />
+      border-bottom: 1px solid #ddd; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="tableborderbottom.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Таблиця з наведенням</h2>
+    <p>
+      Використовуйте :hover селектор на &lt;tr&gt;, що виділити рядки таблиці
+      при наведенні миші:
+    </p>
+    <code> tr:hover{background-color: coral;} <br /> </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="tabletrhover.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Смугасті таблиці</h2>
+    <p>
+      Для таблиць зі смужками зебри використовуйте nth-child() селектор ш
+      додайте background-color до всіх парних (або непарних) рядків таблиці:
+    </p>
+    <code> tr:nth-child(even) {background-color: #f2f2f2;} <br /> </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="tablenthchild.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Колір таблиці</h2>
+    <p>
+      У наведеному нижче прикладі вказано колір фону та колір тексту елементів
+      &lt;th&gt;:
+    </p>
+    <code>
+      th{ <br />
+      background-color:#04aa6d; <br />
+      color: white; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="tablecolor.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+  </body>
+</html>

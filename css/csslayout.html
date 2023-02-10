@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Макет CSS - властивість відображення</title>
+    <style>
+      .border {
+        border: 2px solid green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Макет CSS - властивість відображення</h1>
+    <p>
+      Властивість display є найважливішою властивістю CSS для керування макетом.
+    </p>
+    <hr />
+
+    <h2>Властивість дисплея</h2>
+    <p>Властивість display визначає, чи/як буде відображатися елемент.</p>
+    <p>
+      Кожен елемент HTML має значення відображення за замовчуванням залежно від
+      типу елемента. Стандартним значення відображення для більшості елементів є
+      block або inline.
+    </p>
+    <hr />
+
+    <h2>Елементи рівня блоку</h2>
+    <p>
+      Елемент рівня блоку завжди починається з нового рядка і займає всю
+      доступну ширину (розтягується ліворуч і праворуч, наскільки це можливо).
+    </p>
+    <div class="border">
+      <p>Елемент &lt;div&gt; є елементом рівня блоку</p>
+    </div>
+    <p>Приклади елементів рівня блоку:</p>
+    <ul>
+      <li>&lt;div&gt;</li>
+      <li>&lt;h1&gt;-&lt;h6&gt;</li>
+      <li>&lt;p&gt;</li>
+      <li>&lt;form&gt;</li>
+      <li>&lt;header&gt;</li>
+      <li>&lt;footer&gt;</li>
+      <li>&lt;section&gt;</li>
+    </ul>
+    <hr />
+
+    <h2>Вбудовані елементи</h2>
+    <p>
+      Вбудований елемент не починається з нового рядка і займає лише необхідну
+      ширину.
+    </p>
+    <p>
+      Це
+      <span class="border">вбудований елемент &lt;span&gt; всередині</span>
+      абзацу
+    </p>
+    <p>Приклади вбудованих елементів:</p>
+    <ul>
+      <li>&lt;span&gt;</li>
+      <li>&lt;a&gt;</li>
+      <li>&lt;img&gt;</li>
+    </ul>
+    <hr />
+
+    <h2>display: none</h2>
+    <p>
+      display: none; зазвичай використовується з JavaScript, щоб приховати та
+      показати елементи без їх видалення та повторного створення. Подивіться на
+      наш останній приклад на цій сторінці, якщо ви хочете знати, як цього можна
+      досягти.
+    </p>
+    <p>Елемент &lt;script&gt; використовує display:none; за замовчуванням.</p>
+    <hr />
+
+    <h2>Замінити відображуване значення за замовчуванням</h2>
+    <p>
+      Як згадувалося, кожен елемент має значення відображення за замовчуванням.
+      Однак ви можете перевизначити це.
+    </p>
+    <p>
+      Зміна вбудованого елемента на блоковий елемент або навпаки може бути
+      корисною для надання сторінки певного вигляду та дотримання
+      веб-стандартів.
+    </p>
+    <p>
+      Типовим прикладом є створення вбадованих &lt;li&gt; елементів для
+      горизонтального меню:
+    </p>
+    <code>
+      li{ <br />
+      display: inline; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="displayinline.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <p>
+      <strong>Примітка.</strong> Налаштування властивості відображення елемента
+      змінює лише спосіб відображення елемента, а НЕ те, який це елемент. Таким
+      чином, вдудованому (inline) елементу з display: block; заборонено мати
+      інші блокові елементи всередині нього.
+    </p>
+    <p>
+      У наступному прикладі елементи &lt;span&gt; відображаються як блокові
+      елементи:
+    </p>
+    <code>
+      span{ <br />
+      display: block; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="spandisplayblock.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <p>
+      У наступному прикладі елементи &lt;a&gt; відображаються як елементи блоку:
+    </p>
+    <code>
+      a{ <br />
+      display: block; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="adisplayblock.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Приховати елемент - display:none або visibility:hidden</h2>
+    <p>
+      Приховати елемент можна, встановивши для display властивості значення
+      none. Елемент буде приховано, а сторінка відображатиметься так, ніби
+      елемента там немає:
+    </p>
+    <code>
+      &lt;head&gt; <br />
+      &lt;style&gt; <br />
+      h1.hidden { <br />
+      display: none; <br />
+      } <br />
+      &lt;/style&gt; <br />
+      &lt;/head&gt; <br />
+      &lt;body&gt; <br />
+      <br />
+      &lt;h1&gt;This is a visible heading&lt;/h1&gt; <br />
+      &lt;h1 class="hidden"&gt;This is a hidden heading&lt;/h1&gt; <br />
+      &lt;p&gt;Notice that the h1 element with display: none; does not take up
+      any space.&lt;/p&gt; <br />
+      <br />
+      &lt;/body&gt;
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="displaynone.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <p>visibility:hidden; також приховує елемент.</p>
+    <p>
+      Однак елемент займатиме стількиж місця, скільки й раніше. Елемент буде
+      приховано, але це все одно вплине на макет:
+    </p>
+    <code>
+      &lt;head&gt; <br />
+      &lt;style&gt; <br />
+      h1.hidden { <br />
+      visibility: hidden; <br />
+      } <br />
+      &lt;/style&gt; <br />
+      &lt;/head&gt; <br />
+      &lt;body&gt; <br />
+      <br />
+      &lt;h1&gt;This is a visible heading&lt;/h1&gt; <br />
+      &lt;h1 class="hidden"&gt;This is a hidden heading&lt;/h1&gt; <br />
+      &lt;p&gt;Notice that the hidden heading still takes up space.&lt;/p&gt;
+      <br />
+      <br />
+      &lt;/body&gt;
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="visibilityhidden.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+  </body>
+</html>

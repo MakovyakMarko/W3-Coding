@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .img-container {
+        float: left;
+        width: 33.33%;
+        padding: 5px;
+      }
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Зображення один поруч з одним</h2>
+    <p>Плаваючі зображення один поруч з одним</p>
+    <div class="clearfix">
+      <div class="img-container">
+        <img src="./img/boxsizing1.jpg" alt="Italy" style="width: 100%" />
+      </div>
+      <div class="img-container">
+        <img src="./img/boxsizing2.jpg" alt="Forest" style="width: 100%" />
+      </div>
+      <div class="img-container">
+        <img src="./img/boxsizing3.jpg" alt="Mountains" style="width: 100%" />
+      </div>
+    </div>
+    <p>
+      Зауважте, що ми також використовуємо хак clearfix, щоб подбати про потік
+      макета, і що ми додаємо властивість box-sizing, щоб переконатися, що
+      контейнер зображення не зламається через додаткове заповнення. Спробуйте
+      видалити цей код, щоб побачити ефект.
+    </p>
+  </body>
+</html>

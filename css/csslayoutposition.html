@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Макет CSS - властивість position</title>
+  </head>
+  <body>
+    <h1>Макет CSS - властивість position</h1>
+    <p>
+      Властивість position вказує тип методу позиціонування, який
+      використовується для елемента (статичний, відносний, фіксований,
+      абослютний або закріплений).
+    </p>
+    <hr />
+
+    <h2>Властивості position</h2>
+    <p>
+      Властивість position визначає тип методу позиціонування, що
+      використовується для елемента.
+    </p>
+    <p>Є п'ять різних значень позиції:</p>
+    <ul>
+      <li>static</li>
+      <li>relative</li>
+      <li>fixed</li>
+      <li>absolute</li>
+      <li>sticky</li>
+    </ul>
+    <p>
+      Потім елементи розташовуються за допомогою властивостей top, bottom, left
+      i right. Однак ці властивості не працюватимуть, якщо position властивість
+      не встановлено спочатку. Вони також працюють по-різному залежно від
+      значення позиції.
+    </p>
+    <hr />
+
+    <h2>position:static;</h2>
+    <p>Елементи HTML за замовчуванням позиціонуються статично.</p>
+    <p>
+      На статичні позиціоновані елементи не впливають властивості top, bottom,
+      left i right.
+    </p>
+    <p>
+      Елемент з position:static; не позиціонується ніяким особливим чином; він
+      завжди розташовується відповідно до нормального потоку сторінки:
+    </p>
+    <div style="position: static; border: 3px solid green">
+      <p>Цей елемент &lt;div&gt; має position:static</p>
+    </div>
+    <p>Ось CSS, який використовується:</p>
+    <code>
+      div.static{ <br />
+      position: static; <br />
+      border: 3px solid green; <br />
+      }
+    </code>
+    <hr />
+
+    <h2>position:relative;</h2>
+    <p>
+      Елемент position:relative; позиціонується відносно свого нормального
+      положення.
+    </p>
+    <p>
+      Встановлення властивостей top, bottom, left, right віносно розташованого
+      елемента призведе до його відхилення від нормального положення. Інший
+      вміст не буде скориговано відповідно до проміжків, залишених елементом.
+    </p>
+    <div style="position: relative; left: 30px; border: 3px solid green">
+      <p>Цей елемент &lt;div&gt; має position:relative;</p>
+    </div>
+    <code>
+      div.relative{ <br />
+      position: relative; <br />
+      left: 30px; <br />
+      border: 3px solid green; <br />
+      }
+    </code>
+    <hr />
+
+    <h2>position:fixed;</h2>
+    <p>
+      Елемент з position: fixed; позиціонується відносно вікна перегляду, що
+      означає, що він завжди в тому самому місці, навіть якщо сторінку
+      прокручують. Властивості top, right, bottom i left використовуються для
+      позиціонування елемента.
+    </p>
+    <p>
+      Фіксований елемент не залишає розриву на сторінці, де він зазвичай
+      розташовувався б.
+    </p>
+    <div
+      style="
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        width: 300px;
+        border: 3px solid green;
+      "
+    >
+      <p>Цей елемент &lt;div&gt; має position:fixed;.</p>
+    </div>
+    <p>
+      Зверніть увагу на фіксований елемент у нижньому правому куті сторінки. Ось
+      CSS, який використовується:
+    </p>
+    <code>
+      div.fixed{ <br />
+      position: fixed; <br />
+      bottom: 0; <br />
+      right:0; <br />
+      width: 300px; <br />
+      border: 3px solid green; <br />
+      }
+    </code>
+    <hr />
+
+    <h2>position:absolute;</h2>
+    <p>
+      Елемент з position: absolute; позиціонується відносно найближчого
+      позиціонованого предка (замість позиціонування підносно вікна перегляду,
+      як fixed)
+    </p>
+    <p>
+      Одак, якщо абслоютний позиціонований елемент не має позиціонування
+      предків, він використовує тіло документа та переміщується разом із
+      прокручуванням сторінки.
+    </p>
+    <p>
+      <strong>Примітка.</strong> Елементи з абослютним розташуванням видаляються
+      з нормального потоку та можуть перекривати елементи.
+    </p>
+    <p>Ось простий приклад:</p>
+    <div
+      style="
+        position: relative;
+        width: 400px;
+        height: 200px;
+        border: 3px solid green;
+      "
+    >
+      <p>Цей елемент &lt;div&gt; має position:relative;</p>
+      <div
+        style="
+          position: absolute;
+          top: 80px;
+          right: 0px;
+          width: 200px;
+          height: 100px;
+          border: 3px solid green;
+        "
+      >
+        <p>Цей елемент &lt;div&gt; має position:absolute;</p>
+      </div>
+    </div>
+    <p>Ось CSS, який використовується:</p>
+    <code>
+      div.relative{ <br />
+      position: relative; <br />
+      width: 400px; <br />
+      height: 200px; <br />
+      border: 3px solid green; <br />
+      } <br />
+      div.absolute{ <br />
+      position: absolute; <br />
+      top: 80px; <br />
+      right: 0; <br />
+      width: 200px; <br />
+      height: 100px; <br />
+      border: 3px solid green; <br />
+      }
+    </code>
+    <hr />
+
+    <h2>position:sticky;</h2>
+    <p>
+      Елемент з position:sticky; позиціонується на основі позиції прокручування
+      користувача.
+    </p>
+    <p>
+      Закріплений елемент перемикається між relative i fixed залежно від
+      положення прокручування. Він розташовується відносно, доки задане
+      положення зсуву не зустрінеться у вікні перегляду - тоді воно "прилипає"
+      на місце (наприклад, position:fixed;).
+    </p>
+    <p>
+      <strong>Примітка.</strong> Internet Explorer не підтримує фіксоване
+      позиціонування. Для Safari потрібен префікс -webkit-. Ви також повинні
+      вказати принаймні один з top,right,bottom,left, щоб закріплене
+      позиціонування працювало.
+    </p>
+    <p>
+      У цьому прикладі липкий елемент прилопає до верхньої частини сторінки
+      (top:0;), коли ви досягаєте його позиції прокручування.
+    </p>
+    <code>
+      div.sticky{ <br />
+      position: -webkit-sticky; <br />
+      position: sticky; <br />
+      top: 0; <br />
+      background-color: green; <br />
+      border: 2px solid #4CAF50; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="positionsticky.html"
+      frameborder="1"
+      width="100%;"
+      height="150px;"
+    ></iframe>
+    <hr />
+
+    <h2>Розташування тексту на зображенні</h2>
+    <p>Як розмістити текст над зображенням:</p>
+    <code>
+      .container{ <br />
+      position: relative; <br />
+      } <br />
+      .topleft{ <br />
+      position: absolute; <br />
+      top: 8px; <br />
+      left: 16px; <br />
+      font-size: 18px; <br />
+      } <br />
+      .topright{ <br />
+      position: absolute; <br />
+      top: 8px; <br />
+      right: 16px; <br />
+      font-size: 18px; <br />
+      } <br />
+      .bottomleft{ <br />
+      position: absolute; <br />
+      bottom: 8px; <br />
+      left: 16px; <br />
+      font-size: 18px; <br />
+      } <br />
+      .bottomright{ <br />
+      position: absolute; <br />
+      bottom: 8px; <br />
+      right: 16px; <br />
+      font-size: 18px; <br />
+      } <br />
+      .center{ <br />
+      position: absolute; <br />
+      top: 50%; <br />
+      width: 100%; <br />
+      text-align: center; <br />
+      font-size: 18px; <br />
+      } <br />
+      img{ <br />
+      width: 100%; <br />
+      height: auto; <br />
+      opacity: 0.3; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="positiononimage.html"
+      frameborder="1"
+      width="100%;"
+      height="450px;"
+    ></iframe>
+  </body>
+</html>

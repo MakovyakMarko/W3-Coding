@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Макет CSS - приклади float</title>
+  </head>
+  <body>
+    <h1>Макет CSS - приклади float</h1>
+    <p>Ця сторінка містить типові приклади float.</p>
+    <hr />
+
+    <h2>Сітка коробок / коробки однакової ширини</h2>
+    <p>За допомогою float властивості можна розміщувати блоки вмісту поруч:</p>
+    <code>
+      *{ <br />
+      box-sizing: border-box; <br />
+      } <br />
+      .box{ <br />
+      float: left; <br />
+      width: 33.33%; <br />
+      padding: 50px; <br />
+      } <br />
+      .clearfix::after{ <br />
+      content: ""; <br />
+      clear: both; <br />
+      display: table; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="gridofboxes.html"
+      frameborder="1"
+      width="100%;"
+      height="350px;"
+    ></iframe>
+    <p>
+      <strong>Що таке box-sizing?</strong><br />Ви можете легко створити три
+      плаваючі коробки поруч. Однак, коли ви додаєте щось, що збільшує ширину
+      кожного поля (наприклад відступ від межі), поле розривається. Властивість
+      box-sizing дозволяє нам включити відступ і рамку в загальну ширину (і
+      висоту) коробки, переконавшись, що відступ залишається всередині коробки і
+      не ламається.
+    </p>
+    <hr />
+
+    <h2>Зображення поруч</h2>
+    <p>
+      Сітку прямокутників також можна використовувати для відображення зображень
+      поруч:
+    </p>
+    <code>
+      *{ <br />
+      box-sizing: border-box; <br />
+      } <br />
+      .img-conteiner{ <br />
+      float: left; <br />
+      width: 33.33%; <br />
+      padding: 5px; <br />
+      } <br />
+      .clearfix::after{ <br />
+      content: ""; <br />
+      clear: both; <br />
+      display: table; <br />
+      } <br />
+    </code>
+    <p>ВІдображатиметься так:</p>
+    <iframe
+      src="imgconteinerboxsizing.html"
+      frameborder="1"
+      width="100%"
+      height="400px"
+    ></iframe>
+    <hr />
+
+    <h2>Коробки однакової висоти</h2>
+    <p>
+      У попередньму прикладі ви навчилися розміщувати коробки поруч із однаковою
+      шириною. Однак створоити плаваючі короблки однакової висоти нелегко. Однак
+      швидким виправленням є встановлення фіксованої висоти, як у прикладі
+      нижче:
+    </p>
+    <code>
+      *{ <br />
+      box-sizing: border-box; <br />
+      } <br />
+      .box{ <br />
+      float:left; <br />
+      width:50%; <br />
+      padding:50px; <br />
+      height: 300px; <br />
+      } <br />
+      .clearfix::after{ <br />
+      content: ""; <br />
+      clear: both; <br />
+      display: table; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="floatheight.html"
+      frameborder="1"
+      width="100%"
+      height="600px;"
+    ></iframe>
+    <p>
+      <strong>Однак</strong> це не дуже гнучко. Це нормально, якщо ви можете
+      гарантувати, що в ящиках буде однакова кількість вмісту. Але часто зміст
+      не однаковий. Якщо ви спробуєте наведений вище приклад на мобільному
+      телефоні, ви побачите, що вміст другої коробки відображається за її
+      межами. Ось тут і стане в нагоді CSS3 Flexbox, оскільки він може
+      автоматично розтягувати коробки до найдовшої коробки:
+    </p>
+    <code>
+      .flex-container{ <br />
+      display: flex; <br />
+      flex-wrap: nowrap; <br />
+      background-color: DodgerBlue; <br />
+      } <br />
+      .flex-container .box{ background-color: #f1f1f1; <br />
+      width: 50%; <br />
+      margin: 10px; <br />
+      text-align: center; <br />
+      line-height: 75px; <br />
+      font-size: 30px; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="flexboxfloat.html"
+      frameborder="1"
+      width="100%;"
+      height="800px;"
+    ></iframe>
+    <hr />
+
+    <h2>Навігаційне меню</h2>
+    <p>
+      Ви також можете використовувати float зі списком гіперпосилань, щоб
+      створити горизонтальне меню:
+    </p>
+    <code>
+      ul{ <br />
+      list-style-type: none; <br />
+      margin:0; <br />
+      padding:0; <br />
+      overflow:hidden; <br />
+      background-color:#333; <br />
+      } <br />
+      li{ <br />
+      float:left; <br />
+      } <br />
+      li a{ <br />
+      display: inline-block; <br />
+      color: white; <br />
+      text-align: center; <br />
+      padding: 14px 16px; <br />
+      text-decoration: none; <br />
+      } <br />
+      li a:hover{ <br />
+      background-color: #111; <br />
+      } <br />
+      .active{ <br />
+      background-color: red; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="floatmenu.html"
+      frameborder="1"
+      width="100%;"
+      height="100px;"
+    ></iframe>
+    <hr />
+
+    <h2>Приклад веб-макету</h2>
+    <p>
+      Також часто можна створювати цілі веб-макети за допомогою float
+      властивості:
+    </p>
+    <code>
+      *{ <br />
+      box-sizing: border-box; <br />
+      } <br />
+      body{ <br />
+      background-color: white; <br />
+      } <br />
+      .header, .footer{ <br />
+      background-color: grey; <br />
+      color: white; <br />
+      padding: 15px; <br />
+      } <br />
+      .column{ <br />
+      float: left; <br />
+      padding: 15px; <br />
+      } <br />
+      .clearfix::after{ <br />
+      content: ""; <br />
+      clear: both; <br />
+      display: table; <br />
+      } <br />
+      .menu{ <br />
+      width: 25%; <br />
+      } <br />
+      .content{ <br />
+      width: 75%; <br />
+      } <br />
+      .menu ul{ <br />
+      list-style-type: none; <br />
+      margin: 0; <br />
+      padding: 0; <br />
+      } <br />
+      .menu li{ padding: 8px; <br />
+      margin-bottom: 8px; <br />
+      background-color: #33b5e5; <br />
+      color: #ffffff; <br />
+      } <br />
+      .menu li:hover{ <br />
+      background-color: #0099cc; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="floatlayout.html"
+      frameborder="1"
+      width="100%;"
+      height="500px;"
+    ></iframe>
+    <hr />
+
+    <h2>Більше прикладів</h2>
+    <p>Нехай перша літера плаває ліворуч:</p>
+    <code>
+      span{ <br />
+      float: left; <br />
+      width: 0.7em; <br />
+      font-size: 400%; <br />
+      font-family: algerian, courier; <br />
+      line-height: 80%; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="floatleftletter.html"
+      frameborder="1"
+      width="100%"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <p>Створення веб-сайту за допомогою float</p>
+    <code> </code>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .div1 {
+        float: left;
+        padding: 10px;
+        border: 3px solid green;
+      }
+      .div2 {
+        padding: 10px;
+        border: 3px solid red;
+      }
+      .div3 {
+        float: left;
+        padding: 10px;
+        border: 3px solid green;
+      }
+      .div4 {
+        padding: 10px;
+        border: 3px solid red;
+        clear: left;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Без clear</h2>
+    <div class="div1">Div 1</div>
+    <div class="div2">
+      Div 2 – зверніть увагу, що div2 стоїть після div1 у коді HTML. Однак,
+      оскільки div1 плаває ліворуч, текст у div2 обтікає div1.
+    </div>
+    <br /><br />
+
+    <h2>З clear</h2>
+    <div class="div3">Div 3</div>
+    <div class="div4">
+      Div 4 - Тут, clear:left; переміщує div4 нижче плаваючого div3. Значення
+      "left" очищає елементи, розташовані ліворуч. Ви також можете очистити
+      «правий» і «обидва».
+    </div>
+  </body>
+</html>

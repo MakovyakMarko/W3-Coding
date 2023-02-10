@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .box {
+        float: left;
+        width: 33.33%;
+        padding: 50px;
+      }
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Сітка коробок</h2>
+    <p>Плаваючі корбоки одна біля одної</p>
+    <div class="clearfix">
+      <div class="box" style="background-color: #bbb">Якийсь текст</div>
+      <div class="box" style="background-color: #ccc">Якийсь текст</div>
+      <div class="box" style="background-color: #ddd">Якийсь текст</div>
+    </div>
+    <p>
+      <strong>Примітка.</strong> Тут ми використовуємо хак clearfix, щоб подбати
+      про потік макета. Ми також використовуємо властивість box-sizing, щоб
+      переконатися, що коробка не зламається через додаткову прокладку.
+    </p>
+  </body>
+</html>

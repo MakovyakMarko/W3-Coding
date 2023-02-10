@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Вирівнювання таблиці CSS</title>
+  </head>
+  <body>
+    <h1>Вирівнювання таблиці CSS</h1>
+    <hr />
+
+    <h2>Горизонтальне вирівнювання</h2>
+    <p>
+      Властивість text-align встановлює горизонтальне вирівнювання (наприклад,
+      ліворуч, праворуч або по центру) вмісту в &lt;th&gt; або &lt;td&gt;.
+    </p>
+    <p>
+      За замовчуванням вміст елементів &lt;th&gt; вирівнюється по центру, а
+      вміст елементів &lt;td&gt; вирівнюється за лівим краєм.
+    </p>
+    <p>
+      Щоб також вирівняти вміст елементів &lt;td&gt; по центру, використовуйте
+      text-align:center :
+    </p>
+    <code>
+      td{ <br />
+      text-align: center; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="tabletextalign.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <p>
+      Щоб вирівняти вміст за лівим краєм, примусово вирівнюйте елементи
+      &lt;th&gt; за лівим краєм за допомогою text-align:left властивості:
+    </p>
+    <code>
+      th{ <br />
+      text-align: left; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="tablethleft.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Вертикальне вирівнювання</h2>
+    <p>
+      Властивість vertical-align встановлює вертикальне вирівнювання (наприклад,
+      зверху, знизу, або посередині) вмісту в &lt;th&gt; або &lt;td&gt;.
+    </p>
+    <p>
+      За замовчуванням вміст у таблиці вирівнюється посередині (для елементів
+      &lt;th&gt; i &lt;td&gt;).
+    </p>
+    <p>
+      У наступному прикладі встановлюється вертикальне вирівнювання тексту за
+      низом для елементів &lt;td&gt;:
+    </p>
+    <code>
+      td{ <br />
+      height: 50px: <br />
+      vertical-align: bottom; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="tableverticalalign.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+  </body>
+</html>

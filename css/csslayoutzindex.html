@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Макет CSS - властивість z-index</title>
+  </head>
+  <body>
+    <h1>Макет CSS - властивість z-index</h1>
+    <p>Властивість z-index визначає порядок стека елемента.</p>
+
+    <h2>Властивість z-index</h2>
+    <p>Коли елементи розташовані, вони можуть перекривати інші елементи.</p>
+    <p>
+      Властивість z-index визначає порядок стека елемента (який елемент має бути
+      розміщений попереду чи позаду інших).
+    </p>
+    <p>Елемент може мати позитивний або негативний порядок стека:</p>
+    <code>
+      img{ <br />
+      position: absolute; <br />
+      left: 0px; <br />
+      top: 0px; <br />
+      z-index: -1; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="imgzindex.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <p>
+      <strong>Примітка:</strong> z-index працює лише з позиціонованими
+      елементами (position: absolute/relative/fixed/sticky) та flex елементами
+      (елементами, які є прямими дочірніми елементами відображення: flex
+      елементами)
+    </p>
+    <hr />
+
+    <h2>Інший приклад z-index</h2>
+    <p>
+      <strong>Приклад.</strong> Тут ми бачимо, що елемент з більшим порядком
+      стека завжди нод елементом з нижчим порядком стека:
+    </p>
+    <code>
+      .container { <br />
+      position: relative; <br />
+      } <br />
+      .black-box{ <br />
+      position: relative; <br />
+      z-index: 1; <br />
+      border: 2px solid black; <br />
+      height: 100px; <br />
+      margin: 30px; <br />
+      } <br />
+      .gray-box{ <br />
+      position: absolute; <br />
+      z-index: 3; <br />
+      background: lightgray; <br />
+      height: 60px; <br />
+      width: 70%; <br />
+      left: 50px; <br />
+      top: 50px; <br />
+      } <br />
+      .green-box{ <br />
+      position:absolute; <br />
+      z-index: 2; <br />
+      background: lightgreen; <br />
+      width: 35%; <br />
+      left: 270px; <br />
+      top: -15px; <br />
+      height: 100px; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="zindexonpage.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Без z-index</h2>
+    <p>
+      Якщо два позиціоновані елементи перекривають один одного без вказання
+      z-index, елемент, визначений останнім у коді HTML, буде показано зверху.
+    </p>
+    <code>
+      .container { <br />
+      position: relative; <br />
+      } <br />
+      .black-box{ <br />
+      position: relative; <br />
+      border: 2px solid black; <br />
+      height: 100px; <br />
+      margin: 30px; <br />
+      } <br />
+      .gray-box{ <br />
+      position: absolute; <br />
+      background: lightgray; <br />
+      height: 60px; <br />
+      width: 70%; <br />
+      left: 50px; <br />
+      top: 50px; <br />
+      } <br />
+      .green-box{ <br />
+      position:absolute; <br />
+      background: lightgreen; <br />
+      width: 35%; <br />
+      left: 270px; <br />
+      top: -15px; <br />
+      height: 100px; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="nozindexonpage.html"
+      frameborder="1"
+      width="100%"
+      height="300px;"
+    ></iframe>
+  </body>
+</html>

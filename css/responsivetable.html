@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>CSS адаптивна таблиця</title>
+  </head>
+  <body>
+    <h1>CSS адаптивна таблиця</h1>
+    <hr />
+
+    <h2>Чуйна таблиця</h2>
+    <p>
+      Адаптивна таблиця відображатиме горизонтальну смугу прокрутки, якщо екран
+      замалий для відображення всього вмісту.
+    </p>
+    <p>
+      Додайте елемент контейнера (наприклад, &lt;div&gt;) overflow-x:auto
+      навколо елемента &lt;table&gt;, щоб зробити його адаптивним:
+    </p>
+    <code>
+      &lt;div style="overflow-x:auto;"&gt; <br />
+      &lt;table&gt; <br />
+      ... table content ... <br />
+      &lt;/table&gt; <br />
+      &lt;/div&gt; <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="tableoverflowxauto.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+  </body>
+</html>

@@ -1,9 +1,14 @@
+* {
+  box-sizing: border-box;
+}
 body {
   background-color: #ffffff;
   color: #000000;
   margin: 50px;
-  font-size: 110%;
+  font-size: 18px;
   font-family: Arial, sans-serif;
+  text-shadow: 0px 0px 1px white;
+  overflow: auto;
 }
 p {
   text-align: justify;
@@ -17,14 +22,13 @@ h3,
 h4,
 h5,
 h6 {
-  color: blue;
+  color: rgb(64, 36, 223);
   text-align: center;
-  text-shadow: 1px 1px 2px white, 5px 5px 7px lightgray;
   font-family: "Times New Roman", Times, serif;
 }
 li {
   color: #000000;
-  font-size: 110%;
+  font-size: 18px;
 }
 caption {
   color: #818181;
@@ -34,7 +38,7 @@ a:link {
   text-decoration: none;
 }
 a:visited {
-  color: green;
+  color: rgb(3, 177, 81);
   text-decoration: none;
 }
 a:hover {
@@ -42,7 +46,7 @@ a:hover {
   text-decoration: underline;
 }
 a:active {
-  color: yellow;
+  color: rgb(119, 128, 0);
   text-decoration: underline;
 }
 .theme {
@@ -57,9 +61,10 @@ a:active {
   color: rgb(255, 249, 249);
 }
 code {
-  border-left: 5px solid blue;
-  border-right: 5px solid blue;
+  border-left: 5px solid rgb(255, 0, 0);
+  border-right: 5px solid rgb(255, 0, 0);
   /*border-bottom: 3px solid blue; */
-  background-color: rgb(202, 232, 241);
+  background-color: rgb(7, 96, 211);
   font-family: "Courier New", Courier, monospace;
+  color: rgb(255, 255, 255);
 }

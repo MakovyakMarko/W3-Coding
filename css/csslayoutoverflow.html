@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Макет CSS - переповнення (overflow)</title>
+  </head>
+  <body>
+    <h1>Макет CSS - переповнення (overflow)</h1>
+    <p>
+      Властивість CSS overflow контролює, що відбувається з вмістом, який
+      занадто великий, щоб поміститися в область.
+    </p>
+    <hr />
+
+    <h2>Переповнення CSS</h2>
+    <p>
+      Властивість overflow визначає, чи потрібно обрізати вміст або додати смуги
+      прокручування, якщо вміст елемента занадто великий, щоб поміститися у
+      вказану область.
+    </p>
+    <p>Властивість overflow має такі значення:</p>
+    <ul>
+      <li>
+        visible - за замовчуванням. Переповнення не обрізається. Вміст
+        відображається за межами вікна елемента
+      </li>
+      <li>
+        hidden - переповнення буде обрізано, а решта вмісту буде невидимою
+      </li>
+      <li>
+        scroll - переповнення обрізано, а для перегляду решти вмісту додано
+        смугу прокрутки
+      </li>
+      <li>
+        auto - подібно до scroll, але смуги прокрутки додаються лиша за потреби
+      </li>
+    </ul>
+    <p>
+      <strong>Примітка:</strong> властивість overflow працює лише для блокових
+      елементів із заданою висотою.
+    </p>
+    <p>
+      <strong>Примітка.</strong> В OS X Lion (на Mac) смуги прокрутки приховані
+      за умовчанням і відображаються лише під час використання (навіть якщо
+      встановлено "overflow:scroll").
+    </p>
+    <hr />
+
+    <h2>overflow:visible</h2>
+    <p>
+      За замовчуванням переповнення має visible значення, що означає, що воно не
+      обрізається та відображається за межами вікна елемента:
+    </p>
+    <code>
+      div{ <br />
+      width: 200px; <br />
+      height: 65px; <br />
+      background-color: coral; <br />
+      overflow: visible; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="overflowvisible.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>overflow:hidden</h2>
+    <p>
+      За допомогою hidden значення переповнення обрізається, а решта вмісту
+      прихована:
+    </p>
+    <code>
+      div{ <br />
+      overflow:hidden; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="overflowhidden.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>overflow:scroll</h2>
+    <p>
+      Якщо встановити значення scroll, переповнення буде обрізано та додано
+      смугу прокрутки для прокручування всередині поля. Зауважте, що це додасть
+      смугу прокрутки як горизонтально, так і вертикально (навіть якщо вона вам
+      не потрібна):
+    </p>
+    <code>
+      div{ <br />
+      overflow: scroll; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="overflowscroll.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>overflow:auto</h2>
+    <p>
+      Значення auto подібне до scroll, але воно додає смуги прокрутки лише за
+      необхідності:
+    </p>
+    <code>
+      div{ <br />
+      overflow: auto; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="overflowauto.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>overflow-x i overflow-y</h2>
+    <p>
+      Властивість overflow-x і overflow-y визначають, чи потрібно змінювати
+      переповнення вмісту лише горизонтально чи вертикально (або обидва):
+    </p>
+    <code>
+      div{ <br />
+      overflow-x: hidden; <br />
+      overflow-y: scroll; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="overflowxoverflowy.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+  </body>
+</html>

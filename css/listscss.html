@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Списки CSS</title>
+  </head>
+  <body>
+    <h1>Списки CSS</h1>
+    <p>Невпорядковані списки:</p>
+    <ul style="list-style-type: circle">
+      <li>кава</li>
+      <li>чай</li>
+      <li>Кока-Кола</li>
+    </ul>
+    <ul style="list-style-type: square">
+      <li>кава</li>
+      <li>чай</li>
+      <li>Кока-Кола</li>
+    </ul>
+    <p>Впорядковані списки:</p>
+    <ol style="list-style-type: upper-roman">
+      <li>кава</li>
+      <li>чай</li>
+      <li>Кока-Кола</li>
+    </ol>
+
+    <ol style="list-style-type: lower-greek">
+      <li>кава</li>
+      <li>чай</li>
+      <li>Кока-Кола</li>
+    </ol>
+    <hr />
+
+    <h2>Списки HTML і властивості списку CSS</h2>
+    <p>У HTML існує два основних типи списків:</p>
+    <ul>
+      <li>
+        невпорядковані списки (&lt;ul&gt;) - елементи списку позначені маркерами
+      </li>
+      <li>
+        впорядковані списки (&lt;ol&gt;) - елементи списку позначаються цифрами
+        або літреами
+      </li>
+    </ul>
+    <p>Властивості списку CSS дозволяють:</p>
+    <ul>
+      <li>
+        Установити різні маркери елементів списку для впорядкованих списків
+      </li>
+      <li>
+        Установити різні маркери елементів списку для невпорядкованих списків
+      </li>
+      <li>Установити зображення як маркер елемента списку</li>
+      <li>Додати фонові кольори до списків і елементів списку</li>
+    </ul>
+    <hr />
+
+    <h2>Різні маркери елементів списку</h2>
+    <p>Властивість list-style-type визначає тип маркера елемента списку.</p>
+    <p>
+      У наступному прикладі показано деякі з доступних маркерів елементів
+      списку:
+    </p>
+    <code>
+      ul.a{ <br />
+      list-style-type: circle; <br />
+      } <br />
+      ul.b{ <br />
+      list-style-type: square; <br />
+      } <br />
+      ol.c{ <br />
+      list-style-type: upper-roman; <br />
+      } <br />
+      ol.d{ <br />
+      list-style-type: lower-alpha; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="liststyletype.html"
+      frameborder="1"
+      width="100%;"
+      height="450px;"
+    ></iframe>
+    <p>
+      <strong>Примітка.</strong> Деякі значення призначені для невпорядкованих
+      списків, а деякі - для впорядкованих списків.
+    </p>
+    <hr />
+
+    <h2>Зображення як маркер елемента списку</h2>
+    <p>
+      Властивість list-style-image визначає зображення як маркер елемента
+      списку:
+    </p>
+    <code>
+      ul{ <br />
+      list-style-image: url('./img/1.png'); <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="liststyleimage.html"
+      frameborder="1"
+      width="100%;"
+      height="400px;"
+    ></iframe>
+    <hr />
+
+    <h2>Розташуйте маркери елементів списку</h2>
+    <p>
+      Властивість list-style-position визначає положення маркерів елементів
+      списку (маркованих точок).
+    </p>
+    <p>
+      "list-style-position: outside", означає, що маркери будуть розташовані за
+      межами елемента списку. Початок кожного рядка елемента списку буде
+      вирівняно по вертикалі. Це за умовчуванням.
+    </p>
+    <p>
+      "list-style-position: inside", означає, що маркери будуть усередині
+      елемента списку. Оскільки він є частиною елемента списку, він буде
+      частиною тексту та вставлятиме текст на початку.
+    </p>
+    <code>
+      ul.a{ <br />
+      list-style-position: outside; <br />
+      } <br />
+      ul.b{ <br />
+      list-style-position: inside; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="liststyleposition.html"
+      frameborder="1"
+      width="100%"
+      height="550px;"
+    ></iframe>
+    <hr />
+
+    <h2>Видалити налаштування за замовчуванням</h2>
+    <p>
+      Властивість list-style-type:none також можна використовувати для видалення
+      маркерів/куль. Зверніть увагу, що список також має стандартні поля та
+      відступи. Щоб видалити це, додайте margin:0 та padding:0 до ul або ol
+    </p>
+    <code>
+      ul{ <br />
+      list-style-type: none; <br />
+      margin:0; <br />
+      padding:0; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="liststyletypenone.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Список - коротка властивість</h2>
+    <p>
+      Властивість list-style є скороченою властивістю. Вона використовується для
+      встановлення всіх властивостей списку в одні декларації:
+    </p>
+    <code>
+      ul{ <br />
+      list-style: circle inside url("./img/1.png"); <br />
+      }
+    </code>
+    <p>
+      При використанні скороченої властивості порядок значень властивості такий:
+    </p>
+    <ul>
+      <li>
+        list-style-type (якщо вказано list-style-image, значення цієї
+        властивості буде показано, якщо зображення з якоїсь причини не може бути
+        відображено)
+      </li>
+      <li>
+        list-style-position (вказує, чи мають відображатися маркери елементів
+        списку всередині чи поза потоком вмісту)
+      </li>
+      <li>list-style-image (вказує заображення як маркер елемента списку)</li>
+    </ul>
+    <p>
+      Якщо одне з наведених вище значень властивості відсутнє, буде встановлено
+      значення за умовчуванням для відсутньої властивості, якщо воно є.
+    </p>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="liststyle.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Список стилів із кольорами</h2>
+    <p>
+      Ми також можемо стилізувати список за допомогою кольорів, щоб вони
+      виглядали трохи цікавіше.
+    </p>
+    <p>
+      Усе, що додається до тегу &lt;ol&gt; або &lt;ul&gt;, впливає на весь
+      список, тоді як властивості, додані до тегу &lt;li&gt;, впливатимуть на
+      окремі елементи списку:
+    </p>
+    <code>
+      ol{ <br />
+      background: #ff9999; <br />
+      padding: 20px; <br />
+      } <br />
+      ul{ <br />
+      background: #3399ff; <br />
+      padding: 20px; <br />
+      } <br />
+      ol li{ <br />
+      background: #ffe5e5; <br />
+      color: darker; <br />
+      padding: 5px; <br />
+      margin-left: 35px; <br />
+      } <br />
+      ul li{ <br />
+      background: #cce5ff; <br />
+      color: darkblue; <br />
+      margin: 5px; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="listcolorstyle.html"
+      frameborder="1"
+      width="100%;"
+      height="400px;"
+    ></iframe>
+    <hr />
+
+    <h2>Більше прикладів</h2>
+    <p>Настроюваний список з червоною лівою рамкою</p>
+    <code>
+      ul{ <br />
+      border-left: 5px solid red; <br />
+      background-color: #f1f1f1; <br />
+      list-style-type: none; <br />
+      padding: 10px 20px; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="listborderleft.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <p>Список із рамкою на всю ширину</p>
+    <code>
+      ul { <br />
+      list-style-type: none; <br />
+      padding: 0; <br />
+      border: 1px solid #ddd; <br />
+      } <br />
+      <br />
+      ul li { <br />
+      padding: 8px 16px; <br />
+      border-bottom: 1px solid #ddd; <br />
+      } <br />
+      <br />
+      ul li:last-child { <br />
+      border-bottom: none; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="listborder.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <p>Усі різні маркери елементів списку для списків</p>
+    <code>
+      ul.a {list-style-type: circle;} <br />
+      ul.b {list-style-type: disc;} <br />
+      ul.c {list-style-type: square;} <br />
+      <br />
+      ol.d {list-style-type: armenian;} <br />
+      ol.e {list-style-type: cjk-ideographic;} <br />
+      ol.f {list-style-type: decimal;} <br />
+      ol.g {list-style-type: decimal-leading-zero;} <br />
+      ol.h {list-style-type: georgian;} <br />
+      ol.i {list-style-type: hebrew;} <br />
+      ol.j {list-style-type: hiragana;} <br />
+      ol.k {list-style-type: hiragana-iroha;} <br />
+      ol.l {list-style-type: katakana;} <br />
+      ol.m {list-style-type: katakana-iroha;} <br />
+      ol.n {list-style-type: lower-alpha;} <br />
+      ol.o {list-style-type: lower-greek;} <br />
+      ol.p {list-style-type: lower-latin;} <br />
+      ol.q {list-style-type: lower-roman;} <br />
+      ol.r {list-style-type: upper-alpha;} <br />
+      ol.s {list-style-type: upper-latin;} <br />
+      ol.t {list-style-type: upper-roman;} <br />
+      ol.u {list-style-type: none;} <br />
+      ol.v {list-style-type: inherit;} <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="liststyleall.html"
+      frameborder="1"
+      width="100%;"
+      height="1700px;"
+    ></iframe>
+  </body>
+</html>

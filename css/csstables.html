@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Таблиці CSS</title>
+  </head>
+  <body>
+    <h1>Таблиці CSS</h1>
+    <p>Вигляд таблиці HTML можна значно покращити за допомогою CSS:</p>
+    <code>
+      #customers { <br />
+      font-family: Arial, Helvetica, sans-serif; <br />
+      border-collapse: collapse; <br />
+      width: 100%; <br />
+      } <br />
+      <br />
+      #customers td, #customers th { <br />
+      border: 1px solid #ddd; <br />
+      padding: 8px; <br />
+      } <br />
+      <br />
+      #customers tr:nth-child(even){background-color: #f2f2f2;} <br />
+      <br />
+      #customers tr:hover {background-color: #ddd;} <br />
+      <br />
+      #customers th { <br />
+      padding-top: 12px; <br />
+      padding-bottom: 12px; <br />
+      text-align: left; <br />
+      background-color: #04AA6D; <br />
+      color: white; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="cssteble.html"
+      frameborder="1"
+      width="100%;"
+      height="570px;"
+    ></iframe>
+    <hr />
+
+    <h2>Межі таблиці</h2>
+    <p>Щоб указати межі таблиці в CSS, використовуйте border властивість.</p>
+    <p>
+      У наведеному нижче прикладі вказано суцільну рамку для елементів
+      &lt;table&gt;,&lt;th&gt; i &lt;td&gt;:
+    </p>
+    <code>
+      table, th, td{ <br />
+      border: 1px solid; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="tebleborder.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Таблиця на повну ширину</h2>
+    <p>
+      У деяких випадках наведена вище таблиця може здатися маленькою. Якщо вам
+      потрібна таблиця, яка має займати весь екран (на всю ширину), додайте
+      width:100% до елемента &lt;table&gt;:
+    </p>
+    <code>
+      table{ <br />
+      width: 100%; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="teblewidth.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <p>
+      <strong>Подвійні межі:</strong> зверніть увагу, що таблиця в наведених
+      вище прикладах має подвійні рамки. <br />
+      Щоб видалити подвійні рамки, подивіться на приклад нижче.
+    </p>
+    <hr />
+
+    <h2>Згорнути межі таблиці</h2>
+    <p>
+      Властивість border-collapse визначає, чи повинні межі таблиці згортатися в
+      одну рамку:
+    </p>
+    <code>
+      teble{ <br />
+      border-collapse: collapse; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="teblebordercollapse.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <p>
+      Якщо вам потрібна лише рамка навколо таблиці, вкажіть border властивість
+      лише для &lt;table&gt;:
+    </p>
+    <code>
+      table{ <br />
+      border: 1px solid; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="borderfortable.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+  </body>
+</html>

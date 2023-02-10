@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        border: 3px solid green;
+        padding: 5px;
+      }
+      .img1 {
+        float: right;
+      }
+      .img2 {
+        float: right;
+      }
+      .clearfix {
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Без clearfix</h1>
+    <p>
+      Це зображення плаває праворуч. Він також вищий за елемент, що його
+      містить, тому він виходить за межі свого контейнера:
+    </p>
+    <div>
+      <img
+        src="./img/pineapple.jpg"
+        alt="pineapple"
+        class="img1"
+        width="170px;"
+        height="170px;"
+      />Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </div>
+    <h1 style="clear: right">З clearfix</h1>
+    <p>
+      Ми можемо виправити це, додавши клас clearfix із переповненням: auto; до
+      елемента, що містить:
+    </p>
+    <div class="clearfix">
+      <img
+        src="./img/pineapple.jpg"
+        alt="pineapple"
+        height="170px;"
+        width="170px;"
+        class="img2"
+      />Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </div>
+  </body>
+</html>
