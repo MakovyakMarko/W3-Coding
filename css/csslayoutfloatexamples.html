@@ -250,7 +250,125 @@
     ></iframe>
     <hr />
 
-    <p>Створення веб-сайту за допомогою float</p>
-    <code> </code>
+    <p>Створення веб-сайту за допомогою float:</p>
+    <code>
+      &lt;head&gt; <br />
+      &lt;style&gt; <br />
+      *{ <br />
+      box-sizing: border-box; <br />
+      } <br />
+      body{ <br />
+      margin: 0; <br />
+      } <br />
+      .header{ <br />
+      background-color: #2196F3; <br />
+      color: white; <br />
+      text-align: center; <br />
+      padding: 15px; <br />
+      } <br />
+      .footer{ <br />
+      background-color: #444; color: white; <br />
+      padding: 15px; <br />
+      } <br />
+      .topmenu{ <br />
+      list-style-type: none; <br />
+      margin: 0; <br />
+      padding: 0; <br />
+      overflow: hidden; <br />
+      background-color: #777; <br />
+      } <br />
+      .topmenu li{ <br />
+      float: left; <br />
+      } .topmenu li a{ <br />
+      display: inline-block; <br />
+      color: white; <br />
+      text-align: center; <br />
+      padding: 16px; <br />
+      text-decoration: none; <br />
+      } <br />
+      .topmenu li a:hover{ <br />
+      background-color: #222; } .topmenu li a.active{ <br />
+      color: white; <br />
+      background-color: #4caf50; <br />
+      } .column{ <br />
+      float: left; <br />
+      padding: 15px; <br />
+      } <br />
+      .clearfix:after{ <br />
+      content: ""; <br />
+      clear: both; <br />
+      display: table; <br />
+      } <br />
+      .sidemenu{ <br />
+      width: 25%; <br />
+      } .content{ width: 75%; <br />
+      } .sidemenu ul{ <br />
+      list-style-type: none; <br />
+      margin: 0; <br />
+      padding: 0; <br />
+      } <br />
+      .sidemenu li a{ <br />
+      margin-bottom: 4px; <br />
+      display: block; <br />
+      padding: 8px; <br />
+      background-color: #eee; <br />
+      text-decoration: none; <br />
+      color: #666; <br />
+      } <br />
+      .sidemenu li a:hover{ <br />
+      background-color: #555; <br />
+      color: white; <br />
+      } <br />
+      .sidemenu li a.active{ <br />
+      background-color: #008cba; <br />
+      color: white; <br />
+      } <br />
+      &lt;/style&gt; <br />
+      &lt;/head&gt; <br />
+      &lt;body&gt; <br />
+      &lt;ul class="topmenu"&gt; <br />
+      &lt;li&gt;&lt;a href="#home" class="active"&gt;Home&lt;/a&gt;&lt;/li&gt;
+      <br />
+      &lt;li&gt;&lt;a href="#news"&gt;News&lt;/a&gt;&lt;/li&gt; <br />
+      &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt; <br />
+      &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt; <br />
+      &lt;/ul&gt; <br />
+      &lt;div class="clearfix"&gt; <br />
+      &lt;div class="column sidemenu"&gt; <br />
+      &lt;ul&gt; &lt;li&gt;&lt;a href="#flight"&gt;The
+      Flight&lt;/a&gt;&lt;/li&gt; <br />
+      &lt;li&gt;&lt;a href="#city" class="active"&gt;The
+      City&lt;/a&gt;&lt;/li&gt; <br />
+      &lt;li&gt;&lt;a href="#island"&gt;The Island&lt;/a&gt;&lt;/li&gt; <br />
+      &lt;li&gt;&lt;a href="#food"&gt;The Food&lt;/a&gt;&lt;/li&gt; <br />
+      &lt;li&gt;&lt;a href="#people"&gt;The People&lt;/a&gt;&lt;/li&gt; <br />
+      &lt;li&gt;&lt;a href="#history"&gt;The History&lt;/a&gt;&lt;/li&gt; <br />
+      &lt;li&gt;&lt;a href="#oceans"&gt;The Oceans&lt;/a&gt;&lt;/li&gt; <br />
+      &lt;/ul&gt; <br />
+      &lt;/div&gt; <br />
+      &lt;div class="column content"&gt; <br />
+      &lt;div class="header"&gt; <br />
+      &lt;h1&gt;The City&lt;/h1&gt; <br />
+      &lt;/div&gt; <br />
+      &lt;h1&gt;Chania&lt;/h1&gt; <br />
+      &lt;p&gt;Chania is the capital of the Chania region on the island of
+      Crete. The city can ve divided in two parts, the old town and the modern
+      city.&lt;/p&gt; <br />
+      &lt;p&gt;You will learn more about responsive web pages in a later
+      chapter.&lt;/p&gt; <br />
+      &lt;/div&gt; <br />
+      &lt;/div&gt; <br />
+      &lt;div class="footer"&gt; <br />
+      &lt;p&gt;Footer text&lt;/p&gt; <br />
+      &lt;/div&gt; <br />
+      &lt;/body&gt; <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="floatsitelayout.html"
+      frameborder="1"
+      width="100%"
+      height="500px;"
+    ></iframe>
   </body>
 </html>

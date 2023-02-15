@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Макет CSS - display:inline-block</title>
+  </head>
+  <body>
+    <h1>Макет CSS - display:inline-block</h1>
+    <hr />
+
+    <h2>display: inline-block значення</h2>
+    <p>
+      Порівняно з display:inline, основна видимість поляшає в тому, що display:
+      inline-block дозволяє встановити ширину та висоту елемента.
+    </p>
+    <p>
+      Крім того, за допомогою display: inline-block верхні та нижні
+      поля/відступи дотримуються, а за допомогою display: inline ні.
+    </p>
+    <p>
+      Порівняно з display:block, основна відмінність полягає в тому, що з
+      display: inline-block після елемента не додається розрив рядка, тому
+      елемент може розташовуватись поруч з іншими елементами.
+    </p>
+    <p>
+      У наступному прикладі показано різну поведінку display: inline, display:
+      inline-block, diaplay: block :
+    </p>
+    <code>
+      span.a{ <br />
+      display: inline; <br />
+      width: 100px; <br />
+      height: 100px; <br />
+      padding: 5px; <br />
+      border: 1px solid blue; <br />
+      background-color: yellow; <br />
+      } <br />
+      span.b{ <br />
+      display: inline-block; <br />
+      width: 100px; <br />
+      height: 100px; <br />
+      padding: 5px; <br />
+      border: 1px solid blue; <br />
+      background-color: yellow; <br />
+      } <br />
+      span.c{ <br />
+      display: block; <br />
+      width: 100px; <br />
+      height: 100px; <br />
+      padding: 5px; <br />
+      border: 1px solid blue; <br />
+      background-color: yellow; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="displayinlineblock.html"
+      frameborder="1"
+      width="100%"
+      height="700px;"
+    ></iframe>
+    <hr />
+
+    <h2>Використання inline-blcok для створення навігаційних посилань</h2>
+    <p>
+      Одним із поширених способів використання display: inline-block є
+      відображення елементів списку горизонатльно, а не вертикально. У
+      наступному прикладі створюються горизонтальні навігаційні посилання:
+    </p>
+    <code>
+      .nav{ <br />
+      background-color: yellow; <br />
+      list-style-type: none; <br />
+      text-align: center; <br />
+      padding: 0; <br />
+      margin: 0; <br />
+      } <br />
+      .nav li{ <br />
+      display: inline-block; <br />
+      font-size: 20px; <br />
+      padding: 20px; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="displayinlineblocklist.html"
+      frameborder="1"
+      width="100%"
+      height="400px;"
+    ></iframe>
+  </body>
+</html>

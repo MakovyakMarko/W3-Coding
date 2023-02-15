@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Псевдокласи CSS</title>
+  </head>
+  <body>
+    <h1>Псевдокласи CSS</h1>
+    <hr />
+
+    <h2>Що таке псевдокласи?</h2>
+    <p>Псевдоклас використовується для визначення особливого стану елемента.</p>
+    <p>Наприклад, його можна викорстовувати для:</p>
+    <ul>
+      <li>Стилізації елемента, коли користувач наводить на нього мишу</li>
+      <li>По-різному стилізувати відвідані та невідвідані посилання</li>
+      <li>Стилізувати елемент, коли він отримає фокус</li>
+    </ul>
+    <hr />
+
+    <h2>Синтаксис</h2>
+    <p>Ситаксис псевдокласів:</p>
+    <code>
+      selector:pseudo-class{ <br />
+      property: value; <br />
+      }
+    </code>
+    <hr />
+
+    <h2>Якірні псевдокласи</h2>
+    <p>Посилання можуть відображатись різними способами:</p>
+    <code>
+      unvisited link <br />
+      a:link{ <br />
+      color: #ff0000; <br />
+      } <br />
+      a:visited{ <br />
+      color: #00ff00; <br />
+      } <br />
+      mouse over link <br />
+      a:hover{ <br />
+      color: #ff00ff; } <br />
+      selected link <br />
+      a:active{ <br />
+      color: #0000ff; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="pseudoclasseslink.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Псевдокласи та класи HTML</h2>
+    <p>Псевдокласи можна комбінувати з класами HTML:</p>
+    <p>Коли ви наведете курсор на посилання в прикладі, воно змінить колір:</p>
+    <code>
+      a.highlight:hover{ <br />
+      color:#ff0000; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="pseudoclasseslinkhover.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Наведіть курсор на div</h2>
+    <p>Приклад використання :hover псевдокласу в елементі div:</p>
+    <code>
+      div:hover{ <br />
+      background-color: blue; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="pseudoclassesdivhover.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Просте наведення підказки</h2>
+    <p>
+      Наведіть курсор на елемент div, щоб показати елемент &lt;p&gt; (як
+      підказка):
+    </p>
+    <code>
+      p{ <br />
+      display: none; <br />
+      background-color: yellow; <br />
+      padding: 20px; <br />
+      } <br />
+      div:hover p{ <br />
+      display: block; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="pseudoclassesdivhoverp.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>CSS - псевдоклас :first-child</h2>
+    <p>
+      Псевдоклас :first-child відповідає зазначеному елементу, який є першим
+      дочірнім елементом іншого елемента.
+    </p>
+    <h3>Зіставте перший елемент &lt;p&gt;</h3>
+    <p>
+      У наступному прикладі селектор відповідає будь-якому елементу &lt;p&gt;,
+      який є першим дочірним елементом будь-якого елемента:
+    </p>
+    <code>
+      p:first-child{ <br />
+      color:blue; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="pseudoclassesfirstchild.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <h3>Зіставте перший елемент &lt;i&gt; у всіх елементах &lt;p&gt;</h3>
+    <p>
+      У наступному прикладі селектор відповідає першому елементу &lt;i&gt; в
+      усіх елементах &lt;p&gt; :
+    </p>
+    <code>
+      p i:first-child{ <br />
+      color: blue; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="pseudoclassespifirstchild.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h3>
+      Зіставте всі елементи &lt;i&gt; у всіх перших дочірніх елементах &lt;p&gt;
+    </h3>
+    <p>
+      У наступному прикладі селектор відповідає всім елементам &lt;i&gt; в
+      елементах &lt;p&gt;, які є першими дочірніми елементами іншого елемента:
+    </p>
+    <code>
+      p:first-child i{ <br />
+      color: blue; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="pseudoclassespfirstchildi.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>CSS - псевдоклас :lang</h2>
+    <p>
+      Псевдоклас :lang дозволяє визначити спаціальні правила для різних мов.
+    </p>
+    <p>
+      У наведеному нижче прикладі :lang визначає лапки для елементів &lt;q&gt;
+      за допомогою lang="no":
+    </p>
+    <code>
+      &lt;html&gt; <br />
+      &lt;head&gt; <br />
+      &lt;style&gt; <br />
+      q:lang(no){ <br />
+      quotes: "~" "~"; <br />
+      } <br />
+      &lt;/style&gt; <br />
+      &lt;/head&gt; <br />
+      &lt;body&gt; <br />
+      &lt;p&gt;Якийсь текст &lt;q lang="no"&gt;Цитата в параграфі&lt;/q&gt;
+      Якийсь текст.&lt;/p&gt;
+      <br />
+      &lt;/body&gt; <br />
+      &lt;/html&gt; <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="pseudoclasseslangno.html"
+      frameborder="1"
+      width="100%"
+      height="300px"
+    ></iframe>
+    <hr />
+
+    <h2>Більше прикладів</h2>
+    <h2>Використання :focus</h2>
+    <p>Цей приклад демонструє, як використовувати псевдокласс :focus</p>
+    <code>
+      input:focus{ <br />
+      background-color: yellow; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="pseudoclassesfocus.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+  </body>
+</html>

@@ -4,33 +4,42 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../styles.css" />
     <title>Увійти</title>
   </head>
   <body>
     <form action="login_page.py" method="post">
-      <fieldset>
-        <legend>Увійти:</legend>
-        <label for="username">Логін:</label> <br />
-        <input
-          type="text"
-          id="username"
-          name="username"
-          required
-          autofocus
-          autocomlite
-        />
-        <br />
-        <label for="password">Пароль:</label><br />
-        <input
-          type="password"
-          id="password"
-          name="password"
-          required
-          autocomlite
-        />
-        <br /><br />
-        <input type="submit" value="Увійти" id="submitlogin" />
+      <fieldset class="fieldset">
+        <legend class="legend">Увійти:</legend>
+        <div class="center">
+          <label for="username" class="label">Логін:</label> <br />
+          <input
+            class="inputtext"
+            type="text"
+            id="username"
+            name="username"
+            required
+            autofocus
+            autocomlite
+          />
+          <br />
+          <label for="password" class="label">Пароль:</label><br />
+          <input
+            class="inputtext"
+            type="password"
+            id="password"
+            name="password"
+            required
+            autocomlite
+          />
+          <br /><br />
+          <input
+            class="inputbutton"
+            type="submit"
+            value="Увійти"
+            id="submitlogin"
+          />
+        </div>
       </fieldset>
     </form>
   </body>

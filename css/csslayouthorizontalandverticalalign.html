@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Макет CSS - горизонтальне та вертикальне вирівнювання</title>
+  </head>
+  <body>
+    <h1>Макет CSS - горизонтальне та вертикальне вирівнювання</h1>
+    <hr />
+
+    <h2>Вирівнювання по центру елементів</h2>
+    <p>
+      Щоб горизонтально відцентрувати елемент блоку (наприклад, div),
+      використовуйте margin: auto;
+    </p>
+    <p>
+      Встановленння ширини елемента запобігає його розтягуванню до країв
+      контейнера.
+    </p>
+    <p>
+      Тоді елемент займе вказану ширину, а простір, що залишився, буде порівну
+      розподілено між двома полями:
+    </p>
+    <code>
+      .center{ <br />
+      margin: auto; <br />
+      width: 50%; <br />
+      border: 3px solid green; <br />
+      padding: 10px; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="horizontalalignmarginauto.html"
+      frameborder="1"
+      width="100%;"
+      height="150px;"
+    ></iframe>
+    <p>
+      <strong>Примітка:</strong> вирівнювання по центру не має ефекту, якщо
+      width властивість не встановлено (або встановлено на 100%).
+    </p>
+    <hr />
+
+    <h2>Вирівнювання тексту по центру</h2>
+    <p>
+      Щоб просто відцентрувати текст всередині елемента, використовуйте
+      text-align: center;
+    </p>
+    <code>
+      .center{ <br />
+      text-align: center; <br />
+      border: 3px solid green; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="textaligncenter.html"
+      frameborder="1"
+      width="100%;"
+      height="150px;"
+    ></iframe>
+    <hr />
+
+    <h2>Цетрування зображення</h2>
+    <p>
+      Щоб відцентрувати зображення, установіть ліве та праве поле auto ти
+      зробіть його елементом block :
+    </p>
+    <code>
+      img{ <br />
+      display: block; <br />
+      margin-left: auto; <br />
+      margin-right: auto; <br />
+      width: 40%; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="imgmarginauto.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Вирівнювання за лівим і правим краєм - використання position</h2>
+    <p>
+      Одним із методів вирівнювання елементів є використання position:absolute;
+      :
+    </p>
+    <code>
+      .right{ <br />
+      position:absolute; <br />
+      right: 0px; <br />
+      width: 300px; <br />
+      border: 3px solid #73AD21; <br />
+      padding: 10px; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="alignmentpositionabsolute.html"
+      frameborder="1"
+      width="100%"
+      height="150px;"
+    ></iframe>
+    <p>
+      <strong>Примітка.</strong> Елементи з абосолютним розташуванням
+      видаляються з нормального потоку та можуть перекривати елементи.
+    </p>
+    <hr />
+
+    <h2>Вирівнювання по лівому та правому краю - за допомогою float</h2>
+    <p>
+      Іншим методом вирівнювання елементів є викиорстання float властивості:
+    </p>
+    <code>
+      .right{ <br />
+      float: right; <br />
+      width: 300px; <br />
+      border: 3px solid #73ad21; <br />
+      padding: 10px; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="alignmentfloatright.html"
+      frameborder="1"
+      width="100%;"
+      height="150px;"
+    ></iframe>
+    <hr />
+
+    <h2>По центру по вертикалі - за допомогою padding</h2>
+    <p>
+      У CSS є багато способів відцентрувати елемент вертикально. Просте рішення
+      полягає в тому, що викоритсовувати top i bottom padding:
+    </p>
+    <code>
+      .center{ <br />
+      padding: 70px 0; <br />
+      border: 3px solid green; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="alingmentpaddingtopbottom.html"
+      frameborder="1"
+      width="100%;"
+      height="250px"
+    ></iframe>
+    <p>
+      Щоб відцентрувати як вертикально, так і горизонтально, використовуйте
+      padding та text-align:center:
+    </p>
+    <code>
+      .center{ <br />
+      padding: 70px 0; <br />
+      border: 3px solid green; <br />
+      text-align: center; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="alignmentpaddintextalign.html"
+      frameborder="1"
+      width="100%;"
+      height="250px;"
+    ></iframe>
+    <hr />
+
+    <h2>По центру по вертикалі - за допомогою line-height</h2>
+    <p>
+      Інший трюк полягає у використанні line-height властивості за значенням,
+      рівним властивості height :
+    </p>
+    <code>
+      .center{ <br />
+      line-height: 200px; <br />
+      height: 200px; <br />
+      border: 3px solid green; <br />
+      text-align: center; <br />
+      } <br />
+      Для багатострокового тексту введіть наступне: <br />
+      .center p{ <br />
+      line-height: 1.5; <br />
+      display: inline-block; <br />
+      vertical-align: middle; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="alignmentlineheight.html"
+      frameborder="1"
+      width="100%;"
+      height="600px;"
+    ></iframe>
+    <hr />
+
+    <h2>Центрувати по вертикалі - використання position i transform</h2>
+    <p>
+      Якщо padding i line-heigth не є варіантами, іншим рішенням є використання
+      position та transform властивості:
+    </p>
+    <code>
+      .center{ <br />
+      height: 200px; <br />
+      position: relative; <br />
+      border: 3px solid green; <br />
+      } <br />
+      .center{ <br />
+      margin: 0; <br />
+      position: absolute; <br />
+      top: 50%; <br />
+      left: 50%; <br />
+      transform: translate (-50%, -50%); <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="alignmentpositiontransform.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>По центру по вертикалі - за допомогою flexbox</h2>
+    <p>
+      Ви також можете використовувати flexbox для цетрування речей. Зверніть
+      увагу, що flexbox не підтримується в IE10 і попередніх версіях:
+    </p>
+    <code>
+      .center{ <br />
+      display: flex; <br />
+      justify-content: center; <br />
+      align-items: center; <br />
+      height: 200px; <br />
+      border: 3px solid green; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="alignmentflex.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+  </body>
+</html>

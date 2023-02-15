@@ -4,18 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../styles.css" />
     <title>Зареєструватися</title>
   </head>
   <body>
     <form action="register_page.py" method="post">
-      <fieldset>
-        <legend>Реєстрація нового користувача:</legend>
-        <label for="username">Логін:</label> <br />
-        <input type="text" id="username" name="username" required autofocus />
-        <br />
-        <label for="useremail">Email:</label> <br />
+      <fieldset class="fieldset">
+        <legend class="legend">Реєстрація нового користувача:</legend>
+        <label for="username" class="label">Логін:</label> <br />
         <input
+          class="inputtext"
+          type="text"
+          id="username"
+          name="username"
+          required
+          autofocus
+        />
+        <br />
+        <label for="useremail" class="label">Email:</label> <br />
+        <input
+          class="inputtext"
           type="email"
           id="useremail"
           name="useremail"
@@ -24,10 +32,18 @@
         />
         <br />
 
-        <label for="password">Пароль:</label><br />
-        <input type="password" id="password" name="password" required /> <br />
-        <label for="passwordcheck">Повторіть пароль:</label><br />
+        <label for="password" class="label">Пароль:</label><br />
         <input
+          class="inputtext"
+          type="password"
+          id="password"
+          name="password"
+          required
+        />
+        <br />
+        <label for="passwordcheck" class="label">Повторіть пароль:</label><br />
+        <input
+          class="inputtext"
           type="password"
           id="passwordcheck"
           name="passwordcheck"
@@ -35,7 +51,12 @@
         />
 
         <br /><br />
-        <input type="submit" value="Зареєструвати" id="submitreg" />
+        <input
+          class="inputbutton"
+          type="submit"
+          value="Зареєструвати"
+          id="submitreg"
+        />
       </fieldset>
     </form>
   </body>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Непрозорість/прозорість CSS</title>
+  </head>
+  <body>
+    <h1>Непрозорість/прозорість CSS</h1>
+    <p>Властивість opacity визначає напрозорість/прозорість елемента.</p>
+    <hr />
+
+    <h2>Прозоре зображення</h2>
+    <p>
+      Властивість opacity може приймати значення від 0,0 до 1,0. Чим менше
+      значення, тим прозоріше:
+    </p>
+    <code>
+      img.a{ <br />
+      opacity:0.2; <br />
+      } <br />
+      img.b{ <br />
+      opacity:0.5; <br />
+      } <br />
+      img.c{ <br />
+      opacity:0.8; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="cssopacity05.html"
+      frameborder="1"
+      width="100%"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Ефект прозорого наведення</h2>
+    <p>
+      Властивість opacity часто використовується разом із :hover селектором для
+      зміни непрозорості при наведенні миші:
+    </p>
+    <code>
+      img{ <br />
+      opcity: 0.5; <br />
+      } <br />
+      img:hover{ <br />
+      opacity: 1.0; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="cssopacityhover.html"
+      frameborder="1"
+      width="100%"
+      height="300px;"
+    ></iframe>
+    <h2>Приклад з поясненням</h2>
+    <p>
+      Перший блок CSS схожий на код у прикладі 1. Крім того, ми додали, що має
+      статися, коли користувач наводить курсор на одне із зображень. У цьому
+      випадку ми хочемо, щоб зображення Не було прозорим. Коли користувач
+      наводить на нього курсор воно стає прозорим:
+    </p>
+    <code>
+      img{ <br />
+      opacity: 1.0; <br />
+      } <br />
+      img:hover{ <br />
+      opacity: 0.5; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="cssopacityimg.html"
+      frameborder="1"
+      width="100%;"
+      height="300px"
+    ></iframe>
+    <hr />
+
+    <h2>Прозора коробка</h2>
+    <p>
+      Під час використання opacity властивості для додавання прозорості фону
+      елемента всі його дочірні елементи успадковують однакову прозорістью Це
+      може ускладнити читання тексту всередині повністю прозорого елемента:
+    </p>
+    <code>
+      div{ <br />
+      background-color: #4caf50; <br />
+      padding: 10px; <br />
+      } <br />
+      div.first{ <br />
+      opacity: 0.1; <br />
+      } <br />
+      div.second{ <br />
+      opacity: 0.3; <br />
+      } <br />
+      div.third{ <br />
+      opacity: 0.6; <br />
+      } <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="cssopacitydiv.html"
+      frameborder="1"
+      width="100%;"
+      height="200px;"
+    ></iframe>
+    <hr />
+
+    <h2>Прозорість за допомогою RGBA</h2>
+    <p>
+      Якщо ви не хочете застосовувати до дочірніх елементів, як у нашому
+      прикладі вище, використовуйте значення кольорів RGBA. У наступному
+      прикладі встановлюється непрозорість для колору фону, а не тексту:
+    </p>
+    <code>
+      div{ <br />
+      background: rgb(76, 175, 80); <br />
+      padding: 10px; <br />
+      } <br />
+      div.first{ <br />
+      background: rgba(76, 175, 80, 0.1); <br />
+      } <br />
+      div.second{ <br />
+      background: rgba(76, 175, 80, 0.3); <br />
+      } <br />
+      div.third{ <br />
+      background: rgba(76, 175, 80, 0.6); <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="cssopacityrgba.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Текст у прозорому полі</h2>
+    <code>
+      div.background{ <br />
+      background: url(./img/); <br />
+      border: 2px solid black; <br />
+      } <br />
+      div.transbox{ <br />
+      margin: 30px; <br />
+      background-color: #ffffff; <br />
+      border: 1px solid black; <br />
+      opacity: 0.6; <br />
+      } <br />
+      div.transbox p{ <br />
+      margin: 5%; <br />
+      font-weight: bold; <br />
+      color: #000; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="cssopacitytransperentbox.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+  </body>
+</html>

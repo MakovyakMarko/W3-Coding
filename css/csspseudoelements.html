@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Псевдоелементи CSS</title>
+  </head>
+  <body>
+    <h1>Псевдоелементи CSS</h1>
+    <hr />
+
+    <h2>Що таке псевдоелементи?</h2>
+    <p>
+      Псевдоелементи CSS використовуються для стилізації визначених частин
+      елемента.
+    </p>
+    <p>Наприклад, його можна використовувати для:</p>
+    <ul>
+      <li>Стилю першої літери або рядка елемента</li>
+      <li>Додавання вмісту до або після вмісту елемента</li>
+    </ul>
+    <hr />
+
+    <h2>Синтаксис</h2>
+    <p>Синтаксис псевдоелементів:</p>
+    <code>
+      selector::pseudo-element{ <br />
+      property: value; <br />
+      }
+    </code>
+    <hr />
+
+    <h2>Псевдоелемент ::first-line</h2>
+    <p>
+      Псевдоелемент ::first-line використовується для додавання особливого стилю
+      до першого рядка тексту.
+    </p>
+    <p>
+      У наступному прикладі форматується перший рядок тексту в усіх елементах
+      &lt;p&gt;:
+    </p>
+    <code>
+      p::first-line{ <br />
+      color: #ff0000; <br />
+      font-variant: small-caps; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="pseudoelementsfirstline.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <p>
+      <strong>Примітка.</strong> Псевдоелемент ::first-line можна застосувати
+      лише до елементів рівня блоку.
+    </p>
+    <p>Наступні властивості застосовуються до ::first-line псевдоелемента:</p>
+    <ul>
+      <li>font</li>
+      <li>color</li>
+      <li>background</li>
+      <li>word-spacing</li>
+      <li>letter-spacing</li>
+      <li>text-decoration</li>
+      <li>vertical-align</li>
+      <li>text-transform</li>
+      <li>line-hight</li>
+      <li>clear</li>
+    </ul>
+    <hr />
+
+    <h2>Псевдоелемент ::first-letter</h2>
+    <p>
+      Псевдоелемент ::first-letter використовується для додання особливого стилю
+      першій літері тексту.
+    </p>
+    <p>
+      У наступному прикладі форматується перша літера тексту в усіх елементак
+      &lt;p&gt;:
+    </p>
+    <code>
+      p::first-letter{ <br />
+      color: #ff0000; <br />
+      font-size: xx-large; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="pseudoelementsfirstletter.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <p>
+      <strong>Примітка.</strong> Псевдоелемент ::first-letter можна
+      застосовувати лише до елементів рівня блоку.
+    </p>
+    <p>Наступні властивості застосовуються до псевдоелемента ::first-letter:</p>
+    <ul>
+      <li>font</li>
+      <li>color</li>
+      <li>background</li>
+      <li>margin</li>
+      <li>padding</li>
+      <li>border</li>
+      <li>text-decoration</li>
+      <li>vertical-align (only if "float" is "none")</li>
+      <li>text-transform</li>
+      <li>line-height</li>
+      <li>float</li>
+      <li>clear</li>
+    </ul>
+    <hr />
+
+    <h2>Псевдоелементи та класи HTML</h2>
+    <p>Псевдоелементи можна комбінувати з класами HTML:</p>
+    <code>
+      p.intro::first-letter{ <br />
+      color: red; <br />
+      font-size: 200%; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="pseudoelementsandclasses.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Кілька псевдоелементів</h2>
+    <p>Кілька псевдоелементів також можна комбінувати</p>
+    <p>
+      У наступному прикладі перша літера абзацу буде червоного кольору, шрифт
+      розміром хх. Інша частина першого рядка буде синьою і написана великими
+      літерами. Решта абзацу буде стандартним розміром і кольором шрифту:
+    </p>
+    <code>
+      p::first-letter{ <br />
+      color: #ff0000; <br />
+      font-size: xx-large; <br />
+      } <br />
+      p::first-line{ <br />
+      color: #0000ff; <br />
+      font-variant: small-caps; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="pseudoelementsfirstletterfirstline.html"
+      frameborder="1"
+      width="100%"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>CSS - псевдоелемент ::before</h2>
+    <p>
+      Псевдоелемент ::before можна використовувати для вставки деякого вмісту
+      перед вмістом елемента.
+    </p>
+    <p>
+      У наступному прикладі зображення встановлюється перед вмістом кожного
+      елемента &lt;h1&gt;:
+    </p>
+    <code>
+      h1::before{ <br />
+      content: url(./img/smile.jpeg); <br />
+      width: 30px; <br />
+      height: 30px; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="pseudoelementbefore.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>CSS - псевдоелемент ::after</h2>
+    <p>
+      Псевдоелемент ::after можна використовувати для вставки деякого вмісту
+      після вмісту елемента.
+    </p>
+    <p>
+      У наступному прикладі зображення вставляється після кожного елемента
+      &lt;h1&gt;:
+    </p>
+    <code>
+      h1::after{ <br />
+      content: url(./img/smile.png); <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="pseudoelementsafter.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>CSS - псевдоелемент ::marker</h2>
+    <p>Псевдоелемент ::after вибирає маркери елементів списку.</p>
+    <p>Наступний приклад стилізує маркери елементів списку:</p>
+    <code>
+      ::marker{ <br />
+      color: red; <br />
+      font-size: 23px; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="pseudoelementsmarker.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>CSS псевдоелемент ::selection</h2>
+    <p>
+      Псевдоелемент ::selection відповідає частині елемента, яку вибирає
+      користувач.
+    </p>
+    <p>
+      Наступні властивості CSS можна застосувати до ::selection : color,
+      background, cursor, outline.
+    </p>
+    <p>У наступному прикладі виділений текст стає червоним на жовтому тлі:</p>
+    <code>
+      ::selection{ <br />
+      color: red; <br />
+      background: yellow; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="pseudoelementsselection.html"
+      frameborder="1"
+      width="100%"
+      height="300px;"
+    ></iframe>
+  </body>
+</html>

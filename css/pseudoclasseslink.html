@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      a:link {
+        color: #ff0000;
+      }
+      a:visited {
+        color: #00ff00;
+      }
+      a:hover {
+        color: #ff00ff;
+      }
+      a:active {
+        color: #0000ff;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Стилізація посилання залежно від стану</h2>
+    <a href="#">Це посилання</a>
+    <p>
+      <strong> Примітка: </strong>
+      a:hover ПОВИНЕН стояти після :link i :visited у визначенні CSS, щоб бути
+      ефективним.
+    </p>
+    <p>
+      <strong> Примітка: </strong>
+      a:active ПОВИНЕН стояти після a:hover у визначенні CSS, щоб бути
+      ефективним.
+    </p>
+  </body>
+</html>
