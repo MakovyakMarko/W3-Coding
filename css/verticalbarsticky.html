@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 25%;
+        background-color: #f1f1f1;
+        position: fixed;
+        height: 100%;
+        overflow: auto;
+      }
+      li a {
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+      }
+      li a.active {
+        background-color: #04aa6d;
+        color: white;
+      }
+      li a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a class="active" href="#home">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+
+    <div style="margin-left: 25%; padding: 1px 16px; height: 1000px">
+      <h1>Виправлена ​​бічна навігація повної висоти</h1>
+      <h2>
+        Спробуйте прокрутити цю область і подивіться, як бічна навігація
+        прилипає до сторінки
+      </h2>
+      <p>
+        Зверніть увагу, що цей елемент div має ліве поле 25%. Це пов’язано з
+        тим, що для бічної навігації встановлено 25% ширини. Якщо видалити поле,
+        бічна навігація накладатиметься на цей div.
+      </p>
+      <p>
+        Також зауважте, що ми встановили параметр overflow:auto для sidenav. Це
+        додасть смугу прокрутки, якщо бокова навігація надто довга (наприклад,
+        якщо всередині неї понад 50 посилань).
+      </p>
+      <p>Трохи тексту..</p>
+      <p>Трохи тексту..</p>
+      <p>Трохи тексту..</p>
+      <p>Трохи тексту..</p>
+      <p>Трохи тексту..</p>
+
+      <p>Трохи тексту..</p>
+      <p>Трохи тексту..</p>
+      <p>Трохи тексту..</p>
+
+      <p>Трохи тексту..</p>
+      <p>Трохи тексту..</p>
+      <p>Трохи тексту..</p>
+    </div>
+  </body>
+</html>

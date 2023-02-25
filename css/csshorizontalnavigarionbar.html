@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Горизонтальна панель навігації CSS</title>
+  </head>
+  <body>
+    <h1>Горизонтальна панель навігації CSS</h1>
+    <hr />
+
+    <h2>Горизонтальна панель навігації</h2>
+    <p>
+      Існує два способи створити горизонтальну панель навігації. Використання
+      <b>вбудованих</b> або <b>плаваючих</b> елементів списку.
+    </p>
+    <h3>Елементи вбудованого (inline) списку</h3>
+    <p>
+      Один зі способів створення горизонатльної навігаційної панелі - це вказати
+      елементи li як вбудовані (inline) на додаток до стандортного коду з
+      попередньої сторінки:
+    </p>
+    <code>
+      ul{ <br />
+      list-style-type: none;<br />
+      margin: 0; <br />
+      padding: 0; <br />
+      } <br />
+      li{ <br />
+      display: inline; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="horizontalnavbarinline.html"
+      frameborder="1"
+      width="100%"
+      height="300px;"
+    ></iframe>
+    <p><strong>Пояснення.</strong></p>
+    <ul>
+      <li>
+        display: inline - за умочуванням елементи li є блоковими. Тут ми
+        видаляємо розриви рядків перед і після кожного елемента списку, щоб
+        відобрадати їх в одному рядку
+      </li>
+    </ul>
+    <h3>Елементи плаваючого списку</h3>
+    <p>
+      Інший спосіб створення горизонтальної навігаційної панелі полягає в тому,
+      щоб перемістити елементи li та вказати макет для навігаційних посилань:
+    </p>
+    <code>
+      li{ <br />
+      float: left; <br />
+      } <br />
+      a{ <br />
+      display: block; <br />
+      padding: 8px; <br />
+      background-color: #ddd; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="horizontalnavbarfloat.html"
+      frameborder="1"
+      width="100%"
+      height="300px;"
+    ></iframe>
+    <p><strong>Пояснення.</strong></p>
+    <ul>
+      <li>
+        float: left; - використовуйте float, щоб елементи блоку плавали один
+        поруч з одним
+      </li>
+      <li>
+        display: block; - дозволяє нам вказати відступи (і висоту, ширину, поля
+        тощо, якщо хочете)
+      </li>
+      <li>
+        padding: 8px; - вкажіть відступ між кожним елементом a, щоб вони
+        виглядали добре
+      </li>
+      <li>
+        background-color: #ddd; - додайте сірий фоновий колір до кожного
+        елемента a
+      </li>
+    </ul>
+    <p>
+      <strong>Порада:</strong> додайте фоновий колір до ul замість кожного
+      елемента а, якщо вам потрібен фоновий колір на всю ширину:
+    </p>
+    <code>
+      ul{ <br />
+      background-color: #ddd; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="horizontalnavbarulbgcolor.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Приклади горизонтальної панелі навігації</h2>
+    <p>
+      Свторіть базову горищонтальну панель навігації з темним кольором фону та
+      змініть колір фону посилань, коли коритсувач наводить на них мишу:
+    </p>
+    <code>
+      ul{ <br />
+      list-style-type: none; <br />
+      margin:0; <br />
+      padding: 0; <br />
+      overflow: hidden; <br />
+      background-color: #333; <br />
+      } <br />
+      li{ <br />
+      float: left; <br />
+      } <br />
+      li a{ <br />
+      display: block; <br />
+      color: white; <br />
+      text-align: center; <br />
+      padding: 14px 16px; <br />
+      text-decoration: none; <br />
+      } <br />
+      li a:hover{ <br />
+      background-color: #111; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="horizontalnavbarbghover.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Активне/поточне навігаційне посилання</h2>
+    <p>
+      Додайте клас "активний" до поточного посилання, щоб користувач знав, на
+      якій сторінці він/вона:
+    </p>
+    <code>
+      .active { <br />
+      background-color: #04aa6d; <br />
+      }
+    </code>
+    <iframe
+      src="horizontalnavbargbhoveractive.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Посилання за правим краєм</h2>
+    <p>
+      Вирівнюйте параграф за правим краєм, переміщуючи елементи списку праворуч
+      (float: right):
+    </p>
+    <code>
+      &lt;ul&gt; <br />
+      &lt;li style="float:right;"&gt;&lt;a class="active"
+      href="#about"&gt;&lt;/li&gt; <br />
+      &lt;/ul&gt; <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="horizontalnavbarlifloatright.html"
+      frameborder="1"
+      width="100%"
+      height="300px"
+    ></iframe>
+    <hr />
+
+    <h2>Роздільники меж</h2>
+    <p>
+      Додайте border-right властивість до li, щоб створити роздільники посилань:
+    </p>
+    <code>
+      li{ <br />
+      border-ridght: 1px solid #bbb; <br />
+      } <br />
+      li:last-child{ <br />
+      border-right: none; <br />
+      } <br />
+    </code>
+  </body>
+</html>

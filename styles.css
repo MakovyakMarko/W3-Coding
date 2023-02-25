@@ -4,7 +4,7 @@
 body {
   background-color: white;
   color: #000000;
-  margin: 50px;
+  margin: 0px;
   font-size: 18px;
   font-family: Arial, sans-serif;
   text-shadow: 0px 0px 1px white;
@@ -70,12 +70,12 @@ code {
   line-height: 30px;
   font-weight: bold;
 }
+
 code::selection {
   color: white;
   font-weight: bold;
   background-color: red;
 }
-
 /*Для головної сторінки*/
 #grad1 {
   height: auto;
@@ -118,7 +118,7 @@ header h1 {
 }
 .headerdiv ul {
   list-style-type: none;
-  border: 2px outset blue;
+  /*border: 2px outset blue;*/,
   border-radius: 7px;
 }
 .headerdiv li {

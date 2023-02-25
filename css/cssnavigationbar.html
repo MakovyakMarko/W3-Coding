@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Панель навігації CSS</title>
+  </head>
+  <body>
+    <h1>Панель навігації CSS</h1>
+    <hr />
+
+    <h2>Панелі навігації</h2>
+    <p>Для будь-якого веб-сайту важлива проста у використанні навігація.</p>
+    <p>
+      За допомогою CSS ви можете перетворити нудні HTML-меню на гарні
+      навігаційні панелі
+    </p>
+    <hr />
+
+    <h2>Панель навігації = список посилань</h2>
+    <p>Для панелі навігації потрібен стандартной HTML як основа</p>
+    <p>
+      У наших прикладах ми створимо панель навігації зі стандартного списку
+      HTML.
+    </p>
+    <p>
+      Панель навігації - це в осонвному список посилань, тому використання
+      елементів ul i li має сенс:
+    </p>
+    <code>
+      &lt;ul&gt; <br />
+      &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt; <br />
+      &lt;li&gt;&lt;a href="#news"&gt;News&lt;/a&gt;&lt;/li&gt; <br />
+      &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt; <br />
+      &lt;li&gt;&lt;a href="#about"&gt;About&lt;/a&gt;&lt;/li&gt; <br />
+      &lt;/ul&gt; <br />
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="nevigationbarulli.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <p>Тепер давайте видалимо маркери, поля та відступи зі списку:</p>
+    <code>
+      ul{ <br />
+      list-style-type: none; <br />
+      margin: 0; <br />
+      padding: 0; <br />
+      }
+    </code>
+    <p>Відображатиметься так:</p>
+    <iframe
+      src="navigationbarulstyle.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <p><strong>Пояснення.</strong></p>
+    <ul>
+      <li>
+        list-style-type: none; - знімає кулі. Панелі навігації не потрібні
+        маркери списку
+      </li>
+      <li>
+        встановіть margin:0; i padding:0; видаліть налаштування браузера за
+        замовчуванням
+      </li>
+    </ul>
+    <p>
+      Код у наведеному прикладі є стандартним кодом, який використовується як у
+      вертикальній, так і в горизонтальній панелях навігації, про який ви
+      дізнаєтесь більше в наступних розділах.
+    </p>
+  </body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles.css" />
+    <title>Вертикальна панель навігації CSS</title>
+  </head>
+  <body>
+    <h1>Вертикальна панель навігації CSS</h1>
+    <hr />
+
+    <h2>Вертикальна панель навігації</h2>
+    <p>
+      Щоб побудувати вертикальну панель навігації, ви можете оформити елемент
+      &lt;a&gt; всередині списку на додаток до коду з попередньої сторінки:
+    </p>
+    <code>
+      ul{ <br />
+      list-style-type:none; <br />
+      margin: 0; <br />
+      padding: 0; <br />
+      } <br />
+      li a{ <br />
+      display: block; <br />
+      width: 60px; <br />
+      background-color: #ddd; <br />
+      }
+    </code>
+    <p>Відоражатиметься так:</p>
+    <iframe
+      src="verticalnavbarullia.html"
+      frameborder="1"
+      width="100%"
+      height="300px;"
+    ></iframe>
+    <p><strong>Пояснення.</strong></p>
+    <ul>
+      <li>
+        display:block; - відображення посилань у вигляді блокових елементів
+        робить клікабельною всю область посилання (а не лише текст), і це
+        дозволяє нам вказати ширину (і відступи, поля, висоту тощо, якщо ви
+        хочете)
+      </li>
+      <li>
+        width:60px; - елементи блоку займають повну ширину, доступну за
+        замовчуванням, Ми хочемо вказати ширину 60пікселів
+      </li>
+    </ul>
+    <p>
+      Ви також можете встановити ширину &lt;ul&gt; і видалити ширину &lt;a&gt;,
+      оскільки вони займуть повну доступну ширину, коли відображатимуться як
+      блокові елементи. Це дасть той самий результат, що й у попередньому
+      прикладі
+    </p>
+    <hr />
+
+    <h2>Приклад вертикальної панелі навігації</h2>
+    <p>
+      Створіть базову вертикальну панель навігації з сірим кольором фону та
+      змініть колір фону посилань, коли користувач наводить на них мишу:
+    </p>
+    <code>
+      ul{ <br />
+      list-style-type: none; <br />
+      margin: 0; <br />
+      padding: 0; <br />
+      width: 200px; <br />
+      background-color: #f1f1f1; <br />
+      } <br />
+      li a{ <br />
+      display: block; <br />
+      color: #000; <br />
+      padding: 8px 16px; <br />
+      text-decoration: none; <br />
+      } <br />
+      lia:hover{ <br />
+      background-color: #555; <br />
+      color: white; <br />
+      }
+    </code>
+    <p>відображатиметься так:</p>
+    <iframe
+      src="vertivalnavbarliahover.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Активне/поточне навігаційне посилання</h2>
+    <p>
+      Додайте клас "активний" до поточного посилання, щоб користувач знав, на
+      якій сторінці він/вона:
+    </p>
+    <code>
+      .active{ <br />
+      background-color: #04aa6d; <br />
+      color: white; <br />
+      }
+    </code>
+    <p>Відоражатиметься так:</p>
+    <iframe
+      src="verticalnavbaractive.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Центруйте посилання та додайте межі</h2>
+    <p>Додайте text-align:center до li або a, щоб цетрувати посилання.</p>
+    <p>
+      Додайте border властивість до ul додайте раску навколо панелі навігоції.
+      Якщо вам також потрібні межі всередині навігаційної панелі, додайте
+      border-bottom до всіх елементів li, крім останнього:
+    </p>
+    <code>
+      ul{ <br />
+      border: 1px solid #555; <br />
+      } <br />
+      li{ <br />
+      text-align: center; <br />
+      border-bottom: 1px solid #555; <br />
+      } <br />
+      li:last-child{ <br />
+      border-bottom: none; <br />
+      }
+    </code>
+    <p>Відоражатиметься так:</p>
+    <iframe
+      src="verticalnavbarborder.html"
+      frameborder="1"
+      width="100%;"
+      height="300px;"
+    ></iframe>
+    <hr />
+
+    <h2>Повнорозмірна фіксована вертикальна панель навігації</h2>
+    <p>Створіть "липку" бічну навігацію на повну висоту:</p>
+    <code>
+      ul{ <br />
+      list-style-type: none; <br />
+      margin: 0; <br />
+      paddding: 0; <br />
+      width: 25%; <br />
+      background-color: #f1f1f1; <br />
+      height: 100%; <br />
+      position: fixed; <br />
+      overflow: auto; <br />
+      }
+    </code>
+    <p>Відоражатиметься так:</p>
+    <iframe
+      src="verticalbarsticky.html"
+      frameborder="1"
+      width="100%"
+      height="300px;"
+      style="margin: 0; padding: 0"
+    ></iframe>
+    <p>
+      <strong>Примітка.</strong> Цей приклад може не працювати належним чином на
+      мобільних пристроях.
+    </p>
+  </body>
+</html>
